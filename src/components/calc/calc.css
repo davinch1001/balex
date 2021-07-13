@@ -1,0 +1,138 @@
+.calc {
+  padding: 80px 0 48px;
+  background: #40328A;
+}
+.calc__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 52px;
+  /* identical to box height */
+  color: #FFFFFF;
+}
+.calc__box {
+  max-width: 844px;
+  padding: 48px 109px 67px 87px;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.calc .kg-sm {
+  margin-bottom: 24px;
+}
+.calc__country-input {
+  background: #FFFFFF;
+  border: 1px solid #EF8C3B;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 328px;
+  height: 50px;
+  margin-bottom: 32px;
+}
+.calc__kilogram-input {
+  margin-right: 7px;
+  background: #FFFFFF;
+  border: 1px solid #EF8C3B;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 160px;
+  height: 50px;
+}
+.calc__centimeter-input {
+  background: #FFFFFF;
+  border: 1px solid #EF8C3B;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 160px;
+  height: 50px;
+}
+.calc__mass-input {
+  margin-right: 8px;
+  background: #FFFFFF;
+  border: 1px solid #EF8C3B;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 75px;
+  height: 35px;
+}
+.calc__length-input {
+  margin-right: 8px;
+  background: #FFFFFF;
+  border: 1px solid #EF8C3B;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 75px;
+  height: 35px;
+}
+.calc__width-input {
+  margin-right: 8px;
+  background: #FFFFFF;
+  border: 1px solid #EF8C3B;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 75px;
+  height: 35px;
+}
+.calc__height-input {
+  background: #FFFFFF;
+  border: 1px solid #EF8C3B;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 75px;
+  height: 35px;
+}
+.calc__price-box {
+  margin-left: 106px;
+}
+.calc__price {
+  padding: 12px 32px;
+  background: #FFFFFF;
+  border: 1px solid #EF8C3B;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 219px;
+  height: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.calc__price .price {
+  padding-bottom: 10px;
+  width: 155px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+.calc__price .price-value {
+  padding-top: 8px;
+}
+.calc__price .price-btn {
+  border-style: none;
+  background: #EF8C3B;
+  border-radius: 10px;
+  padding: 18px 32px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  margin-top: 60px;
+  color: #FFFFFF;
+}

@@ -1,0 +1,94 @@
+.contacts{
+  margin-top: 80px;
+  text-align: center;
+  &__title{
+    margin-bottom: 48px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    /* identical to box height */
+
+
+    color: #000000;
+  }
+  &__block{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__social-network{
+    .social-network-title{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 42px;
+      /* identical to box height */
+      margin-bottom: 32px;
+
+      color: #000000;
+    }
+    .social-network-link{
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 42px;
+      /* identical to box height */
+      margin-bottom: 24px;
+      display: inline-block;
+      color: #40328A;
+    }
+    .social-network-abouts{
+      max-width: 509px;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 21px;
+      text-align: left;
+      color: #000000;
+    }
+    &:before{
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 204px;
+      background: #000000;
+      left: 50%;
+
+    }
+  }
+  &__numbers{
+    display: flex;
+    flex-direction: column;
+    .numbers-title{
+      margin-bottom: 32px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 42px;
+      /* identical to box height */
+
+
+      color: #000000;
+    }
+    .number{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 42px;
+      /* identical to box height */
+      color: #000000;
+    }
+    .abouts{
+      margin-top: 29px;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 21px;
+      /* identical to box height */
+
+
+      color: #000000;
+    }
+  }
+}

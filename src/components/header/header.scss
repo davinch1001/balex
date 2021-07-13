@@ -1,0 +1,41 @@
+.header{
+  background: #40328A;
+  &__nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__nav-link{
+    margin-right: 91px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #FFFFFF;
+    text-decoration: none;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__personal-account{
+    display: flex;
+    align-items: center;
+    .personal-account-text{
+      text-decoration: none;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 21px;
+      /* identical to box height */
+      color: #FFFFFF;
+    }
+    .after{
+     display: inline-block;
+      width: 1px;
+      height: 23px;
+      background: white;
+      margin: 0 10px;
+    }
+  }
+}

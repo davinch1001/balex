@@ -1,0 +1,114 @@
+.store{
+  padding: 50px 0 12px 0;
+  &__title{
+    text-align: center;
+    margin-bottom: 48px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    /* identical to box height */
+
+
+    color: #000000;
+  }
+  &__search{
+    width: 219px;
+    height: 40px;
+    margin-left: 360px;
+    background: #F6F6FF;
+    border: 1px solid #40328A;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 32px;
+  }
+  &__catalog{
+    max-height: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in;
+  }
+  &__catalog.active{
+    height: 100%;
+    max-height: 1150px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  &__items{
+    display: flex;
+    flex-direction: column;
+  }
+  &__catalog-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+
+    color: #40328A;
+    width: 298px;
+    height: 80px;
+    background: #FFF7F1;
+    box-shadow: 4px 8px 7px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-right: 30px;
+    margin-bottom: 41px;
+    transition: 0.5s;
+    &:last-child{
+      margin-right: 0;
+    }
+  &:hover{
+    cursor: pointer;
+    background: #40328A;
+    color: white;
+  }
+  }
+  &__store-links{
+    display: none;
+  }
+  &__store-links.active{
+    display: block;
+  }
+  &__view-more{
+    text-align: center;
+    display: block;
+    margin: 0 auto 0;
+    border-style: none;
+    background: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    text-decoration: none;
+    color: #40328A;
+    &:hover{
+      cursor: pointer;
+      color: #343521
+    }
+    .view-more-img{
+      transform: rotate(0);
+    }
+    .view-more-img.active{
+      transform: rotate(180deg);
+    }
+  }
+  &__store-links{
+    .mySwiper{
+      width: 100%;
+      .swiper-box{
+        height: 200px;
+        width: 200px;
+        background: darkred;
+        border:1px solid black;
+      }
+    }
+
+  }
+}
+
+

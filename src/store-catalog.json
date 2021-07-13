@@ -1,0 +1,90 @@
+{
+  "auto": [
+    {"storeName": "Tesla" , "storeLink":  "url", "storeImg": "img-url", "storeId": 0},
+    {"storeName": "Jaguar" , "storeLink":  "url", "storeImg": "img-url", "storeId": 1},
+    {"storeName": "Ford" , "storeLink":  "url", "storeImg": "img-url", "storeId": 2},
+    {"storeName": "Mustang" , "storeLink":  "url", "storeImg": "img-url", "storeId" : 3},
+    {"storeName": "Chevrolet" , "storeLink":  "url", "storeImg": "img-url", "storeId": 4},
+    {"storeName": "Dodge" , "storeLink":  "url", "storeImg": "img-url", "storeId": 5},
+    {"storeName": "Jeep" , "storeLink":  "url", "storeImg": "img-url", "storeId": 6},
+    {"storeName": "Hummer" , "storeLink":  "url", "storeImg": "img-url", "storeId": 7},
+    {"storeName": "Chrysler" , "storeLink":  "url", "storeImg": "img-url", "storeId": 8}
+  ],
+  "forMoms": [
+    {"storeName": "Ebay" , "storeLink":  "url", "storeImg": "img-url", "storeId": 0},
+    {"storeName": "Beko" , "storeLink":  "url", "storeImg": "img-url", "storeId": 1},
+    {"storeName": "Amazon" , "storeLink":  "url", "storeImg": "img-url", "storeId": 2},
+    {"storeName": "FixPrice" , "storeLink":  "url", "storeImg": "img-url", "storeId": 3 },
+    {"storeName": "Ebay" , "storeLink":  "url", "storeImg": "img-url", "storeId": 4},
+    {"storeName": "Ebay" , "storeLink":  "url", "storeImg": "img-url", "storeId": 5},
+    {"storeName": "Ebay" , "storeLink":  "url", "storeImg": "img-url", "storeId": 6},
+    {"storeName": "Ebay" , "storeLink":  "url", "storeImg": "img-url", "storeId": 7},
+    {"storeName": "Ebay" , "storeLink":  "url", "storeImg": "img-url", "storeId": 8}
+  ],
+  "Kids": [
+    {"storeName": "Lego" , "storeLink":  "url", "storeImg": "img-url", "storeId": 0},
+    {"storeName": "Lego" , "storeLink":  "url", "storeImg": "img-url", "storeId": 1},
+    {"storeName": "A" , "storeLink":  "url", "storeImg": "img-url", "storeId": 2},
+    {"storeName": "Fix" , "storeLink":  "url", "storeImg": "img-url", "storeId": 3 },
+    {"storeName": "Lego" , "storeLink":  "url", "storeImg": "img-url", "storeId": 4},
+    {"storeName": "Lego" , "storeLink":  "url", "storeImg": "img-url", "storeId": 5},
+    {"storeName": "Lego" , "storeLink":  "url", "storeImg": "img-url", "storeId": 6},
+    {"storeName": "Lego" , "storeLink":  "url", "storeImg": "img-url", "storeId": 7},
+    {"storeName": "Lego" , "storeLink":  "url", "storeImg": "img-url", "storeId": 8}
+  ],
+  "Accessories": [
+    {"storeName": "Apple" , "storeLink":  "url", "storeImg": "img-url", "storeId": 0},
+    {"storeName": "Chanel" , "storeLink":  "url", "storeImg": "img-url", "storeId": 1},
+    {"storeName": "Ebay" , "storeLink":  "url", "storeImg": "img-url", "storeId": 2},
+    {"storeName": "Apple" , "storeLink":  "url", "storeImg": "img-url", "storeId": 3 },
+    {"storeName": "Lego" , "storeLink":  "url", "storeImg": "img-url", "storeId": 4},
+    {"storeName": "Apple" , "storeLink":  "url", "storeImg": "img-url", "storeId": 5},
+    {"storeName": "Apple" , "storeLink":  "url", "storeImg": "img-url", "storeId": 6},
+    {"storeName": "Apple" , "storeLink":  "url", "storeImg": "img-url", "storeId": 7},
+    {"storeName": "Apple" , "storeLink":  "url", "storeImg": "img-url", "storeId": 8}
+  ],
+  "Toys": [
+    {"storeName": "Lego" , "storeLink":  "url", "storeImg": "img-url", "storeId": 0},
+    {"storeName": "Marvel" , "storeLink":  "url", "storeImg": "img-url", "storeId": 1},
+    {"storeName": "DC", "storeLink":  "url", "storeImg": "img-url", "storeId": 2},
+    {"storeName": "Transformers" , "storeLink":  "url", "storeImg": "img-url", "storeId": 3 },
+    {"storeName": "Pop it" , "storeLink":  "url", "storeImg": "img-url", "storeId": 4},
+    {"storeName": "simple dimple" , "storeLink":  "url", "storeImg": "img-url", "storeId": 5},
+    {"storeName": "Rick & Morty" , "storeLink":  "url", "storeImg": "img-url", "storeId": 6},
+    {"storeName": "Football" , "storeLink":  "url", "storeImg": "img-url", "storeId": 7},
+    {"storeName": "Disney" , "storeLink":  "url", "storeImg": "img-url", "storeId": 8}
+  ],
+  "Shoes": [
+    {"storeName": "Nike" , "storeLink":  "url", "storeImg": "img-url", "storeId": 0},
+    {"storeName": "Adidas" , "storeLink":  "url", "storeImg": "img-url", "storeId": 1},
+    {"storeName": "Basconi", "storeLink":  "url", "storeImg": "img-url", "storeId": 2},
+    {"storeName": "Puma" , "storeLink":  "url", "storeImg": "img-url", "storeId": 3 },
+    {"storeName": "UnderArmor" , "storeLink":  "url", "storeImg": "img-url", "storeId": 4},
+    {"storeName": "LiNing" , "storeLink":  "url", "storeImg": "img-url", "storeId": 5},
+    {"storeName": "SportShoes" , "storeLink":  "url", "storeImg": "img-url", "storeId": 6},
+    {"storeName": "ClassicShoes" , "storeLink":  "url", "storeImg": "img-url", "storeId": 7},
+    {"storeName": "Shoes" , "storeLink":  "url", "storeImg": "img-url", "storeId": 8}
+  ],
+  "extremeSport": [
+    {"storeName": "Nike" , "storeLink":  "url", "storeImg": "img-url", "storeId": 0},
+    {"storeName": "Adidas" , "storeLink":  "url", "storeImg": "img-url", "storeId": 1},
+    {"storeName": "Basconi", "storeLink":  "url", "storeImg": "img-url", "storeId": 2},
+    {"storeName": "Puma" , "storeLink":  "url", "storeImg": "img-url", "storeId": 3 },
+    {"storeName": "UnderArmor" , "storeLink":  "url", "storeImg": "img-url", "storeId": 4},
+    {"storeName": "LiNing" , "storeLink":  "url", "storeImg": "img-url", "storeId": 5},
+    {"storeName": "SportShoes" , "storeLink":  "url", "storeImg": "img-url", "storeId": 6},
+    {"storeName": "ClassicShoes" , "storeLink":  "url", "storeImg": "img-url", "storeId": 7},
+    {"storeName": "Shoes" , "storeLink":  "url", "storeImg": "img-url", "storeId": 8}
+  ],
+  "lingerie": [
+    {"storeName": "Victorya Secret" , "storeLink":  "url", "storeImg": "img-url", "storeId": 0},
+    {"storeName": "Victorya Secret" , "storeLink":  "url", "storeImg": "img-url", "storeId": 1},
+    {"storeName": "Victorya Secret", "storeLink":  "url", "storeImg": "img-url", "storeId": 2},
+    {"storeName": "Victorya Secret" , "storeLink":  "url", "storeImg": "img-url", "storeId": 3 },
+    {"storeName": "Victorya Secret" , "storeLink":  "url", "storeImg": "img-url", "storeId": 4},
+    {"storeName": "Victorya Secret" , "storeLink":  "url", "storeImg": "img-url", "storeId": 5},
+    {"storeName": "Victorya Secret" , "storeLink":  "url", "storeImg": "img-url", "storeId": 6},
+    {"storeName": "Victorya Secret" , "storeLink":  "url", "storeImg": "img-url", "storeId": 7},
+    {"storeName": "Victorya Secret" , "storeLink":  "url", "storeImg": "img-url", "storeId": 8}
+  ]
+}

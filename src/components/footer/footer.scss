@@ -1,0 +1,58 @@
+.footer{
+  padding: 53px 0 89px 0;
+  background: #40328A;
+  &__block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo{
+    display: flex;
+    flex-direction: column;
+  }
+  &__logo-img{
+    width: 188px;
+    border-right: 1px solid black;
+  }
+  &__description{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+  }
+  &__get-address-btn{
+    border-style: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 42px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+    background: #EF8C3B;
+    border-radius: 10px;
+    padding: 18px 32px;
+  }
+  &__support{
+    .support-title{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 42px;
+      /* identical to box height */
+      color: #FFFFFF;
+    }
+    .email{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 31px;
+
+      color: #FFFFFF;
+    }
+  }
+
+}
