@@ -1,5 +1,4 @@
 .home{
-
   background: #40328A;
   &__home-block{
     position: relative;
@@ -12,9 +11,13 @@
     font-weight: bold;
     font-size: 48px;
     line-height: 62px;
-
     color: #FFFFFF;
     margin-bottom: 54px;
+    .usa{
+      position: relative;
+      top: 9px;
+      left: -9px;
+    }
   }
   &__abouts{
     width: 625px;
@@ -26,6 +29,13 @@
     color: #FFFFFF;
     margin-bottom: 100px;
   }
+  &__air{
+    position: absolute;
+    top: 11%;
+    left: 41%;
+    z-index: 1;
+  }
+
   &__get-address-btn{
     border-style: none;
     font-style: normal;
@@ -41,6 +51,7 @@
     padding: 18px 32px;
   }
   &__img-block{
+    position: relative;
     img{
       margin-left: -130px;
     }
@@ -59,8 +70,14 @@
   }
   &__sky3{
     position: absolute;
-    top:61px;
+    top:26px;
     left: 50%;
 
   }
+  &__balex{
+    position: absolute;
+    top: 28%;
+    left: 65%;
+  }
+
 }

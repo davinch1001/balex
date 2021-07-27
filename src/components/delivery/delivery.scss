@@ -26,6 +26,15 @@
       border-radius: 10px;
       margin-bottom: 16px;
     }
+    .box2{
+      box-shadow: 0px 8px 8px 2px rgba(0, 0, 0, 0.4)
+    }
+    .box3{
+      box-shadow: 0px 8px 8px 2px rgba(0, 0, 0, 0.4)
+    }
+    .box4{
+      box-shadow: 4px 8px 8px 2px rgba(0, 0, 0, 0.4);
+    }
   }
   &__title{
     text-align: center;
@@ -92,6 +101,10 @@
     .step-img{
       display: block;
       margin: 0 auto;
+    }
+    .step-img.active{
+      width: 500px;
+      z-index: 2;
     }
   }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Calc = () => {
     return (
-        <section className='calc'>
+        <section className='calc' id='calc'>
             <h1 className="calc__title">Стоимость</h1>
             <div className="calc__box">
             <div className="calc__counter">
@@ -13,14 +13,14 @@ const Calc = () => {
                     <option value="">Россия</option>
                 </select>
                 <div className="kg-sm">
-                    <input type="text" className="calc__kilogram-input"/>
-                   <input type="text" className="calc__centimeter-input"/>
+                    <input type="text" placeholder="Киллограм" className="calc__kilogram-input"/>
+                   <input type="text" placeholder='Сантиметр' className="calc__centimeter-input"/>
                </div>
                <div className="w-h">
-                   <input type="text" className="calc__mass-input"/>
-                   <input type="text" className="calc__length-input"/>
-                   <input type="text" className="calc__width-input"/>
-                   <input type="text" className="calc__height-input"/>
+                   <input type="text" placeholder='Вес' className="calc__mass-input"/>
+                   <input type="text" placeholder='Длинна' className="calc__length-input"/>
+                   <input type="text" placeholder='Ширина' className="calc__width-input"/>
+                   <input type="text"  placeholder='Высота' className="calc__height-input"/>
                </div>
             </div>
                 <div className="calc__price-box">

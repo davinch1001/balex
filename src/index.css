@@ -6,6 +6,7 @@
           box-sizing: border-box;
   outline: none;
   scroll-behavior: smooth;
+  border-style: none;
 }
 
 body {
@@ -89,6 +90,11 @@ body {
   color: #FFFFFF;
   margin-bottom: 54px;
 }
+.home__title .usa {
+  position: relative;
+  top: 9px;
+  left: -9px;
+}
 .home__abouts {
   width: 625px;
   font-style: normal;
@@ -98,6 +104,12 @@ body {
   position: relative;
   color: #FFFFFF;
   margin-bottom: 100px;
+}
+.home__air {
+  position: absolute;
+  top: 11%;
+  left: 41%;
+  z-index: 1;
 }
 .home__get-address-btn {
   border-style: none;
@@ -117,6 +129,9 @@ body {
   border-radius: 10px;
   padding: 18px 32px;
 }
+.home__img-block {
+  position: relative;
+}
 .home__img-block img {
   margin-left: -130px;
 }
@@ -132,12 +147,28 @@ body {
 }
 .home__sky3 {
   position: absolute;
-  top: 61px;
+  top: 26px;
   left: 50%;
+}
+.home__balex {
+  position: absolute;
+  top: 28%;
+  left: 65%;
 }
 
 .store {
   padding: 50px 0 12px 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .store__title {
   text-align: center;
@@ -152,13 +183,75 @@ body {
 .store__search {
   width: 219px;
   height: 40px;
-  margin-left: 360px;
+  margin-right: 943px;
+  margin-bottom: 32px;
+  position: relative;
+}
+.store__search::before {
+  position: absolute;
+  width: 2px;
+  height: 200px;
+  background: #000;
+}
+.store__search .lupa {
+  position: absolute;
+  top: 36%;
+  left: 16px;
+}
+.store__input {
+  padding-left: 40px;
+  padding-right: 90px;
   background: #F6F6FF;
   border: 1px solid #40328A;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 10px;
-  margin-bottom: 32px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.store__input::-webkit-input-placeholder {
+  border-left: 1px solid black;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #000000;
+}
+.store__input::-moz-placeholder {
+  border-left: 1px solid black;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #000000;
+}
+.store__input:-ms-input-placeholder {
+  border-left: 1px solid black;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #000000;
+}
+.store__input::-ms-input-placeholder {
+  border-left: 1px solid black;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #000000;
+}
+.store__input::placeholder {
+  border-left: 1px solid black;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #000000;
 }
 .store__catalog {
   max-height: 480px;
@@ -220,7 +313,7 @@ body {
 .store__catalog-item:last-child {
   margin-right: 0;
 }
-.store__catalog-item:hover {
+.store__catalog-item:focus {
   cursor: pointer;
   background: #40328A;
   color: white;
@@ -244,7 +337,7 @@ body {
   text-decoration: none;
   color: #40328A;
 }
-.store__view-more:hover {
+.store__view-more:active {
   cursor: pointer;
   color: #343521;
 }
@@ -300,6 +393,18 @@ body {
           box-shadow: -4px 8px 8px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   margin-bottom: 16px;
+}
+.delivery__advantages-box .box2 {
+  -webkit-box-shadow: 0px 8px 8px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 8px 8px 2px rgba(0, 0, 0, 0.4);
+}
+.delivery__advantages-box .box3 {
+  -webkit-box-shadow: 0px 8px 8px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 8px 8px 2px rgba(0, 0, 0, 0.4);
+}
+.delivery__advantages-box .box4 {
+  -webkit-box-shadow: 4px 8px 8px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 4px 8px 8px 2px rgba(0, 0, 0, 0.4);
 }
 .delivery__title {
   text-align: center;
@@ -366,6 +471,10 @@ body {
   display: block;
   margin: 0 auto;
 }
+.delivery__step-box .step-img.active {
+  width: 500px;
+  z-index: 2;
+}
 
 .calc {
   padding: 80px 0 48px;
@@ -377,7 +486,9 @@ body {
   font-size: 40px;
   line-height: 52px;
   /* identical to box height */
+  text-align: center;
   color: #FFFFFF;
+  margin-bottom: 48px;
 }
 .calc__box {
   max-width: 844px;
@@ -400,7 +511,70 @@ body {
   border-radius: 5px;
   width: 328px;
   height: 50px;
+  text-align: center;
   margin-bottom: 32px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #000000;
+}
+.calc__country-input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__country-input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__country-input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__country-input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__country-input::placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__country-input select {
+  margin-left: 32px;
+}
+.calc__country-input option {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #000000;
 }
 .calc__kilogram-input {
   margin-right: 7px;
@@ -411,6 +585,52 @@ body {
   border-radius: 5px;
   width: 160px;
   height: 50px;
+  text-align: center;
+}
+.calc__kilogram-input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__kilogram-input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__kilogram-input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__kilogram-input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__kilogram-input::placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
 }
 .calc__centimeter-input {
   background: #FFFFFF;
@@ -420,6 +640,52 @@ body {
   border-radius: 5px;
   width: 160px;
   height: 50px;
+  text-align: center;
+}
+.calc__centimeter-input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__centimeter-input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__centimeter-input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__centimeter-input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__centimeter-input::placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
 }
 .calc__mass-input {
   margin-right: 8px;
@@ -430,6 +696,52 @@ body {
   border-radius: 5px;
   width: 75px;
   height: 35px;
+  text-align: center;
+}
+.calc__mass-input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__mass-input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__mass-input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__mass-input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__mass-input::placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
 }
 .calc__length-input {
   margin-right: 8px;
@@ -440,6 +752,52 @@ body {
   border-radius: 5px;
   width: 75px;
   height: 35px;
+  text-align: center;
+}
+.calc__length-input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__length-input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__length-input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__length-input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__length-input::placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
 }
 .calc__width-input {
   margin-right: 8px;
@@ -450,6 +808,52 @@ body {
   border-radius: 5px;
   width: 75px;
   height: 35px;
+  text-align: center;
+}
+.calc__width-input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__width-input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__width-input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__width-input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__width-input::placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
 }
 .calc__height-input {
   background: #FFFFFF;
@@ -459,6 +863,52 @@ body {
   border-radius: 5px;
   width: 75px;
   height: 35px;
+  text-align: center;
+}
+.calc__height-input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__height-input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__height-input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__height-input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__height-input::placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
 }
 .calc__price-box {
   margin-left: 106px;
@@ -472,6 +922,7 @@ body {
   border-radius: 5px;
   width: 219px;
   height: 85px;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -482,6 +933,51 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.calc__price::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__price::-moz-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__price:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__price::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.calc__price::placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
 }
 .calc__price .price {
   padding-bottom: 10px;
@@ -724,5 +1220,170 @@ body {
   font-size: 24px;
   line-height: 31px;
   color: #FFFFFF;
+}
+
+.header {
+  width: 100%;
+  background: #40328A;
+}
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header__logo {
+  width: 190px;
+}
+.header__input-block {
+  width: 410px;
+  height: 40px;
+  position: relative;
+}
+.header__input-block .input {
+  width: 100%;
+  height: 100%;
+  padding-left: 49px;
+  border-radius: 10px;
+}
+.header__input-block .input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 40px;
+  /* identical to box height */
+  color: #000000;
+}
+.header__input-block .input::-moz-placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 40px;
+  /* identical to box height */
+  color: #000000;
+}
+.header__input-block .input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 40px;
+  /* identical to box height */
+  color: #000000;
+}
+.header__input-block .input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 40px;
+  /* identical to box height */
+  color: #000000;
+}
+.header__input-block .input::placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 40px;
+  /* identical to box height */
+  color: #000000;
+}
+.header__input-magnifier {
+  position: absolute;
+  top: 13px;
+  left: 19px;
+}
+.header__user-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+}
+.header__price {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 32px;
+}
+.header__user-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__user-login .user {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+  margin: 0 10px;
+}
+
+.personal-account {
+  height: calc(100% - 69px);
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(100vh + -105px);
+}
+
+.empty-packages {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  color: red;
+  width: 1000px;
+}
+
+.empty-packages {
+  height: 100vh;
+  background: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu {
+  padding: 43px 0 0 34px;
+  width: 278px;
+  border-right: 1px solid #40328A;
+}
+.menu__menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 44px;
+}
+.menu__menu-link {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #40328A;
+  text-decoration: none;
 }
 /*# sourceMappingURL=index.css.map */

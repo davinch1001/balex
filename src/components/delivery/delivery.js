@@ -9,34 +9,39 @@ import step3 from '../../../src/img/delivery/step3.png'
 
 
 const Delivery = () => {
+    const increaseImg = (e) => {
+        e.preventDefault()
+        document.querySelector('.step-img').classList.toggle('active')
+    }
+
     return (
-        <section className="delivery">
+        <section className="delivery" id='delivery'>
             <h2 className="delivery__main-title">Доставка</h2>
             <div className="container">
                 <div className="delivery__advantages">
                     <div className="delivery__advantages-box">
-                        <div className="img-box">
+                        <div className="img-box box1">
                             <img src={item1} alt=""/>
                         </div>
                         <h2 className="delivery__title">Экономно</h2>
                         <p className="delivery__subtitle">Наши клиенты не платят налог с продаж</p>
                     </div>
                     <div className="delivery__advantages-box">
-                        <div className="img-box">
+                        <div className="img-box box2">
                             <img src={item2} alt=""/>
                         </div>
                         <h2 className="delivery__title">Надежно</h2>
                         <p className="delivery__subtitle">Наши клиенты не платят налог с продаж</p>
                     </div>
                     <div className="delivery__advantages-box">
-                        <div className="img-box">
+                        <div className="img-box box3">
                             <img src={item3} alt=""/>
                         </div>
                         <h2 className="delivery__title">Быстро</h2>
                         <p className="delivery__subtitle">Наши клиенты не платят налог с продаж</p>
                     </div>
                     <div className="delivery__advantages-box">
-                        <div className="img-box">
+                        <div className="img-box box4">
                             <img src={item4} alt=""/>
                         </div>
                         <h2 className="delivery__title">Просто</h2>
@@ -47,7 +52,7 @@ const Delivery = () => {
             <h2 className="delivery__main-subtitle">
                 Выполните три простых шага, чтобы получить покупку из США
             </h2>
-                <div className="delivery__steps">
+                <div onClick={increaseImg} className="delivery__steps">
                     <div className="delivery__step-box">
                         <h2 className="step-number">Шаг 1</h2>
                         <p className="step-title">Получите персональный адрес в США</p>
@@ -65,7 +70,7 @@ const Delivery = () => {
                         <h2 className="step-number">Шаг 2</h2>
                         <p className="step-title">Примите посылки в Бишкеке</p>
                         <p className="step-subtitle">Доставка займет от 7 дней с момента отправки. В кабинете можно следить за статусом доставки и отслеживать вашу посылку.</p>
-                        <img className='step-img' src={step3} alt=""/>
+                        <img className='delivery__steps' src={step3} alt=""/>
                     </div>
                 </div>
             </div>

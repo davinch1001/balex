@@ -31,7 +31,7 @@ const Faq = () => {
     }
 
     return (
-        <section className="faq">
+        <section className="faq" id='faq'>
             <h2 className="faq__title">F.A.Q</h2>
             <div className="container">
                 <div className="faq__questions">

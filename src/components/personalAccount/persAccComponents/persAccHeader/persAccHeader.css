@@ -1,0 +1,26 @@
+.header {
+  width: 100%;
+  background: #40328A;
+}
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header__logo {
+  width: 190px;
+}
+.header__input {
+  border-radius: 10px;
+  width: 410px;
+  height: 40px;
+  position: relative;
+}
+.header__input-magnifier {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

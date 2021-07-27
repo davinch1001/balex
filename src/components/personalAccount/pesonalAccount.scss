@@ -1,0 +1,13 @@
+.personal-account{
+  height: calc(100% - 69px);
+}
+
+.content{
+  display: flex;
+  height: calc(100vh + -105px);
+}
+.empty-packages {
+  flex-grow: 0;
+  color: red;
+  width: 1000px;
+}

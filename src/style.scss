@@ -7,6 +7,7 @@
   box-sizing: border-box;
   outline: none;
   scroll-behavior: smooth;
+  border-style: none;
 }
 
 body{
@@ -26,3 +27,7 @@ body{
 @import "../src/components/contacts/contacts";
 @import "../src/components/faq/faq";
 @import "../src/components/footer/footer";
+@import "../src/components/personalAccount/persAccComponents/persAccHeader/persAccHeader";
+@import "../src/components/personalAccount/pesonalAccount";
+@import "../src/components/personalAccount/persAccComponents/packages/emptyPackages";
+@import "../src/components/personalAccount/persAccComponents/menu/menu";

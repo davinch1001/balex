@@ -1,5 +1,9 @@
 .store{
   padding: 50px 0 12px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &__title{
     text-align: center;
     margin-bottom: 48px;
@@ -15,12 +19,40 @@
   &__search{
     width: 219px;
     height: 40px;
-    margin-left: 360px;
+    margin-right: 943px;
+    margin-bottom: 32px;
+    position: relative;
+    &::before{
+      position: absolute;
+      width: 2px;
+      height: 200px;
+      background: #000;
+    }
+    .lupa{
+      position: absolute;
+      top: 36%;
+      left: 16px;
+    }
+  }
+  &__input{
+    padding-left: 40px;
+    padding-right: 90px;
     background: #F6F6FF;
     border: 1px solid #40328A;
-    box-sizing: border-box;
     border-radius: 10px;
-    margin-bottom: 32px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    &::placeholder{
+
+      border-left: 1px solid black;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 23px;
+      text-align: center;
+      color: #000000;
+    }
   }
   &__catalog{
     max-height: 480px;
@@ -62,11 +94,17 @@
     &:last-child{
       margin-right: 0;
     }
-  &:hover{
-    cursor: pointer;
-    background: #40328A;
-    color: white;
-  }
+  //&:hover{
+  //  cursor: pointer;
+  //  background: #40328A;
+  //  color: white;
+  //}
+    &:focus{
+      cursor: pointer;
+      background: #40328A;
+      color: white;
+    }
+
   }
   &__store-links{
     display: none;
@@ -86,7 +124,7 @@
     line-height: 23px;
     text-decoration: none;
     color: #40328A;
-    &:hover{
+    &:active{
       cursor: pointer;
       color: #343521
     }

@@ -2,13 +2,13 @@ import React from 'react';
 
 const Contacts = () => {
     return (
-        <section className="contacts">
+        <section className="contacts" id='contact'>
             <h2 className="contacts__title">Контакты</h2>
             <div className="container">
                 <div className="contacts__block">
                     <div className="contacts__social-network">
                         <div className="social-network-title">Следи за нами в instagram</div>
-                        <a href="#" className="social-network-link">@betrex</a>
+                        <a href="#" className="social-network-link">@belex</a>
                         <p className="social-network-abouts">В Instagram мы рассказываем, как и где покупать в
                             США, информируем о сезонных и незапланированных распродажах в магазинах, скидываем
                             выгодные лоты, а также делимся другим полезным контентом.</p>

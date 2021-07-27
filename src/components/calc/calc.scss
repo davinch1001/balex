@@ -5,6 +5,16 @@
   border-radius: 5px;
   width: $wtd;
   height: $hgt;
+  text-align: center;
+  &::placeholder{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #737373;
+    text-align: center;
+  }
 }
 
 .calc{
@@ -16,9 +26,9 @@
     font-size: 40px;
     line-height: 52px;
     /* identical to box height */
-
-
+    text-align: center;
     color: #FFFFFF;
+    margin-bottom: 48px;
   }
   &__box{
     max-width: 844px;
@@ -34,6 +44,23 @@
   &__country-input{
     @include input(328px, 50px);
     margin-bottom: 32px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #000000;
+    select{
+      margin-left: 32px;
+    }
+    option{
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 21px;
+      /* identical to box height */
+      color: #000000;
+    }
   }
   &__kilogram-input{
     margin-right: 7px;
