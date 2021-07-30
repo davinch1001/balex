@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;700&display=swap");
+@import "components/personalAccount/pa-content/pa-header/paHeader.css";
 * {
   padding: 0;
   margin: 0;
@@ -506,8 +507,6 @@ body {
 .calc__country-input {
   background: #FFFFFF;
   border: 1px solid #EF8C3B;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 5px;
   width: 328px;
   height: 50px;
@@ -580,8 +579,6 @@ body {
   margin-right: 7px;
   background: #FFFFFF;
   border: 1px solid #EF8C3B;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 5px;
   width: 160px;
   height: 50px;
@@ -635,8 +632,6 @@ body {
 .calc__centimeter-input {
   background: #FFFFFF;
   border: 1px solid #EF8C3B;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 5px;
   width: 160px;
   height: 50px;
@@ -691,8 +686,6 @@ body {
   margin-right: 8px;
   background: #FFFFFF;
   border: 1px solid #EF8C3B;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 5px;
   width: 75px;
   height: 35px;
@@ -747,8 +740,6 @@ body {
   margin-right: 8px;
   background: #FFFFFF;
   border: 1px solid #EF8C3B;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 5px;
   width: 75px;
   height: 35px;
@@ -803,8 +794,6 @@ body {
   margin-right: 8px;
   background: #FFFFFF;
   border: 1px solid #EF8C3B;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 5px;
   width: 75px;
   height: 35px;
@@ -858,8 +847,6 @@ body {
 .calc__height-input {
   background: #FFFFFF;
   border: 1px solid #EF8C3B;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 5px;
   width: 75px;
   height: 35px;
@@ -913,12 +900,10 @@ body {
 .calc__price-box {
   margin-left: 106px;
 }
-.calc__price {
+.calc__prices {
   padding: 12px 32px;
   background: #FFFFFF;
   border: 1px solid #EF8C3B;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 5px;
   width: 219px;
   height: 85px;
@@ -934,7 +919,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.calc__price::-webkit-input-placeholder {
+.calc__prices::-webkit-input-placeholder {
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -943,7 +928,7 @@ body {
   color: #737373;
   text-align: center;
 }
-.calc__price::-moz-placeholder {
+.calc__prices::-moz-placeholder {
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -952,7 +937,7 @@ body {
   color: #737373;
   text-align: center;
 }
-.calc__price:-ms-input-placeholder {
+.calc__prices:-ms-input-placeholder {
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -961,7 +946,7 @@ body {
   color: #737373;
   text-align: center;
 }
-.calc__price::-ms-input-placeholder {
+.calc__prices::-ms-input-placeholder {
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -970,7 +955,7 @@ body {
   color: #737373;
   text-align: center;
 }
-.calc__price::placeholder {
+.calc__prices::placeholder {
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -979,16 +964,16 @@ body {
   color: #737373;
   text-align: center;
 }
-.calc__price .price {
+.calc__prices .prices {
   padding-bottom: 10px;
   width: 155px;
   text-align: center;
   border-bottom: 1px solid black;
 }
-.calc__price .price-value {
+.calc__prices .price-value {
   padding-top: 8px;
 }
-.calc__price .price-btn {
+.calc__prices .price-btn {
   border-style: none;
   background: #EF8C3B;
   border-radius: 10px;
@@ -1222,150 +1207,27 @@ body {
   color: #FFFFFF;
 }
 
-.header {
-  width: 100%;
-  background: #40328A;
-}
-.header__nav {
+.social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
 }
-.header__logo {
-  width: 190px;
-}
-.header__input-block {
-  width: 410px;
-  height: 40px;
-  position: relative;
-}
-.header__input-block .input {
-  width: 100%;
-  height: 100%;
-  padding-left: 49px;
-  border-radius: 10px;
-}
-.header__input-block .input::-webkit-input-placeholder {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 40px;
-  /* identical to box height */
-  color: #000000;
-}
-.header__input-block .input::-moz-placeholder {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 40px;
-  /* identical to box height */
-  color: #000000;
-}
-.header__input-block .input:-ms-input-placeholder {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 40px;
-  /* identical to box height */
-  color: #000000;
-}
-.header__input-block .input::-ms-input-placeholder {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 40px;
-  /* identical to box height */
-  color: #000000;
-}
-.header__input-block .input::placeholder {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 40px;
-  /* identical to box height */
-  color: #000000;
-}
-.header__input-magnifier {
-  position: absolute;
-  top: 13px;
-  left: 19px;
-}
-.header__user-data {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: white;
-}
-.header__price {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 23px;
-  color: #FFFFFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 32px;
-}
-.header__user-login {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.header__user-login .user {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 23px;
-  color: #FFFFFF;
-  margin: 0 10px;
+.social .fab {
+  color: #FFF;
+  font-size: 25px;
+  margin-right: 20px;
 }
 
 .personal-account {
-  height: calc(100% - 69px);
-}
-
-.content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: calc(100vh + -105px);
-}
-
-.empty-packages {
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  color: red;
-  width: 1000px;
-}
-
-.empty-packages {
   height: 100vh;
-  background: whitesmoke;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .menu {
   padding: 43px 0 0 34px;
-  width: 278px;
+  width: 14.5%;
+  height: calc(100vh - 73px);
   border-right: 1px solid #40328A;
 }
 .menu__menu-item {
@@ -1378,12 +1240,957 @@ body {
   margin-bottom: 44px;
 }
 .menu__menu-link {
+  background: transparent;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
   /* identical to box height */
-  color: #40328A;
+  color: #000;
   text-decoration: none;
+}
+.menu__menu-link.active {
+  color: #40328A;
+}
+
+.content {
+  width: 86.5%;
+}
+
+.packages-route {
+  display: none;
+}
+.packages-route.active {
+  display: block;
+  padding: 73px 0 141px 30px;
+}
+
+.price {
+  display: none;
+}
+.price.active {
+  width: 846px;
+  display: block;
+  padding: 190px 0 0 30px;
+}
+
+.address-block {
+  display: none;
+}
+.address-block.active {
+  display: block;
+  padding: 73px 0 24px 30px;
+}
+
+.help-block {
+  display: none;
+}
+.help-block.active {
+  display: block;
+  padding: 73px 0 0 30px;
+}
+
+.settings-block {
+  display: none;
+}
+.settings-block.active {
+  display: block;
+  padding: 73px 0 0 30px;
+}
+
+.tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.empty-packages {
+  display: none;
+}
+.empty-packages__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 42px;
+  /* identical to box height */
+  color: #000000;
+  margin-bottom: 26px;
+  margin-left: 79px;
+}
+.empty-packages__subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 31px;
+  margin-bottom: 24px;
+  color: #000000;
+}
+.empty-packages__description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  margin-bottom: 81px;
+  color: #000000;
+}
+.empty-packages__img {
+  display: block;
+  margin: 0 auto;
+}
+
+.packages__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 850px;
+}
+.packages__info .time-packages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.packages__user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #FFFFFF;
+  border: 1px solid #40328A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  width: 850px;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.packages__user-info .time-packages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.packages__item {
+  margin-right: 55px;
+}
+.packages__name {
+  margin-left: 30px;
+}
+
+.price-calc__title {
+  text-align: center;
+  margin-bottom: 72px;
+  margin-right: 356px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 42px;
+  /* identical to box height */
+  color: #000000;
+}
+.price-calc__box {
+  max-width: 844px;
+  padding: 48px 109px 67px 87px;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  border: 1px solid #40328A;
+  border-radius: 10px;
+}
+.price-calc .kg-sm {
+  margin-bottom: 24px;
+}
+.price-calc__country-input {
+  background: #FFFFFF;
+  border: 1px solid #40328A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 328px;
+  height: 50px;
+  text-align: center;
+  margin-bottom: 32px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #000000;
+}
+.price-calc__country-input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__country-input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__country-input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__country-input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__country-input::placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__country-input select {
+  margin-left: 32px;
+}
+.price-calc__country-input option {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #000000;
+}
+.price-calc__kilogram-input {
+  margin-right: 7px;
+  background: #FFFFFF;
+  border: 1px solid #40328A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 160px;
+  height: 50px;
+  text-align: center;
+}
+.price-calc__kilogram-input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__kilogram-input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__kilogram-input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__kilogram-input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__kilogram-input::placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__centimeter-input {
+  background: #FFFFFF;
+  border: 1px solid #40328A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 160px;
+  height: 50px;
+  text-align: center;
+}
+.price-calc__centimeter-input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__centimeter-input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__centimeter-input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__centimeter-input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__centimeter-input::placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__mass-input {
+  margin-right: 8px;
+  background: #FFFFFF;
+  border: 1px solid #40328A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 75px;
+  height: 35px;
+  text-align: center;
+}
+.price-calc__mass-input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__mass-input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__mass-input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__mass-input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__mass-input::placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__length-input {
+  margin-right: 8px;
+  background: #FFFFFF;
+  border: 1px solid #40328A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 75px;
+  height: 35px;
+  text-align: center;
+}
+.price-calc__length-input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__length-input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__length-input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__length-input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__length-input::placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__width-input {
+  margin-right: 8px;
+  background: #FFFFFF;
+  border: 1px solid #40328A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 75px;
+  height: 35px;
+  text-align: center;
+}
+.price-calc__width-input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__width-input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__width-input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__width-input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__width-input::placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__height-input {
+  background: #FFFFFF;
+  border: 1px solid #40328A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 75px;
+  height: 35px;
+  text-align: center;
+}
+.price-calc__height-input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__height-input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__height-input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__height-input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__height-input::placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__price-box {
+  margin-left: 106px;
+}
+.price-calc__prices {
+  padding: 12px 32px;
+  background: #FFFFFF;
+  border: 1px solid #40328A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 219px;
+  height: 85px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.price-calc__prices::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__prices::-moz-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__prices:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__prices::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__prices::placeholder {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #737373;
+  text-align: center;
+}
+.price-calc__prices .prices {
+  padding-bottom: 10px;
+  width: 155px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+.price-calc__prices .price-value {
+  padding-top: 8px;
+}
+.price-calc__prices .price-btn {
+  border-style: none;
+  background: #40328A;
+  border-radius: 10px;
+  padding: 18px 0;
+  width: 184px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #FFFFFF;
+  margin-top: 60px;
+}
+
+.address__title {
+  margin-left: 109px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 42px;
+  /* identical to box height */
+  margin-bottom: 19px;
+  color: #000000;
+}
+.address__subtitle {
+  margin-left: 109px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  width: 689px;
+  margin-bottom: 78px;
+  color: #000000;
+}
+.address__form {
+  max-width: 846px;
+  background: #FCFAFF;
+  border: 1px solid #40328A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  padding: 30px 80px 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.address__city-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.address__city-name .city-name {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 36px;
+  margin-bottom: 21px;
+  color: #000000;
+}
+.address__user-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.address__user-name .user-first-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 30px;
+  margin-bottom: 24px;
+}
+.address__user-name .user-last-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.address__street {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px;
+}
+.address__street .user-first-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 30px;
+  margin-bottom: 24px;
+}
+.address__street .user-last-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.address__input {
+  background: #FFFFFF;
+  border: 1px solid #40328A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  width: 330px;
+  height: 50px;
+}
+.address__input-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 24px;
+}
+.address__input-block .bottom-inputs {
+  width: 190px;
+}
+.address__input-block .inputs {
+  background: #FFFFFF;
+  border: 1px solid #40328A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  width: 190px;
+  height: 50px;
+}
+.address .name-text {
+  margin-left: 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+
+#de {
+  position: relative;
+}
+#de:after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 50px;
+  background: #000;
+  left: 150%;
+}
+
+.help {
+  width: 846px;
+  height: 580px;
+  overflow: hidden;
+}
+
+.settings__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 42px;
+  /* identical to box height */
+  color: #000000;
+  margin-bottom: 48px;
+}
+.settings__form {
+  position: relative;
+  padding: 54px 76px 12px;
+  background: #FCFAFF;
+  border: 1px solid #40328A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  max-width: 846px;
+}
+.settings__user-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.settings__user-data.data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.settings__input-block {
+  width: 330px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 30px;
+}
+.settings__input-block .input-text {
+  margin-left: 30px;
+}
+.settings__input-block:nth-child(even) {
+  margin-right: 0;
+}
+.settings__input-block:nth-child(1) {
+  margin-bottom: 12px;
+}
+.settings__input-block .input-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+.settings__input-block .settings-input {
+  background: #FFFFFF;
+  border: 1px solid #40328A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  width: 330px;
+  height: 50px;
+}
+.settings__input-block.data {
+  width: 689px;
+  margin-top: 12px;
+}
+.settings__input-block.data:last-child {
+  margin-bottom: 12px;
+}
+.settings__settings-input-data {
+  background: #FFFFFF;
+  border: 1px solid #40328A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  width: 689px;
+  height: 50px;
+}
+.settings__save-btn {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  background: #40328A;
+  border-radius: 10px;
+  width: 186px;
+  height: 40px;
+  color: #fff;
+  margin-top: 27px;
+}
+
+.pa-footer {
+  position: absolute;
+  bottom: 10px;
+  right: 149px;
+}
+.pa-footer__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.pa-footer__item {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+  margin-right: 40px;
+}
+.pa-footer__item:last-child {
+  margin-right: 0;
 }
 /*# sourceMappingURL=index.css.map */

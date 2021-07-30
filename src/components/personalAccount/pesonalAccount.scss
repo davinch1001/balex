@@ -1,13 +1,30 @@
 .personal-account{
-  height: calc(100% - 69px);
+  height: 100vh;
 }
 
-.content{
-  display: flex;
-  height: calc(100vh + -105px);
+
+.menu{
+  padding: 43px 0 0 34px;
+  width: 14.5%;
+  height: calc(100vh - 73px);
+  border-right: 1px solid #40328A;
+  &__menu-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 44px;
+  }
+  &__menu-link{
+    background: transparent;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #000;
+    text-decoration: none;
+    &.active{
+      color: #40328A;
+    }
+  }
 }
-.empty-packages {
-  flex-grow: 0;
-  color: red;
-  width: 1000px;
-}
+

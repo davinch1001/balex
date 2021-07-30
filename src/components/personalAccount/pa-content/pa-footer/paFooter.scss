@@ -1,0 +1,21 @@
+.pa-footer{
+  position: absolute;
+  bottom: 10px;
+  right: 149px;
+  &__items{
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__item{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+
+    margin-right: 40px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}

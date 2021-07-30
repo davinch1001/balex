@@ -1,8 +1,9 @@
 import React from 'react';
 import moreBtn from '../../../src/img/faq/more-btn.png'
-import {logDOM} from "@testing-library/react";
 
-const Faq = () => {
+const Faq = ({title, margin}) => {
+
+
     const questions = [{
         question: 'Как оформить заказ на доставку?',
         answer: 'Войдите в личный кабинет и зарегайся и тд и тд и тд'
@@ -32,7 +33,7 @@ const Faq = () => {
 
     return (
         <section className="faq" id='faq'>
-            <h2 className="faq__title">F.A.Q</h2>
+            <h2 style={margin} className="faq__title">{title}</h2>
             <div className="container">
                 <div className="faq__questions">
                     {questions.map((el, idx) => (

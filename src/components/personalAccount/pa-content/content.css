@@ -1,0 +1,44 @@
+.content {
+  width: 86.5%;
+  background: #F6F6FF;
+}
+
+.packages-route {
+  display: none;
+}
+.packages-route.active {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.price {
+  display: none;
+}
+.price.active {
+  display: block;
+}
+
+.address {
+  display: none;
+}
+.address.active {
+  display: block;
+}
+
+.help {
+  display: none;
+}
+.help.active {
+  display: block;
+}
+
+.settings {
+  display: none;
+}
+.settings.active {
+  display: block;
+}

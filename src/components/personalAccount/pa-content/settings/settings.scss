@@ -1,0 +1,76 @@
+.settings{
+  &__title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    /* identical to box height */
+    color: #000000;
+    margin-bottom: 48px;
+  }
+  &__form{
+    position: relative;
+    padding: 54px 76px 12px;
+    background: #FCFAFF;
+    border: 1px solid #40328A;
+    box-sizing: border-box;
+    border-radius: 10px;
+    max-width: 846px;
+  }
+  &__user-data{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &.data{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__input-block{
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    .input-text{
+      margin-left: 30px;
+    }
+    &:nth-child(even){
+      margin-right: 0;
+    }
+    &:nth-child(1){
+      margin-bottom: 12px;
+    }
+    .input-text{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+      color: #000000;
+    }
+    .settings-input{
+      @include address-input(330px, 50px)
+    }
+    &.data{
+      width: 689px;
+      margin-top: 12px;
+      &:last-child{
+        margin-bottom: 12px;
+      }
+    }
+  }
+  &__settings-input-data{
+    @include address-input(689px, 50px)
+  }
+  &__save-btn{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    background: #40328A;
+    border-radius: 10px;
+    width: 186px;
+    height: 40px;
+    color: #fff;
+    margin-top: 27px;
+  }
+}

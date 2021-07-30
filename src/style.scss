@@ -27,7 +27,12 @@ body{
 @import "../src/components/contacts/contacts";
 @import "../src/components/faq/faq";
 @import "../src/components/footer/footer";
-@import "../src/components/personalAccount/persAccComponents/persAccHeader/persAccHeader";
 @import "../src/components/personalAccount/pesonalAccount";
-@import "../src/components/personalAccount/persAccComponents/packages/emptyPackages";
-@import "../src/components/personalAccount/persAccComponents/menu/menu";
+@import "components/personalAccount/pa-content/pa-header/paHeader.css";
+@import "../src/components/personalAccount/pa-content/content";
+@import "../src/components/personalAccount/pa-content/packages/packages";
+@import "../src/components/personalAccount/pa-content/price/price";
+@import "../src/components/personalAccount/pa-content/address/address";
+@import "../src/components/personalAccount/pa-content/help/help";
+@import "../src/components/personalAccount/pa-content/settings/settings";
+@import "../src/components/personalAccount/pa-content/pa-footer/paFooter";

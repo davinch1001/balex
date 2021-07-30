@@ -24,8 +24,8 @@ const Calc = () => {
                </div>
             </div>
                 <div className="calc__price-box">
-                    <div className="calc__price">
-                        <span className="price">Цена</span>
+                    <div className="calc__prices">
+                        <span className="prices">Цена</span>
                         <span className="price-value">4 644 com</span>
                         <button className='price-btn'>Рассчитать</button>
                     </div>

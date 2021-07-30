@@ -15,6 +15,11 @@ const Footer = () => {
                 <div className="footer__support">
                     <h2 className='support-title'>Поддержка</h2>
                     <p className="email">Email:balex@gmail.com</p>
+                    <div className="social">
+                        <i className="fab fa-youtube"></i>
+                        <i className="fab fa-facebook"></i>
+                        <i className="fab fa-telegram-plane"></i>
+                    </div>
                 </div>
                 </div>
             </div>

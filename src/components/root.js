@@ -9,8 +9,6 @@ import Calc from "./calc/calc";
 import Contacts from "./contacts/contacts";
 import Faq from "./faq/faq";
 import Footer from "./footer/footer";
-import Help from "./personalAccount/persAccComponents/help/help";
-import Scene from "./personalAccount/persAccComponents/Scene/Scene";
 
 const Root = () => {
     return (
@@ -21,12 +19,10 @@ const Root = () => {
     <Route exact path='/' component={Delivery}/>
     <Route exact path='/' component={Calc}/>
     <Route exact path='/' component={Contacts}/>
-    <Route exact path='/' component={Faq}/>
+    <Route exact path='/' component={() => <Faq title={'F.A.Q'}/>}/>
     <Route exact path='/' component={Footer}/>
     <Switch>
         <Route exact path='/personalAccount' component={PersonalAccount}/>
-        <Route exact path='/personalAccount' component={Scene}/>
-
     </Switch>
 </BrowserRouter>
     );

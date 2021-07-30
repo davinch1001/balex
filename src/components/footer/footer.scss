@@ -56,3 +56,14 @@
   }
 
 }
+
+.social{
+  display: flex;
+  align-content: space-between;
+  .fab{
+    color: #FFF;
+    font-size: 25px;
+    margin-right: 20px;
+  }
+}
+

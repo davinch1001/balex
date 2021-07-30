@@ -1,11 +1,11 @@
 import React from 'react';
-import headerLogo from '../../../../../src/img/persAcc/logo-removebg-preview 1.png'
-import lupa from '../../../../../src/img/persAcc/lupa.png'
-import card from '../../../../../src/img/persAcc/card.png'
-import userAva from '../../../../../src/img/persAcc/Ellipse 1.png'
+import headerLogo from '../../../../img/persAcc/logo-removebg-preview 1.png'
+import lupa from '../../../../img/persAcc/lupa.png'
+import card from '../../../../img/persAcc/card.png'
+import userAva from '../../../../img/persAcc/Ellipse 1.png'
 import {Link} from "react-router-dom";
 
-const PersAccHeader = () => {
+const PaHeader = () => {
     return (
         <header className="header">
             <div className="container">
@@ -30,4 +30,4 @@ const PersAccHeader = () => {
     );
 };
 
-export default PersAccHeader;
+export default PaHeader;

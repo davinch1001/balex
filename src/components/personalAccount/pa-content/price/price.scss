@@ -1,6 +1,7 @@
 @mixin input($wtd, $hgt){
   background: #FFFFFF;
-  border: 1px solid #EF8C3B;
+  border: 1px solid #40328A;
+  box-sizing: border-box;
   border-radius: 5px;
   width: $wtd;
   height: $hgt;
@@ -16,18 +17,20 @@
   }
 }
 
-.calc{
-  padding: 80px 0 48px;
-  background: #40328A;
+.price-calc{
   &__title{
-    font-style: normal;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 52px;
-    /* identical to box height */
     text-align: center;
-    color: #FFFFFF;
-    margin-bottom: 48px;
+    margin-bottom: 72px;
+    margin-right: 356px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    /* identical to box height */
+
+
+    color: #000000;
+
   }
   &__box{
     max-width: 844px;
@@ -35,6 +38,7 @@
     background: white;
     display: flex;
     margin: 0 auto;
+    border: 1px solid #40328A;
     border-radius: 10px;
   }
   .kg-sm{
@@ -103,17 +107,17 @@
     }
     .price-btn{
       border-style: none;
-      background: #EF8C3B;
+      background: #40328A;
       border-radius: 10px;
-      padding: 18px 32px;
+      padding: 18px 0;
+      width: 184px;
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
       line-height: 21px;
       /* identical to box height */
-      margin-top: 60px;
-
       color: #FFFFFF;
+      margin-top: 60px;
     }
   }
 }

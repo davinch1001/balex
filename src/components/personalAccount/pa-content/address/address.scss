@@ -1,0 +1,117 @@
+@mixin address-input($wtd, $hgt){
+  background: #FFFFFF;
+  border: 1px solid #40328A;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: $wtd;
+  height: $hgt;
+}
+
+.address{
+  &__title{
+    margin-left: 109px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    /* identical to box height */
+    margin-bottom: 19px;
+    color: #000000;
+  }
+  &__subtitle{
+    margin-left: 109px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    width: 689px;
+    margin-bottom: 78px;
+    color: #000000;
+  }
+  &__form{
+    max-width: 846px;
+    background: #FCFAFF;
+    border: 1px solid #40328A;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 30px 80px 12px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__city-name{
+    display: flex;
+    justify-content: space-around;
+    .city-name{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 21px;
+      color: #000000;
+    }
+  }
+  &__user-name{
+    display: flex;
+    .user-first-name{
+      display: flex;
+      flex-direction: column;
+      margin-right: 30px;
+      margin-bottom: 24px;
+
+    }
+    .user-last-name{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__street{
+    display: flex;
+    margin-bottom: 24px;
+    .user-first-name{
+      display: flex;
+      flex-direction: column;
+      margin-right: 30px;
+      margin-bottom: 24px;
+
+    }
+    .user-last-name{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__input{
+    @include address-input(330px, 50px);
+  }
+  &__input-block{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    .bottom-inputs{
+      width: 190px
+    }
+    .inputs{
+      @include address-input(190px, 50px)
+    }
+  }
+  .name-text{
+    margin-left: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+  }
+}
+
+#de{
+  position: relative;
+  &:after{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 50px;
+    background: #000;
+    left: 150%;
+  }
+
+}

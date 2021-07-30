@@ -1,4 +1,5 @@
 import React from 'react';
+
 import homeImg from '../../../src/img/home/delivery.png'
 import balex from '../../../src/img/home/BALEX.png'
 import sky from '../../../src/img/home/sky.png'

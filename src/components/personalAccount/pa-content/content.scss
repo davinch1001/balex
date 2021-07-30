@@ -1,0 +1,47 @@
+.content{
+  width: 86.5%;
+}
+
+.packages-route{
+  display: none;
+  &.active{
+    display: block;
+    padding: 73px 0 141px 30px;
+  }
+}
+
+.price{
+  display: none;
+  &.active{
+    width: 846px;
+    display: block;
+    padding: 190px 0 0 30px;
+  }
+}
+.address-block{
+  display: none;
+  &.active{
+    display: block;
+    padding: 73px 0 24px 30px;
+  }
+}
+
+.help-block{
+  display: none;
+  &.active{
+    display: block;
+    padding: 73px 0 0 30px;
+  }
+}
+
+.settings-block{
+  display: none;
+  &.active{
+    display: block;
+    padding: 73px 0 0 30px;
+  }
+}
+
+.tabs{
+  display: flex;
+}
