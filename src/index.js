@@ -11,7 +11,6 @@ ReactDOM.render(
       <Provider store={store}>
           <Root />
       </Provider>
-
   </React.StrictMode>,
   document.getElementById('root')
 );
