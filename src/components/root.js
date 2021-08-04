@@ -9,6 +9,8 @@ import Calc from "./calc/calc";
 import Contacts from "./contacts/contacts";
 import Faq from "./faq/faq";
 import Footer from "./footer/footer";
+import Registr from "./auth/registr/registr";
+import Auth from "./auth/auth";
 
 const Root = () => {
     return (
@@ -17,12 +19,13 @@ const Root = () => {
     <Route exact path='/' component={Home}/>
     <Route exact path='/' component={Store}/>
     <Route exact path='/' component={Delivery}/>
-    <Route exact path='/' component={Calc}/>
+    {/*<Route exact path='/' component={Calc}/>*/}
     <Route exact path='/' component={Contacts}/>
     <Route exact path='/' component={() => <Faq title={'F.A.Q'}/>}/>
     <Route exact path='/' component={Footer}/>
     <Switch>
         <Route exact path='/personalAccount' component={PersonalAccount}/>
+        <Route exact path='/auth' component={Auth}/>
     </Switch>
 </BrowserRouter>
     );

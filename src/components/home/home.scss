@@ -1,5 +1,6 @@
 .home{
   background: #40328A;
+  padding-bottom: 30px;
   &__home-block{
     position: relative;
     display: flex;
@@ -80,4 +81,76 @@
     left: 65%;
   }
 
+}
+
+@media (max-width: 1200px) {
+  .home__img-block img {
+    margin-left: -208px;
+  }
+}
+
+@media (max-width: 1264px) {
+  .home__title{
+    width: 502px;
+  }
+  .home-img{
+    display: none;
+  }
+  .home__balex{
+    display: none;
+  }
+  .home__air{
+    display: none;
+  }
+  .home__sky1{
+    display: none;
+  }
+  .home__sky2{
+    display: none;
+  }
+  .home__sky3{
+    display: none;
+  }
+
+}
+
+@media (max-width: 1080px) {
+  .home__home-block{
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 733px) {
+  .home__title{
+    font-size: 38px
+  }
+}
+
+@media (max-width: 634px) {
+  .home__title{
+    width: 320px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+
+    color: #FFFFFF;
+  }
+  .home__abouts{
+    width: 272px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: #FFFFFF
+  }
+  .home__get-address-btn{
+    padding: 8px 32px;
+  }
+  .usa{
+    width: 40px;
+    margin-left: 10px;
+  }
 }

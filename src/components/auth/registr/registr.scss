@@ -1,0 +1,28 @@
+.registr{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__input{
+    @include address-input(400px, 50px);
+    margin-bottom: 30px;
+  }
+  &__btn{
+    width: 150px;
+    height: 50px;
+    background: #40328A;
+    color: #F6F6FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid white;
+    &.cancel{
+      border: 1px solid #EF8C3B;
+    }
+  }
+  &__btns{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

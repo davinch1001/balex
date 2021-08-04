@@ -5,6 +5,7 @@ const Settings = () => {
         <div className='settings'>
             <h2 className="settings__title">Настройки аккаунта</h2>
             <div className="settings__form">
+                <form action="">
                 <div className="settings__user-data">
                     <div className="settings__input-block">
                         <span className="input-text">Имя</span>
@@ -53,9 +54,10 @@ const Settings = () => {
                         <input type="text" className="settings-input"/>
                     </div>
                 </div>
-
+                    <button className="settings__save-btn">Сохранить</button>
+                </form>
             </div>
-            <button className="settings__save-btn">Сохранить</button>
+
         </div>
     );
 };

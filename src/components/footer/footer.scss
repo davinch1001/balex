@@ -67,3 +67,30 @@
   }
 }
 
+@media (max-width: 882px) {
+  .footer__block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__description{
+    padding: 32px 0;
+    text-align: center
+  }
+  .footer__get-address-btn{
+    margin-bottom: 12px;
+  }
+  .footer__logo-img{
+    width: 368px;
+    border-right: 1px solid gray;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .footer__logo-img{
+    width: 320px;
+  }
+}
+

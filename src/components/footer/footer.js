@@ -1,5 +1,5 @@
 import React from 'react';
-import footerLogo from '../../../src/img/header/logo-header.png'
+import footerLogo from '../../../src/img/footer/footer-logo.png'
 
 const Footer = () => {
     return (
@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="footer__block">
                 <div className="footer__logo">
                     <img className="footer__logo-img" src={footerLogo} alt='logo'/>
-                    <p className="footer__description">Сервис доставки посылок <br/>
+                    <p className="footer__description">Сервис доставки посылок
                         из США</p>
                 </div>
                 <button className="footer__get-address-btn">Получить адрес</button>

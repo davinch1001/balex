@@ -2,11 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Root from "./components/root";
+import store from "./redux";
+import {Provider} from "react-redux";
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Root />
+      <Provider store={store}>
+          <Root />
+      </Provider>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

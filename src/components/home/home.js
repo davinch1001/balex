@@ -30,7 +30,7 @@ const Home = () => {
 
                     </div>
                     <div className="home__img-block">
-                        <img src={homeImg} alt=""/>
+                        <img className='home-img' src={homeImg} alt=""/>
                         <img src={balex} className='home__balex' alt=""/>
                     </div>
                 </div>

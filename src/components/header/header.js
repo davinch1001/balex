@@ -20,7 +20,7 @@ const Header = () => {
                 <div className="header__personal-account">
                     <img  src={lengTrans} alt=""/> <span className='after'></span>
                     <img src={account} alt=""/>
-                    <Link className='personal-account-text' to='/personalAccount'> Личный кабинет</Link>
+                    <Link className='personal-account-text' to='/auth'> Личный кабинет</Link>
                 </div>
             </div>
             </div>

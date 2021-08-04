@@ -14,9 +14,13 @@
   }
   &__advantages{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap ;
   }
   &__advantages-box{
+    max-width: 298px;
+    margin-bottom: 24px;
+    margin-right: 18px;
     .img-box{
       display: flex;
       justify-content: center;
@@ -25,6 +29,10 @@
       box-shadow: -4px 8px 8px rgba(0, 0, 0, 0.4);
       border-radius: 10px;
       margin-bottom: 16px;
+      margin-right: 29px;
+      &:last-child{
+        margin-left: 0;
+      }
     }
     .box2{
       box-shadow: 0px 8px 8px 2px rgba(0, 0, 0, 0.4)
@@ -61,7 +69,8 @@
   }
   &__steps{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   &__step-box{
     padding: 32px 17px 16px 42px;
@@ -69,6 +78,8 @@
     height: 407px;
     background: #40328A;
     border-radius: 10px;
+    margin-bottom: 12px;
+    margin-right: 29px;
     .step-number{
       font-style: normal;
       font-weight: 600;
@@ -106,5 +117,31 @@
       width: 500px;
       z-index: 2;
     }
+  }
+}
+
+@media (max-width: 500px) {
+    .delivery__step-box .step-number{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 36px;
+      color: #FFFFFF;
+    }
+  .delivery__step-box .step-title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: #FFFFFF;
+  }
+  .delivery__step-box .step-subtitle{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #FFFFFF
   }
 }

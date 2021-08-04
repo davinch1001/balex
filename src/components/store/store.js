@@ -37,8 +37,8 @@ const Store = () => {
             </div>
             <div className="container">
                 <div className="store__catalog">
-                    {storeLinks.map(el => el.toLowerCase()).filter((el) => el.includes(search.toLowerCase())).map((el, idx) => (
-                        <div className='store__catalog-items'>
+                    {storeLinks.map((el) => el.toLowerCase()).filter((el) => el.includes(search.toLowerCase())).map((el, idx) => (
+                        <div className='store__catalog-items' key={idx}>
                             <div id={idx} onClick={openStores} className='store__catalog-item'>{capitalizeFirstLetter(el)}</div>
                             <div className="store__store-links">
                                 {/*<Swiper*/}

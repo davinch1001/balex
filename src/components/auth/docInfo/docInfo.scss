@@ -1,0 +1,25 @@
+.doc{
+  &__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__input{
+    @include address-input(400px, 50px)
+  }
+  &__btns{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+  }
+  &__btn{
+    background: #40328A;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid white;
+  }
+}

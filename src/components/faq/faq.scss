@@ -50,10 +50,26 @@
       .more-btn-img{
         margin-right: 10px;
         transition: 0.5s;
+        height: 30px;
+        width: 30px;
       }
       .more-btn-img.rotate{
         transform: rotate(180deg);
       }
     }
+  }
+}
+
+@media (max-width: 449px) {
+  .faq__questions .question .more-btn-img{
+    width: 20px;
+    height: 20px;
+  }
+  .faq__questions .question{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: #40328A
   }
 }

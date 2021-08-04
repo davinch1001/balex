@@ -37,7 +37,7 @@ const Faq = ({title, margin}) => {
             <div className="container">
                 <div className="faq__questions">
                     {questions.map((el, idx) => (
-                        <div className='question-block'>
+                        <div className='question-block' key={idx}>
                             <div className='question' id={idx} onClick={showAnswer}>{el.question} <img
                                 className='more-btn-img' src={moreBtn} alt=""/>
                             </div>
