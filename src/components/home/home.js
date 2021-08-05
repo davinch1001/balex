@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import homeImg from '../../../src/img/home/delivery.png'
 import balex from '../../../src/img/home/BALEX.png'
@@ -13,6 +13,8 @@ const Home = ({activeModal, setActiveModal}) => {
         <section className="home">
             <div onClick={() => setActiveModal(false)} className={activeModal ? 'authorization active' : 'authorization'}>
                 <div onClick={e => e.stopPropagation() } className="auth-block"><Auth/></div>
+
+
             </div>
             <div className="container">
                 <div className="home__home-block">
