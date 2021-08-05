@@ -1,25 +1,67 @@
 .doc{
+  &__title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 47px;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+
+  }
   &__form{
     display: flex;
+    flex-wrap: wrap;
+    .select{@include address-input(229px, 45px)}
+
+    margin-top: 124px;
+  }
+  &__input-block{
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-right: 30px;
+    margin-bottom: 24px;
+    &:nth-child(even){
+      margin-right: 0;
+    }
+    .input-text{
+      margin-left: 11px;
+      color: white;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 23px;
+    }
   }
   &__input{
-    @include address-input(400px, 50px)
+    @include address-input(229px, 45px);
   }
   &__btns{
     display: flex;
     justify-content: space-between;
-    width: 400px;
+    width: 488px;
+    margin-top: 69px;
+    align-items: flex-end;
   }
   &__btn{
-    background: #40328A;
-    width: 100px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 31px;
+    background: #EF8C3B;
     border-radius: 10px;
-    border: 1px solid white;
+    color: #FFFFFF;
+    width: 269px;
+    &.cancel{
+      border-style: none;
+      color: #EF8C3B;
+      background: none;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 23px;
+      width: 53px;
+    }
   }
 }

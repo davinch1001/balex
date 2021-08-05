@@ -1,0 +1,24 @@
+.auth{
+  &__steps-tabs {
+    width: 490px;
+    display: flex;
+    justify-content: space-around;
+    .step-tab{
+      font-weight: 200;
+      font-size: 36px;
+      line-height: 47px;
+      /* identical to box height */
+      color: #FFFFFF;
+      background: transparent;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      margin-bottom: 30px;
+      border: 2px solid black;
+      &.active{
+        background: #fff;
+        color: #EF8C3B;
+      }
+    }
+  }
+}

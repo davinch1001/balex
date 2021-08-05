@@ -12,6 +12,8 @@ import Address from "./pa-content/address/address";
 import Help from "./pa-content/help/help";
 import Settings from "./pa-content/settings/settings";
 import PaFooter from "./pa-content/pa-footer/paFooter";
+import {useDispatch} from "react-redux";
+import {createOrder} from "../../redux/reducers/auth";
 
 const PersonalAccount = () => {
     const [toggleState, setToggleState] = useState(1)
@@ -19,12 +21,24 @@ const PersonalAccount = () => {
     const toggleTab = (idx) => {
         setToggleState(idx)
     }
-
+    const dispatch = useDispatch()
+    const orderHandler = (e) => {
+        e.preventDefault()
+        dispatch(createOrder(e.target.children[0].value, e.target.children[2].value,e.target.children[3].value))
+    }
     return (
         <div className='personal-account'>
             <PaHeader/>
             <div className="tabs">
                 <div className='menu'>
+                    <button className="btn-add">Добавить</button>
+                    <form onSubmit={orderHandler} action="" className="order">
+                        <input type="text" className="order__input"/>
+                        <input type="text" className="order__input"/>
+                        <input type="text" className="order__input"/>
+                        <button className="order__btn">Отмена</button>
+                        <button type='submit' className="order__btn">Далее</button>
+                    </form>
                     {
                         menuItem.map((el, idx) => (
                             <div className='menu__menu-item' key={idx}>

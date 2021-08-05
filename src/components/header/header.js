@@ -4,7 +4,7 @@ import logoHeader from '../../../src/img/header/logo-header.png'
 import lengTrans from '../../../src/img/header/leng-icon.svg'
 import account from '../../../src/img/header/account.png'
 
-const Header = () => {
+const Header = ({activeModal, setActiveModal}) => {
     return (
         <header className="header">
             <div className="container">
@@ -21,6 +21,8 @@ const Header = () => {
                     <img  src={lengTrans} alt=""/> <span className='after'></span>
                     <img src={account} alt=""/>
                     <Link className='personal-account-text' to='/auth'> Личный кабинет</Link>
+                    <button onClick={() => setActiveModal(true)}>Click me</button>
+
                 </div>
             </div>
             </div>

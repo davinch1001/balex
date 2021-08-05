@@ -8,6 +8,19 @@
   width: 14.5%;
   height: calc(100vh - 73px);
   border-right: 1px solid #40328A;
+  .btn-add{
+    border-style: none;
+    background: #EF8C3B;
+    border-radius: 10px;
+    padding: 18px 32px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    /* identical to box height */
+    margin-bottom: 40px;
+    color: #FFFFFF;
+  }
   &__menu-item{
     display: flex;
     align-items: center;
@@ -25,6 +38,25 @@
     &.active{
       color: #40328A;
     }
+  }
+}
+
+.order{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__input{
+    margin-bottom: 30px;
+    width: 300px;
+    height: 50px;
+    border: 1px solid black;
+  }
+  &__btn{
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
   }
 }
 

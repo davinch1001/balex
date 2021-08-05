@@ -1,32 +1,13 @@
 .auth {
-  width: 1000px;
+  max-width: 556px;
+  height: 703px;
   background: #40328A;
-  padding: 68px 30px;
+  padding: 35px 34px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
-
-  &__steps-tabs {
-    width: 100%;
-    .step-tab{
-      background: #fff;
-      width: 33.3%;
-      height: 50px;
-      margin-bottom: 30px;
-      border-right: 1px solid black;
-      &.step1{
-        border-radius: 10px 0 0 10px;
-      }
-      &.step3{
-        border-radius: 0 10px 10px 0;
-      }
-      &:last-child{
-        border: none;
-      }
-    }
-  }
   &__registr-block{
     display: none;
     &.active{

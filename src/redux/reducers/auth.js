@@ -1,25 +1,37 @@
 import axios from "axios";
 
 const AUTH = 'AUTH'
-const CODE = 'CODE'
+const ORDER = 'ORDER'
+const DOC = 'DOC'
 
 const initState = {
     authData:{},
-    userPass: '',
     userEmail: '',
-    status: 'signed-out'
+    userPass: '',
+    status: 'signed-out',
+    order: {}
 }
+
+
+
 
 export default (state = initState, action) => {
     switch (action.type) {
         case AUTH: {
-            return {...state, authData: action.authData, userPass: action.userPass, userEmail:action.userEmail}
+            return {...state, authData: action.authData, userPass: action.userPass, userEmail:action.userEmail, status: "signed-in" }
+        }
+        case DOC: {
+            return {...state, authData: action.authData, userPass: action.userPass, userEmail:action.userEmail }
+        }
+        case ORDER:{
+            return {...state, order: action.order}
         }
 
         default:
             return state;
     }
 }
+
 
 export const postUserData = (user_name, user_last_name, user_email, user_pass, user_num) => {
     return (dispatch) => {
@@ -39,52 +51,59 @@ export const postUserData = (user_name, user_last_name, user_email, user_pass, u
         })
             .then((data) => {
                 if(data.data.successful){
-                    dispatch({type: AUTH, authData: data.data.object, userPass: user_pass})
+                    dispatch({type: AUTH, authData: data.data.object, userEmail: user_email, userPass: user_pass, status: 'sign-in'})
                 }
             })
     }
 }
 
-const hasher = (email, password) => {
-    let token = email + ":" + password;
+const hash = (email, password) => {
+    let token = email + ":"  + password;
     let hash = btoa(token);
-    return "Basic " + hash;
+    return `Basic ${hash}`;
 }
 
 export const postCode = (code) => {
-    return (dispatch) => {
+    return (dispatch, getState) => {
+        const {userEmail, userPass} = getState().auth
         axios({
             method: 'post',
             url: 'https://shipper-back.herokuapp.com/api/users/activateUser',
             headers: {
-                "Content-Type": "application/json",
-                "Authorization": hasher(initState.userEmail, initState.userPass)
+                "Authorization": hash(userEmail, userPass),
+                "Content-Type": "application/json"
             },
             data: {
                 activationCode: code
             }
-        }).then((data)  => dispatch({type: CODE,  activationCode: data.activationCode}) )
+        }).then((data) => {
+            if(data.data.successful){
+                dispatch({type: AUTH, authData: data.data.object,userEmail: userEmail, userPass: userPass, status: 'sign-in'})
+            }
+        })
     }
 }
 
 export const postDocInfo = (documentType, documentNumber, address, country) => {
-    return (dispatch) => {
+    return (dispatch, getState) => {
+        const {userEmail, userPass} = getState().auth
+        console.log('======>', userEmail , userPass)
         axios({
             method: 'post',
             url: 'https://shipper-back.herokuapp.com/api/users/saveDocumentInfo',
             headers:{
+                "Authorization": hash(userEmail, userPass),
                 "Content-Type": "application/json",
-                "Authorization": hasher(initState.userEmail, initState.userPass)
             },
             data: {
-                documentNumber: documentNumber,
                 documentType: documentType,
-                country: country,
-                address: address
+                documentNumber: documentNumber,
+                address: address,
+                country: country
             }
         }).then( (data) => {
                 if(data.data.successful){
-                    dispatch({type: AUTH, authData: data.data.object, status: 'signed-in'})
+                    dispatch({type: DOC, authData: data.data.object, status: 'signed-in',})
                 }
             }
 
@@ -99,7 +118,7 @@ export const login = (username, password) => {
             url: 'https://shipper-back.herokuapp.com/api/users/login',
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": hasher(username, password)
+                "Authorization": hash(username, password)
             }
         })
             .then((data) => {
@@ -125,7 +144,7 @@ export const preChangePassword = () => {
             url: 'https://shipper-back.herokuapp.com/api/users/preChangePassword',
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": hasher(initState.userEmail, initState.password)
+                "Authorization": hash(initState.userEmail, initState.password)
             }
         })
             .then((data) => {
@@ -145,7 +164,7 @@ export const changePassword = (oldPassword, securityCode, newPassword) => {
             url: 'https://shipper-back.herokuapp.com/api/users/changePassword',
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": hasher(initState.userEmail, initState.password)
+                "Authorization": hash(initState.userEmail, initState.password)
             },
             data: {
                 oldPassword: oldPassword,
@@ -164,6 +183,26 @@ export const changePassword = (oldPassword, securityCode, newPassword) => {
 };
 
 
+export const createOrder = ( trackNumber, description, price) => {
+    return (dispatch) => {
+        axios({
+            method: 'post',
+            url: 'https://shipper-back.herokuapp.com/api/order/create',
+            headers: {
+                "Authorization": "Basic dW5kZWZpbmVkOnVuZGVmaW5lZA==",
+                "Content-Type": "application/json"
+            },
+            data: {
+                trackNumber: trackNumber,
+                description: description,
+                priceFromInvoice: price
+            }
+        })
+            .then((data) => {
+                dispatch({type: ORDER, order: data})
+            })
+    }
+};
 
 
 
