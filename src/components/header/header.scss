@@ -10,22 +10,32 @@
     justify-content: space-between;
   }
   &__nav-link{
-    margin-right: 91px;
+    display: inline-block;
+    margin-right: 71px;
+    padding: 10px 20px;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 18px;
-
+    box-sizing: border-box;
     color: #FFFFFF;
     text-decoration: none;
+    transition: 0.3s ease;
+    border-radius: 10px;
     &:last-child{
       margin-right: 0;
+    }
+    &:hover{
+      background: #EF8C3B;
+      padding: 10px 20px;
+      box-shadow: 0px 5px 16px -5px rgba(0,0,0,0.65);
     }
   }
   &__logo{
     img{
       height: 69px;
     }
+    margin-right: 20px;
   }
   &__personal-account{
     display: flex;
@@ -54,12 +64,18 @@
     line-height: 21px;
     /* identical to box height */
     color: #FFFFFF;
+    cursor: pointer;
     border-style: none;
     background: transparent;
     margin-right: 12px;
     &:last-child{
       margin-right: 0;
     }
+    &:hover{
+      color: #EF8C3B;
+    }
+
 
   }
+
 }

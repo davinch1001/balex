@@ -5,6 +5,7 @@
   &__home-block{
     position: relative;
     display: flex;
+    margin-left: 60px;
     align-items: center;
   }
   &__title{
@@ -50,7 +51,12 @@
     color: #F6F6FF;
     background: #EF8C3B;
     border-radius: 10px;
+    border: 2px solid #EF8C3B;
     padding: 18px 32px;
+    transition: 0.3s ease;
+    &:hover{
+      background-color: #40328A;
+    }
   }
   &__img-block{
     position: relative;

@@ -37,16 +37,32 @@ body {
           justify-content: space-between;
 }
 .header__nav-link {
-  margin-right: 91px;
+  display: inline-block;
+  margin-right: 71px;
+  padding: 10px 20px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: #FFFFFF;
   text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  border-radius: 10px;
 }
 .header__nav-link:last-child {
   margin-right: 0;
+}
+.header__nav-link:hover {
+  background: #EF8C3B;
+  padding: 10px 20px;
+  -webkit-box-shadow: 0px 5px 16px -5px rgba(0, 0, 0, 0.65);
+          box-shadow: 0px 5px 16px -5px rgba(0, 0, 0, 0.65);
+}
+.header__logo {
+  margin-right: 20px;
 }
 .header__logo img {
   height: 69px;
@@ -82,12 +98,16 @@ body {
   line-height: 21px;
   /* identical to box height */
   color: #FFFFFF;
+  cursor: pointer;
   border-style: none;
   background: transparent;
   margin-right: 12px;
 }
 .header__auth-btn:last-child {
   margin-right: 0;
+}
+.header__auth-btn:hover {
+  color: #EF8C3B;
 }
 
 .home {
@@ -100,6 +120,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 60px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -150,7 +171,13 @@ body {
   color: #F6F6FF;
   background: #EF8C3B;
   border-radius: 10px;
+  border: 2px solid #EF8C3B;
   padding: 18px 32px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.home__get-address-btn:hover {
+  background-color: #40328A;
 }
 .home__img-block {
   position: relative;
@@ -331,6 +358,10 @@ body {
 .prev-store {
   padding: 80px 0 12px 0;
 }
+.prev-store .container {
+  padding-bottom: 60px;
+  border-bottom: 2px solid #40328A;
+}
 .prev-store__store-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -344,7 +375,6 @@ body {
 }
 .prev-store__view-more {
   display: block;
-  margin-top: 30px;
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
@@ -352,9 +382,11 @@ body {
   text-align: center;
   color: #40328A;
   text-decoration: none;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  margin-top: 70px;
 }
 .prev-store__view-more:hover {
-  text-decoration: underline;
   color: #EF8C3B;
 }
 
@@ -479,7 +511,9 @@ body {
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
+  text-align: center;
   color: #000000;
+  padding: 20px 10px 0px 0px;
 }
 .delivery__main-subtitle {
   margin-top: 32px;
