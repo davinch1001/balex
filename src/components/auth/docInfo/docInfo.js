@@ -7,12 +7,12 @@ import StepBtn from "../stepBtn/stepBtn";
 
 
 
-const DocInfo = ({getIndex, stepsTabs}) => {
-    const goBack = useHistory()
+const DocInfo = ({getIndex, stepsTabs, setActiveModal}) => {
     const dispatch = useDispatch()
     const postDocHadndler = (e) => {
         e.preventDefault()
         dispatch(postDocInfo(e.target.children[0].children[1].value,e.target.children[1].children[1].value, e.target.children[2].children[1].value, e.target.children[3].children[1].value))
+        setActiveModal(false)
     }
 
     const returnStep2 = (e) => {

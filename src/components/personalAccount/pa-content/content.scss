@@ -42,6 +42,14 @@
   }
 }
 
+.add-order-block{
+  display: none;
+  &.active{
+    display: block;
+    padding: 73px 0 24px 30px;
+  }
+}
+
 .tabs{
   display: flex;
 }

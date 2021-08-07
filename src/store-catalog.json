@@ -1,6 +1,7 @@
 {
   "auto": [
-    {"storeName": "Tesla" , "storeLink":  "url", "storeImg": "img-url", "storeId": 0},
+    {"storeCategory": "Автозапчасти"},
+    {"storeName": "Tesla" , "storeLink":  "https://www.tesla.com/", "storeImg": "img-url", "storeId": 0},
     {"storeName": "Jaguar" , "storeLink":  "url", "storeImg": "img-url", "storeId": 1},
     {"storeName": "Ford" , "storeLink":  "url", "storeImg": "img-url", "storeId": 2},
     {"storeName": "Mustang" , "storeLink":  "url", "storeImg": "img-url", "storeId" : 3},

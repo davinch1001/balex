@@ -25,6 +25,21 @@
     display: flex;
     align-items: center;
     margin-bottom: 44px;
+    &:first-child{
+      background: #EF8C3B;
+      border-radius: 10px;
+      width: 184px;
+      height: 57px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+      /* identical to box height */
+      color: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
   &__menu-link{
     background: transparent;

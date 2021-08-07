@@ -1,9 +1,10 @@
-.header{
+.pa-header{
   width: 100%;
   background: #40328A;
   &__nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   &__logo{
     width: 190px;

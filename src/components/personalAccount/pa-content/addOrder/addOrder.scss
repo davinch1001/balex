@@ -1,0 +1,40 @@
+.order{
+  padding: 35px 34px;
+  background: #40328A;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__input{
+    @include address-input(250px, 45px)
+  }
+  &__btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__btn{
+    width: 154px;
+    height: 37px;
+    border-radius: 10px;
+    &.cancel{
+      width: 100px;
+      border-style: none  ;
+    }
+    &.save{
+      background: #EF8C3B;
+
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+      /* identical to box height */
+      color: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+
+}

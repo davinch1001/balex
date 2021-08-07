@@ -7,17 +7,17 @@ import {Link} from "react-router-dom";
 
 const PaHeader = () => {
     return (
-        <header className="header">
+        <header className="pa-header">
             <div className="container">
-                <div className="header__nav">
-                    <Link to='/'><img src={headerLogo} alt="" className="header__logo"/></Link>
-                    <div className="header__input-block">
+                <div className="pa-header__nav">
+                    <Link to='/'><img src={headerLogo} alt="" className="pa-header__logo"/></Link>
+                    <div className="pa-header__input-block">
                         <input placeholder='Поиск посылок' type="text" className="input"/>
-                        <img src={lupa} alt="" className="header__input-magnifier"/>
+                        <img src={lupa} alt="" className="pa-header__input-magnifier"/>
                     </div>
-                    <div className="header__user-data">
-                        <div className="header__price"><img src={card} alt=""/>00.00$</div>
-                        <div className="header__user-login">
+                    <div className="pa-header__user-data">
+                        <div className="pa-header__price"><img src={card} alt=""/>00.00$</div>
+                        <div className="pa-header__user-login">
                             <img src={userAva} alt="" className="user-logo"/>
                             <div className="user">User.U</div>
                             <button className="view-more">^</button>

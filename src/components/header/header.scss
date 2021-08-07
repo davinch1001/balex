@@ -1,5 +1,9 @@
 .header{
+  width: 100%;
   background: #40328A;
+  position: fixed;
+  z-index: 3;
+  top: 0;
   &__nav{
     display: flex;
     align-items: center;
@@ -16,6 +20,11 @@
     text-decoration: none;
     &:last-child{
       margin-right: 0;
+    }
+  }
+  &__logo{
+    img{
+      height: 69px;
     }
   }
   &__personal-account{
@@ -37,5 +46,20 @@
       background: white;
       margin: 0 10px;
     }
+  }
+  &__auth-btn{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #FFFFFF;
+    border-style: none;
+    background: transparent;
+    margin-right: 12px;
+    &:last-child{
+      margin-right: 0;
+    }
+
   }
 }

@@ -3,10 +3,9 @@ import Registr from "./registr/registr";
 import PostCode from "./postCode/postCode";
 import DocInfo from "./docInfo/docInfo";
 
-const Auth = () => {
+const Auth = ({activeModal, setActiveModal, activeSignIn}) => {
 
     const [stepsTabs, setStepsTabs] = useState(1)
-    console.log(stepsTabs, 'step')
 
     const getIndex = (idx) => {
         setStepsTabs(idx)
@@ -22,11 +21,11 @@ const Auth = () => {
                 </div>
 
                 <div className={stepsTabs === 2 ? 'auth__post-code-block active' : 'auth__post-code-block'}>
-                    <PostCode getIndex={getIndex}  stepsTabs={stepsTabs}/>
+                    <PostCode setActiveModal={setActiveModal} setActiveSignIn={activeSignIn}  getIndex={getIndex}  stepsTabs={stepsTabs}/>
                 </div>
 
                 <div className={stepsTabs === 3 ? 'auth__doc-info-block active' : 'auth__doc-info-block'}>
-                    <DocInfo getIndex={getIndex}  stepsTabs={stepsTabs}/>
+                    <DocInfo activeModal={activeModal} setActiveModal={setActiveModal} getIndex={getIndex}  stepsTabs={stepsTabs}/>
                 </div>
 
             </div>

@@ -1,0 +1,71 @@
+.sign-in{
+  padding: 34px 123px;
+  background: #40328A;
+  width: 556px;
+  max-height: 703px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title{
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 47px;
+    /* identical to box height */
+    margin-bottom: 121px;
+    color: #FFFFFF;
+  }
+  &__subtitle{
+    text-align: center;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 31px;
+    color: #FFFFFF
+  }
+  &__form{
+    margin-top: 67px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__input-block{
+    width: 250px;
+    margin-bottom: 24px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    .input-text{
+      font-style: normal;
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 23px;
+      color: #FFFFFF;
+      margin-left: 11px;
+    }
+  }
+  &__input{
+    @include address-input(100%, 45px)
+  }
+  &__btn{
+    background: #EF8C3B;
+    border-radius: 10px;
+    width: 309px;
+    height: 55px;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 31px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 98px;
+  }
+
+}

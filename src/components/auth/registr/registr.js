@@ -9,7 +9,6 @@ const Registr = ({getIndex, stepsTabs}) => {
     const pass = useSelector(s => s.auth.userEmail)
     const email = useSelector(s => s.auth.userPass)
     const dispatch = useDispatch()
-    console.log('=============>',authDatas)
 
     const hash = (email, password) => {
         let token = email + ":"  + password;
@@ -17,7 +16,6 @@ const Registr = ({getIndex, stepsTabs}) => {
         return `Basic ${hash}`;
     }
     const hashData = hash(email, pass)
-    console.log('hashdata', hashData)
 
     useEffect(() => {
         localStorage.setItem('auth', JSON.stringify(authDatas))
