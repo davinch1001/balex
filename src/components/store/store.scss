@@ -1,21 +1,70 @@
 .store{
-  display: flex;
+  .go-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
  &__tabs{
    display: flex;
-   flex-direction: column;
-   width: 400px;
-   height: 100vh;
+   flex-wrap: wrap;
+   margin-bottom: 100px;
  }
   &__tabs-btn{
-    margin-bottom: 12px;
+    margin-top: 30px;
+    width: 150px;
+    height: 45px;
+    background: #40328A;
+    border-radius: 10px;
+    margin-right: 12px;
+    color: white;
+    &:last-child{
+      margin-right: 0;
+    }
+    &:hover{
+      background: #EF8C3B;
+    }
+  }
+  &__store-catalog{
+    width: 160px;
+    height: 160px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    a{
+      text-align: center;
+    }
+    &:hover{
+      border: 2px solid #EF8C3B;
+      .store-name{
+        display: block;
+      }
+    }
+    .store-name{
+      position: absolute;
+      display: none;
+      width: 130px;
+      background: #00000050;
+      text-align: center;
+      color: white;
+      border-radius: 10px;
+      font-size: 24px;
+    }
+  }
+  &__img{
+    width: 90%;
+  }
+  &__block{
+    display: flex;
+    flex-wrap: wrap;
   }
   &__auto-parts{
     display: none;
     &.active{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
      display: block;
 
     }
@@ -24,10 +73,7 @@
     display: none;
     &.active{
       display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+
 
     }
   }
@@ -35,10 +81,47 @@
     display: none;
     &.active{
       display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+
+
+    }
+  }
+  &__accessories{
+    display: none;
+    &.active{
+      display: block;
+
+
+    }
+  }
+  &__toys{
+    display: none;
+    &.active{
+      display: block;
+
+
+    }
+  }
+  &__shoes{
+    display: none;
+    &.active{
+      display: block;
+
+
+    }
+  }
+  &__extreme-sport{
+    display: none;
+    &.active{
+      display: block;
+
+
+    }
+  }
+  &__lingerie{
+    display: none;
+    &.active{
+      display: block;
+
 
     }
   }

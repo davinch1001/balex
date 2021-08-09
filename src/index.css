@@ -302,34 +302,85 @@ body {
           transform: translate(-50%, -50%);
 }
 
-.store {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.store .go-back {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .store__tabs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 400px;
-  height: 100vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 100px;
 }
 .store__tabs-btn {
-  margin-bottom: 12px;
+  margin-top: 30px;
+  width: 150px;
+  height: 45px;
+  background: #40328A;
+  border-radius: 10px;
+  margin-right: 12px;
+  color: white;
+}
+.store__tabs-btn:last-child {
+  margin-right: 0;
+}
+.store__tabs-btn:hover {
+  background: #EF8C3B;
+}
+.store__store-catalog {
+  width: 160px;
+  height: 160px;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+.store__store-catalog a {
+  text-align: center;
+}
+.store__store-catalog:hover {
+  border: 2px solid #EF8C3B;
+}
+.store__store-catalog:hover .store-name {
+  display: block;
+}
+.store__store-catalog .store-name {
+  position: absolute;
+  display: none;
+  width: 130px;
+  background: #00000050;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  font-size: 24px;
+}
+.store__img {
+  width: 90%;
+}
+.store__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .store__auto-parts {
   display: none;
 }
 .store__auto-parts.active {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   display: block;
 }
 .store__for-moms {
@@ -337,22 +388,42 @@ body {
 }
 .store__for-moms.active {
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 .store__kids {
   display: none;
 }
 .store__kids.active {
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+}
+.store__accessories {
+  display: none;
+}
+.store__accessories.active {
+  display: block;
+}
+.store__toys {
+  display: none;
+}
+.store__toys.active {
+  display: block;
+}
+.store__shoes {
+  display: none;
+}
+.store__shoes.active {
+  display: block;
+}
+.store__extreme-sport {
+  display: none;
+}
+.store__extreme-sport.active {
+  display: block;
+}
+.store__lingerie {
+  display: none;
+}
+.store__lingerie.active {
+  display: block;
 }
 
 .prev-store {

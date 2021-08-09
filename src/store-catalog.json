@@ -1,15 +1,14 @@
 {
   "auto": [
-    {"storeCategory": "Автозапчасти"},
-    {"storeName": "Tesla" , "storeLink":  "https://www.tesla.com/", "storeImg": "img-url", "storeId": 0},
-    {"storeName": "Jaguar" , "storeLink":  "url", "storeImg": "img-url", "storeId": 1},
-    {"storeName": "Ford" , "storeLink":  "url", "storeImg": "img-url", "storeId": 2},
-    {"storeName": "Mustang" , "storeLink":  "url", "storeImg": "img-url", "storeId" : 3},
-    {"storeName": "Chevrolet" , "storeLink":  "url", "storeImg": "img-url", "storeId": 4},
-    {"storeName": "Dodge" , "storeLink":  "url", "storeImg": "img-url", "storeId": 5},
-    {"storeName": "Jeep" , "storeLink":  "url", "storeImg": "img-url", "storeId": 6},
-    {"storeName": "Hummer" , "storeLink":  "url", "storeImg": "img-url", "storeId": 7},
-    {"storeName": "Chrysler" , "storeLink":  "url", "storeImg": "img-url", "storeId": 8}
+    {"storeName": "Tesla" , "storeLink":  "https://www.tesla.com/", "storeImg": "https://logo-logos.com/wp-content/uploads/2018/02/tesla-motors-logo.jpg", "storeId": 0},
+    {"storeName": "Jaguar" , "storeLink":  "url", "storeImg": "https://cdn.worldvectorlogo.com/logos/jaguar-1.svg", "storeId": 1},
+    {"storeName": "Ford" , "storeLink":  "url", "storeImg": "https://pw.artfile.me/wallpaper/07-04-2018/627x470/ford-logo-brendy-avto-moto-----unknown-a-1325157.jpg", "storeId": 2},
+    {"storeName": "Mustang" , "storeLink":  "url", "storeImg": "http://www.logo-designer.co/dev/wp-content/uploads/2013/08/evolution-of-the-ford-mustang-badge-logo-design.jpg", "storeId" : 3},
+    {"storeName": "Chevrolet" , "storeLink":  "url", "storeImg": "https://pw.artfile.me/wallpaper/07-04-2018/627x470/chevrolet-logo-brendy-avto-moto--chevrol-1325167.jpg", "storeId": 4},
+    {"storeName": "Dodge" , "storeLink":  "url", "storeImg": "https://lh3.googleusercontent.com/proxy/gJX_YViZmlE8rC_7WOmognLuHTJuEl9mhk-evuJDVSpQ3kky7ythO_s_YiAN_S6TLs0cXg2h9SURAAR0hsYe1kqMcXxZ1lK_BMBL589CrS-yy8dyuiiOfdlJ", "storeId": 5},
+    {"storeName": "Jeep" , "storeLink":  "url", "storeImg": "https://lezebre.lu/images/detailed/20/Jeep_logo.png", "storeId": 6},
+    {"storeName": "Hummer" , "storeLink":  "url", "storeImg": "https://logos-marques.com/wp-content/uploads/2021/02/Hummer-Embleme.png", "storeId": 7},
+    {"storeName": "Chrysler" , "storeLink":  "url", "storeImg": "https://logoeps.com/wp-content/uploads/2013/01/chrysler-logo-vector.png", "storeId": 8}
   ],
   "forMoms": [
     {"storeName": "Ebay" , "storeLink":  "url", "storeImg": "img-url", "storeId": 0},
