@@ -12,8 +12,7 @@ const initState = {
     userPass: '',
     status: 'signed-out',
     order: {},
-    successfulStatus: '',
-    myorders: {}
+    myOrders: {}
 }
 
 
@@ -34,7 +33,7 @@ export default (state = initState, action) => {
             return {...state, authData: action.authData, userPass: action.userPass, userEmail:action.userEmail, status: 'signed-in'}
         }
         case GETORDER:{
-            return {...state ,authData: action.authData, userPass: action.userPass, userEmail:action.userEmail, status: 'signed-in', myorders: action.myorders}
+            return {...state ,myOrders: action.myOrders,userPass: action.userPass, userEmail:action.userEmail, status: 'signed-in'}
         }
 
         default:
@@ -194,7 +193,6 @@ export const changePassword = (oldPassword, securityCode, newPassword) => {
 export const createOrder = ( trackNumber, description, price) => {
     return (dispatch, getState) => {
         const {userEmail, userPass} = getState().auth
-        console.log('order=====>', userEmail, userPass)
         axios({
             method: 'post',
             url: 'https://shipper-back.herokuapp.com/api/order/create',
@@ -227,10 +225,12 @@ export const getAllOrders = () =>{
             }
         })
             .then((data) => {
-                dispatch({type: GETORDER, userEmail:userEmail, userPass:userPass, myorders: data.object})
+                dispatch({type: GETORDER, userEmail:userEmail, userPass:userPass, myOrders: data.object})
             })
     }
 };
+
+
 
 
 

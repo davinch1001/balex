@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import logoHeader from '../../../src/img/header/logo-header-2.png'
 import lengTrans from '../../../src/img/header/leng-icon.svg'
 import account from '../../../src/img/header/account.png'
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 
 const Header = ({activeModal, setActiveModal, setActiveSignIn}) => {
     const userSignIn = useSelector(s => s.auth.status)

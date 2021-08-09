@@ -8,7 +8,7 @@ const Contacts = () => {
                 <div className="contacts__block">
                     <div className="contacts__social-network">
                         <div className="social-network-title">Следи за нами в instagram</div>
-                        <a href="https://www.instagram.com/balex.kg/" target="_blank" className="social-network-link">@balex.kg</a>
+                        <a href="https://www.instagram.com/balex.kg/" target="_blank"  rel="noreferrer" className="social-network-link">@balex.kg</a>
                         <p className="social-network-abouts">В Instagram мы рассказываем, как и где покупать в
                             США, информируем о сезонных и незапланированных распродажах в магазинах, скидываем
                             выгодные лготы, а также делимся другим полезным контентом.</p>

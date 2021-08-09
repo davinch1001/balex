@@ -1,13 +1,13 @@
 import React from 'react';
 import {useDispatch} from "react-redux";
-import {createOrder} from "../../../../redux/reducers/auth";
+import {createOrder, getAllOrders} from "../../../../redux/reducers/auth";
 
 const AddOrder = () => {
     const dispatch = useDispatch()
     const orderHandler = (e) => {
         e.preventDefault()
         dispatch(createOrder(e.target.children[0].value, e.target.children[1].value,e.target.children[3].value))
-        console.log('hello')
+        dispatch(getAllOrders())
     }
     return (
         <form onSubmit={orderHandler} action="" className="order">

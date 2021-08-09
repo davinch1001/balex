@@ -162,6 +162,25 @@
   }
 }
 
+.authorization-sign-in{
+  display: none;
+  width: 99vw;
+  height: 100vh;
+  background: #ffffff90;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  &.active{
+    display: block;
+  }
+  .auth-block{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .authorization{
   display: none;
   width: 99vw;

@@ -1,8 +1,11 @@
 import React from 'react';
 
 import packagesImg from '../../../../img/persAcc/packages-img.png'
+import {useSelector} from "react-redux";
 
 const Packages = () => {
+    const packages = useSelector(s => s.auth.order)
+    console.log('packages====>',packages)
     return (
         <>
             <h2 className="empty-packages__title">Посылки</h2>

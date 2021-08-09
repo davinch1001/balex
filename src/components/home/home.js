@@ -7,10 +7,8 @@ import air from '../../../src/img/home/air.png'
 import usa from '../../../src/img/home/usa.png'
 import Auth from "../auth/auth";
 import SingIn from "../auth/signin/singIn";
-import {useDispatch, useSelector} from "react-redux";
 
 const Home = ({activeModal, setActiveModal, activeSignIn, setActiveSignIn}) => {
-    const userSignedIn = useSelector(s => s.auth.status)
     return (
         <section className="home" id='home'>
 

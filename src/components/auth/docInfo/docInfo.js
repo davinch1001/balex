@@ -1,5 +1,4 @@
 import React from 'react';
-import {useHistory} from "react-router";
 import {useDispatch} from "react-redux";
 
 import {postDocInfo} from "../../../redux/reducers/auth";

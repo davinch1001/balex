@@ -15,7 +15,8 @@ import PaFooter from "./pa-content/pa-footer/paFooter";
 import AddOrder from "./pa-content/addOrder/addOrder";
 
 const PersonalAccount = () => {
-    const [toggleState, setToggleState] = useState(1)
+    const [toggleState, setToggleState] = useState(2)
+    console.log(toggleState)
     const menuItem = [{value: 'Добавить'},{img: packagesIcon, value: 'Посылка'},{img: priceIcon, value: 'Стоимость'},{img: adressIcon, value: 'Адрес'},{img: helpIcon, value: 'Помощь'},{img: settingsIcon, value: 'Настройки'}]
 
     const toggleTab = (idx) => {

@@ -4,23 +4,15 @@ import {postUserData} from "../../../redux/reducers/auth";
 import StepBtn from "../stepBtn/stepBtn";
 
 const Registr = ({getIndex, stepsTabs}) => {
-
-    const authDatas = useSelector(s => s.auth.authData)
-    const pass = useSelector(s => s.auth.userEmail)
-    const email = useSelector(s => s.auth.userPass)
     const dispatch = useDispatch()
 
-    const hash = (email, password) => {
-        let token = email + ":"  + password;
-        let hash = btoa(token);
-        return `Basic ${hash}`;
-    }
-    const hashData = hash(email, pass)
+    const authDatas = useSelector(s => s.auth.authData)
 
     useEffect(() => {
         localStorage.setItem('auth', JSON.stringify(authDatas))
-        localStorage.setItem('authPass', JSON.stringify(hashData))
     },[authDatas])
+
+
 
     const formHandler = (e) => {
         e.preventDefault()

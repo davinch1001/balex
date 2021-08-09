@@ -136,6 +136,8 @@
   &__store-items{
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
     img{
       height: 70px;
     }

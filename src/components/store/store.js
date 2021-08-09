@@ -30,7 +30,7 @@ const Store = () => {
                             <div key={idx} className='store__store-catalog'>
                                 <a href={el.storeLink}>
                                     <img className='store__img' src={el.storeImg} alt="img"/></a>
-                                <a target='_blank' href={el.storeLink} className="store-name">{el.storeName}</a>
+                                <a target='_blank' rel='noreferrer' href={el.storeLink} className="store-name">{el.storeName}</a>
                         </div>
                     ))
                    }
