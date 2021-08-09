@@ -4,6 +4,7 @@ const AUTH = 'AUTH'
 const ORDER = 'ORDER'
 const DOC = 'DOC'
 const LOGIN = 'LOGIN'
+const GETORDER = 'GETORDER'
 
 const initState = {
     authData:{},
@@ -11,7 +12,8 @@ const initState = {
     userPass: '',
     status: 'signed-out',
     order: {},
-    successfulStatus: ''
+    successfulStatus: '',
+    myorders: {}
 }
 
 
@@ -30,6 +32,9 @@ export default (state = initState, action) => {
         }
         case LOGIN:{
             return {...state, authData: action.authData, userPass: action.userPass, userEmail:action.userEmail, status: 'signed-in'}
+        }
+        case GETORDER:{
+            return {...state ,authData: action.authData, userPass: action.userPass, userEmail:action.userEmail, status: 'signed-in', myorders: action.myorders}
         }
 
         default:
@@ -205,6 +210,24 @@ export const createOrder = ( trackNumber, description, price) => {
         })
             .then((data) => {
                 dispatch({type: ORDER, order: data, userEmail:userEmail, userPass:userPass})
+            })
+    }
+};
+
+export const getAllOrders = () =>{
+    return (dispatch, getState) => {
+        const {userEmail, userPass} = getState().auth
+        console.log('order get=====>', userEmail, userPass)
+        axios({
+            method: 'get',
+            url: 'https://shipper-back.herokuapp.com/api/order/getMyOrders',
+            headers: {
+                "Authorization": hash(userEmail, userPass),
+                "Content-Type": "application/json"
+            }
+        })
+            .then((data) => {
+                dispatch({type: GETORDER, userEmail:userEmail, userPass:userPass, myorders: data.object})
             })
     }
 };
