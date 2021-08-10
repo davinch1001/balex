@@ -5,10 +5,11 @@
 
 .menu{
   padding: 43px 0 0 34px;
-  width: 14.5%;
+  width: 17.5%;
   height: calc(100vh - 73px);
   border-right: 1px solid #40328A;
   .btn-add{
+    color: #FFFFFF;
     border-style: none;
     background: #EF8C3B;
     border-radius: 10px;
@@ -19,26 +20,14 @@
     line-height: 21px;
     /* identical to box height */
     margin-bottom: 40px;
-    color: #FFFFFF;
   }
   &__menu-item{
     display: flex;
     align-items: center;
     margin-bottom: 44px;
-    &:first-child{
-      background: #EF8C3B;
-      border-radius: 10px;
-      width: 184px;
-      height: 57px;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 21px;
-      /* identical to box height */
-      color: #FFFFFF;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
+    .svg{
+      margin-right: 10px;
     }
   }
   &__menu-link{
@@ -50,10 +39,35 @@
     /* identical to box height */
     color: #000;
     text-decoration: none;
+    cursor: pointer;
     &.active{
       color: #40328A;
     }
+    &:hover{
+      color: #40328A;
+    }
   }
+  &__add-btn{
+    background: #EF8C3B;
+    border-radius: 10px;
+    width: 184px;
+    height: 57px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    /* identical to box height */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    &:hover{
+      background-color: #40328A;
+    }
+  }
+
 }
 
 .order{

@@ -18,13 +18,17 @@
       height: 100%;
       padding-left: 49px;
       border-radius: 10px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #4a4a4a;
       &::placeholder{
         font-style: normal;
         font-weight: normal;
-        font-size: 16px;
+        font-size: 18px;
+        font-weight: 500;
         line-height: 40px;
         /* identical to box height */
-        color: #000000;
+        color: lightgrey;
       }
     }
   }
@@ -46,10 +50,24 @@
     display: flex;
     align-items: center;
     margin-right: 32px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    padding: 10px 20px;
+    border-radius: 10px;
+    &__balance{
+      font-weight: 400;
+    }
+    &__value{
+
+    }
+    &:hover{
+       background-color: #EF8C3B;
+     }
   }
   &__user-login{
     display: flex;
     align-items: center;
+    cursor:pointer;
     .user{
       font-style: normal;
       font-weight: normal;
@@ -57,6 +75,11 @@
       line-height: 23px;
       color: #FFFFFF;
       margin: 0 10px;
+    }
+    &:hover{
+      color: #40328A;
+      background: #fff;
+
     }
   }
 }

@@ -33,7 +33,7 @@ const PersonalAccount = () => {
                         menuItem.map((el, idx) => (
                             <div className='menu__menu-item' key={idx}>
                                 <img src={el.img} className='svg' alt=""/>
-                                <button onClick={() => toggleTab(idx+1)} className={toggleState === idx+1 ? 'menu__menu-link active' : 'menu__menu-link add-order' }>{el.value}</button>
+                                <button onClick={() => toggleTab(idx+1)} className={ el.value === 'Добавить'? 'menu__add-btn' : toggleState === idx+1 ? 'menu__menu-link active' : 'menu__menu-link add-order'}>{el.value}</button>
                             </div>
                         ))
                     }

@@ -16,11 +16,11 @@ const PaHeader = () => {
                         <img src={lupa} alt="" className="pa-header__input-magnifier"/>
                     </div>
                     <div className="pa-header__user-data">
-                        <div className="pa-header__price"><img src={card} alt=""/>00.00$</div>
-                        <div className="pa-header__user-login">
-                            <img src={userAva} alt="" className="user-logo"/>
-                            <div className="user">User.U</div>
-                            <button className="view-more">^</button>
+                        <div className="pa-header__price"><h4><span className="pa-header__price__balance">Balance:</span>  <span className="pa-header__price__value">00.00$</span></h4></div>
+                        <div className="">
+                            <img src={userAva} alt="" className="pa-header__user-login__user_ava"/>
+                            <div className="user">Aibek Jumagulov</div>
+                            {/*<button className="view-more"><img src="" alt="" className="prev-store__view-more"/></button>*/}
                         </div>
                     </div>
 

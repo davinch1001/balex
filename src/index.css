@@ -1535,11 +1535,12 @@ body {
 
 .menu {
   padding: 43px 0 0 34px;
-  width: 14.5%;
+  width: 17.5%;
   height: calc(100vh - 73px);
   border-right: 1px solid #40328A;
 }
 .menu .btn-add {
+  color: #FFFFFF;
   border-style: none;
   background: #EF8C3B;
   border-radius: 10px;
@@ -1550,7 +1551,6 @@ body {
   line-height: 21px;
   /* identical to box height */
   margin-bottom: 40px;
-  color: #FFFFFF;
 }
 .menu__menu-item {
   display: -webkit-box;
@@ -1561,26 +1561,8 @@ body {
           align-items: center;
   margin-bottom: 44px;
 }
-.menu__menu-item:first-child {
-  background: #EF8C3B;
-  border-radius: 10px;
-  width: 184px;
-  height: 57px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 21px;
-  /* identical to box height */
-  color: #FFFFFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.menu__menu-item .svg {
+  margin-right: 10px;
 }
 .menu__menu-link {
   background: transparent;
@@ -1591,9 +1573,40 @@ body {
   /* identical to box height */
   color: #000;
   text-decoration: none;
+  cursor: pointer;
 }
 .menu__menu-link.active {
   color: #40328A;
+}
+.menu__menu-link:hover {
+  color: #40328A;
+}
+.menu__add-btn {
+  background: #EF8C3B;
+  border-radius: 10px;
+  width: 184px;
+  height: 57px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.menu__add-btn:hover {
+  background-color: #40328A;
 }
 
 .order {
@@ -1643,46 +1656,54 @@ body {
   height: 100%;
   padding-left: 49px;
   border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #4a4a4a;
 }
 .pa-header__input-block .input::-webkit-input-placeholder {
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 40px;
   /* identical to box height */
-  color: #000000;
+  color: lightgrey;
 }
 .pa-header__input-block .input::-moz-placeholder {
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 40px;
   /* identical to box height */
-  color: #000000;
+  color: lightgrey;
 }
 .pa-header__input-block .input:-ms-input-placeholder {
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 40px;
   /* identical to box height */
-  color: #000000;
+  color: lightgrey;
 }
 .pa-header__input-block .input::-ms-input-placeholder {
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 40px;
   /* identical to box height */
-  color: #000000;
+  color: lightgrey;
 }
 .pa-header__input-block .input::placeholder {
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 40px;
   /* identical to box height */
-  color: #000000;
+  color: lightgrey;
 }
 .pa-header__input-magnifier {
   position: absolute;
@@ -1708,6 +1729,17 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-right: 32px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.pa-header__price__balance {
+  font-weight: 400;
+}
+.pa-header__price:hover {
+  background-color: #EF8C3B;
 }
 .pa-header__user-login {
   display: -webkit-box;
@@ -1716,6 +1748,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 .pa-header__user-login .user {
   font-style: normal;
@@ -1724,6 +1757,10 @@ body {
   line-height: 23px;
   color: #FFFFFF;
   margin: 0 10px;
+}
+.pa-header__user-login:hover {
+  color: #40328A;
+  background: #fff;
 }
 
 .content {
@@ -1744,7 +1781,7 @@ body {
 .price.active {
   width: 846px;
   display: block;
-  padding: 190px 0 0 30px;
+  padding: 73px 0 24px 30px;
 }
 
 .address-block {
@@ -2651,28 +2688,45 @@ body {
 }
 
 .pa-footer {
-  position: absolute;
-  bottom: 10px;
-  right: 149px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  bottom: 20px;
+  background-color: #40328A;
+  width: 100%;
+  height: 60px;
 }
 .pa-footer__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 60px;
 }
 .pa-footer__item {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 23px;
-  color: #000000;
+  color: #fff;
+  cursor: pointer;
   margin-right: 40px;
 }
 .pa-footer__item:last-child {
   margin-right: 0;
+}
+.pa-footer__item:hover {
+  color: #EF8C3B;
 }
 
 .registr {
