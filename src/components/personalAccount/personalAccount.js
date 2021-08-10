@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import PaHeader from "./pa-content/pa-header/paHeader";
 
 import packagesIcon from '../../../src/img/menu/packages.png'
@@ -13,8 +13,11 @@ import Help from "./pa-content/help/help";
 import Settings from "./pa-content/settings/settings";
 import PaFooter from "./pa-content/pa-footer/paFooter";
 import AddOrder from "./pa-content/addOrder/addOrder";
+import {useDispatch, useSelector} from "react-redux";
+import {getUserDatals} from "../../redux/reducers/auth";
 
 const PersonalAccount = () => {
+
     const [toggleState, setToggleState] = useState(2)
     console.log(toggleState)
     const menuItem = [{value: 'Добавить'},{img: packagesIcon, value: 'Посылка'},{img: priceIcon, value: 'Стоимость'},{img: adressIcon, value: 'Адрес'},{img: helpIcon, value: 'Помощь'},{img: settingsIcon, value: 'Настройки'}]
@@ -26,7 +29,7 @@ const PersonalAccount = () => {
 
     return (
         <div className='personal-account'>
-            <PaHeader/>
+            <PaHeader toggleTab={toggleTab}/>
             <div className="tabs">
                 <div className='menu'>
                     {

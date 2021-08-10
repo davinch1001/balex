@@ -1,12 +1,12 @@
 .personal-account{
-  height: 100vh;
+  height: calc(100vh - 60px);
 }
 
 
 .menu{
   padding: 43px 0 0 34px;
   width: 17.5%;
-  height: calc(100vh - 73px);
+  height: calc(100vh - 113px);
   border-right: 1px solid #40328A;
   .btn-add{
     color: #FFFFFF;
@@ -20,11 +20,13 @@
     line-height: 21px;
     /* identical to box height */
     margin-bottom: 40px;
+    margin-right: 20px;
   }
   &__menu-item{
     display: flex;
     align-items: center;
     margin-bottom: 44px;
+    margin-right: 20px;
 
     .svg{
       margin-right: 10px;

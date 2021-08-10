@@ -32,6 +32,12 @@
       }
     }
   }
+  .user-login-ava{
+    width: 35px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+  }
   &__input-magnifier{
     position: absolute;
     top: 13px;
@@ -68,6 +74,7 @@
     display: flex;
     align-items: center;
     cursor:pointer;
+    position: relative;
     .user{
       font-style: normal;
       font-weight: normal;
@@ -76,10 +83,104 @@
       color: #FFFFFF;
       margin: 0 10px;
     }
-    &:hover{
-      color: #40328A;
-      background: #fff;
-
+  }
+  &__view-more-btn{
+    border-style: none;
+    background: transparent;
+    transition: 0.5s;
+    transform: rotate(0deg);
+    &.active{
+      transform: rotate(180deg);
     }
   }
+  &__view-more{
+  }
+}
+
+
+.user-data-modal{
+  padding: 30px 13px;
+  position: absolute;
+  top: 65px;
+  left: -18%;
+  width: 300px;
+  border: 1px solid #40328A;
+  max-height: 400px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  .user-names{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 21px;
+    margin-top: 20px;
+  }
+  .user-email{
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 30px;
+  }
+  .btns{
+    display: flex;
+    align-items: center;
+  }
+  .add-order-btn{
+    width: 100px;
+    height: 30px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: #40328A;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 15px;
+    color: #FFFFFF;
+    margin-right: 10px;
+  }
+  .help-btn{
+    width: 100px;
+    height: 30px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: #EF8C3B;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 15px;
+    color: #FFFFFF;
+  }
+  .settings{
+    margin-top: 30px;
+    width: 200px;
+    height: 30px;
+    background: gray;
+    color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+}
+
+.alert-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.alert-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.alert-exit {
+  opacity: 1;
+}
+.alert-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
 }

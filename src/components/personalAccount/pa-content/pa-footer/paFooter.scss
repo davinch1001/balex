@@ -7,8 +7,8 @@
   height: 60px;
   &__items{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-right: 60px;
   }
   &__item{
     user-select: none;

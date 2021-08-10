@@ -1530,13 +1530,13 @@ body {
   }
 }
 .personal-account {
-  height: 100vh;
+  height: calc(100vh - 60px);
 }
 
 .menu {
   padding: 43px 0 0 34px;
   width: 17.5%;
-  height: calc(100vh - 73px);
+  height: calc(100vh - 113px);
   border-right: 1px solid #40328A;
 }
 .menu .btn-add {
@@ -1551,6 +1551,7 @@ body {
   line-height: 21px;
   /* identical to box height */
   margin-bottom: 40px;
+  margin-right: 20px;
 }
 .menu__menu-item {
   display: -webkit-box;
@@ -1560,6 +1561,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 44px;
+  margin-right: 20px;
 }
 .menu__menu-item .svg {
   margin-right: 10px;
@@ -1705,6 +1707,10 @@ body {
   /* identical to box height */
   color: lightgrey;
 }
+.pa-header .user-login-ava {
+  width: 35px;
+  border-radius: 50%;
+}
 .pa-header__input-magnifier {
   position: absolute;
   top: 13px;
@@ -1749,6 +1755,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  position: relative;
 }
 .pa-header__user-login .user {
   font-style: normal;
@@ -1758,9 +1765,117 @@ body {
   color: #FFFFFF;
   margin: 0 10px;
 }
-.pa-header__user-login:hover {
-  color: #40328A;
-  background: #fff;
+.pa-header__view-more-btn {
+  border-style: none;
+  background: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.pa-header__view-more-btn.active {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.user-data-modal {
+  padding: 30px 13px;
+  position: absolute;
+  top: 65px;
+  left: -18%;
+  width: 300px;
+  border: 1px solid #40328A;
+  max-height: 400px;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+}
+.user-data-modal .user-names {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 21px;
+  margin-top: 20px;
+}
+.user-data-modal .user-email {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 30px;
+}
+.user-data-modal .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.user-data-modal .add-order-btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background: #40328A;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 15px;
+  color: #FFFFFF;
+  margin-right: 10px;
+}
+.user-data-modal .help-btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background: #EF8C3B;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 15px;
+  color: #FFFFFF;
+}
+.user-data-modal .settings {
+  margin-top: 30px;
+  width: 200px;
+  height: 30px;
+  background: gray;
+  color: white;
+  border-radius: 10px;
+}
+
+.alert-enter {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.alert-enter-active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, transform 300ms;
+  transition: opacity 300ms, transform 300ms, -webkit-transform 300ms;
+}
+
+.alert-exit {
+  opacity: 1;
+}
+
+.alert-exit-active {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, transform 300ms;
+  transition: opacity 300ms, transform 300ms, -webkit-transform 300ms;
 }
 
 .content {
@@ -2704,10 +2819,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 60px;
 }
 .pa-footer__item {
   -webkit-user-select: none;

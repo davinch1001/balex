@@ -1,16 +1,12 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {postUserData} from "../../../redux/reducers/auth";
+import {getUserDatals, postUserData} from "../../../redux/reducers/auth";
 import StepBtn from "../stepBtn/stepBtn";
 
 const Registr = ({getIndex, stepsTabs}) => {
     const dispatch = useDispatch()
 
-    const authDatas = useSelector(s => s.auth.authData)
 
-    useEffect(() => {
-        localStorage.setItem('auth', JSON.stringify(authDatas))
-    },[authDatas])
 
 
 

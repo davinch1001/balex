@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import homeImg from '../../../src/img/home/delivery.png'
 import balex from '../../../src/img/home/BALEX.png'
@@ -7,8 +7,25 @@ import air from '../../../src/img/home/air.png'
 import usa from '../../../src/img/home/usa.png'
 import Auth from "../auth/auth";
 import SingIn from "../auth/signin/singIn";
+import {useDispatch, useSelector} from "react-redux";
+import {getUserDatals} from "../../redux/reducers/auth";
 
 const Home = ({activeModal, setActiveModal, activeSignIn, setActiveSignIn}) => {
+    const dispatch = useDispatch()
+
+    const authDatas = useSelector(s => s.auth.authData)
+
+    useEffect(() => {
+        const userData = JSON.parse(localStorage.getItem('auth'))
+        dispatch(getUserDatals(userData))
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem('auth', JSON.stringify(authDatas))
+    },[authDatas])
+
+
+
     return (
         <section className="home" id='home'>
 

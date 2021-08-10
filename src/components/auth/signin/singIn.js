@@ -2,15 +2,16 @@ import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {login} from "../../../redux/reducers/auth";
 
-const SingIn = ({setActiveSignIn}) => {
+const SingIn = ({setActive}) => {
     const status = useSelector(s => s.auth.status)
     const dispatch = useDispatch()
     const loginHandler = (e) => {
         e.preventDefault()
         dispatch(login(e.target.children[0].children[1].value, e.target.children[1].children[1].value))
-        if(status === 'signed-in'){
-            setActiveSignIn(false)
-        }
+        if(status === 'signed-in') {
+            setActive(false)
+        }setActive(false)
+
     }
     return (
         <div className='sign-in'>
