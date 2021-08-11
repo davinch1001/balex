@@ -24,33 +24,33 @@ const Registr = ({getIndex, stepsTabs}) => {
         <form className='registr' onSubmit={formHandler}>
             <div className='registr__input-block'>
                 <span className='registr__input-text'>Имя</span>
-                <input id='input' type="text"  className="registr__input"/>
+                <input required id='input' type="text"  className="registr__input"/>
             </div>
 
             <div className='registr__input-block'>
                 <span className='registr__input-text'>Фамилия</span>
-                <input type="text"  className="registr__input"/>
+                <input required type="text"  className="registr__input"/>
             </div>
 
             <div className='registr__input-block'>
                 <span className='registr__input-text'>Email</span>
-                <input type="text" className="registr__input"/>
+                <input required type="email" className="registr__input"/>
             </div>
 
 
             <div className='registr__input-block'>
                 <span className='registr__input-text'>Номер</span>
-                <input type="number"  className="registr__input"/>
+                <input required type="number"  className="registr__input"/>
             </div>
 
             <div className='registr__input-block'>
                 <span className='registr__input-text'>Пароль</span>
-                <input type="text"  className="registr__input"/>
+                <input required type="password"  className="registr__input"/>
             </div>
 
             <div className='registr__input-block'>
-                <span className='registr__input-text'>Пороль</span>
-                <input type="text"  className="registr__input"/>
+                <span className='registr__input-text'>Повторите пароль</span>
+                <input required type="password"  className="registr__input"/>
             </div>
 
 

@@ -82,7 +82,7 @@
     margin-bottom: 12px;
   }
   .footer__logo-img{
-    width: 368px;
+    width: 320px;
     border-right: 1px solid gray;
   }
 
@@ -94,3 +94,8 @@
   }
 }
 
+@media (max-width: 310px) {
+  .footer__logo-img{
+    width: 310px;
+  }
+}

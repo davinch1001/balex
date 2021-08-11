@@ -27,3 +27,15 @@
     }
   }
 }
+
+@media(max-width: 655px){
+ .pa-footer__item{
+   font-size: 16px;
+ }
+}
+
+@media(max-width: 422px){
+  .pa-footer__item{
+    font-size: 14px;
+  }
+}

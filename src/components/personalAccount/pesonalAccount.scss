@@ -91,3 +91,9 @@
   }
 }
 
+@media (max-width: 1105px){
+  .menu{
+    display: none;
+    transform: translateX(-200px);
+  }
+}

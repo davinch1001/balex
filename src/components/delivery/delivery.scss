@@ -123,6 +123,14 @@
   }
 }
 
+@media (max-width: 813px) {
+  .delivery__step-box{
+    margin-right: 0;
+    width: 350px;
+    height: 360px;
+  }
+}
+
 @media (max-width: 500px) {
     .delivery__step-box .step-number{
       font-style: normal;
@@ -131,6 +139,13 @@
       line-height: 36px;
       color: #FFFFFF;
     }
+  @media (max-width: 400px) {
+    .delivery__step-box{
+      margin-right: 0;
+      width: 350px;
+      height: 360px;
+    }
+    }
   .delivery__step-box .step-title{
     font-style: normal;
     font-weight: 600;
@@ -138,6 +153,9 @@
     line-height: 26px;
 
     color: #FFFFFF;
+  }
+  .delivery__advantages-box{
+    margin-right: 0;
   }
   .delivery__step-box .step-subtitle{
     font-style: normal;

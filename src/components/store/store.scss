@@ -139,7 +139,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
     img{
-      height: 70px;
+      width: 170px;
     }
   }
   &__view-more{
@@ -211,3 +211,43 @@
   }
 }
 
+@media (max-width: 860px) {
+  .prev-store__store-items{
+    img{
+      width: 120px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .prev-store__store-items{
+    img{
+      width: 100px;
+    }
+  }
+}
+
+@media (max-width: 516px) {
+  .prev-store__store-items{
+    img{
+      width: 90px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .prev-store__store-items{
+    img{
+      width: 70px;
+    }
+  }
+}
+
+
+@media (max-width: 353px) {
+  .prev-store__store-items{
+    img{
+      width: 60px;
+    }
+  }
+}

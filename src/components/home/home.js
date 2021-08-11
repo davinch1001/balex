@@ -26,6 +26,7 @@ const Home = ({activeModal, setActiveModal, activeSignIn, setActiveSignIn}) => {
 
 
 
+
     return (
         <section className="home" id='home'>
 

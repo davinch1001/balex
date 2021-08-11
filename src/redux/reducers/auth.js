@@ -26,7 +26,7 @@ export default (state = initState, action) => {
             return {...state, authData: action.authData, userPass: action.userPass, userEmail:action.userEmail, status: "signed-in" }
         }
         case GETUSERDATA: {
-            return {...state, authData: action.authData, status: action.status}
+            return {...state, authData: action.authData, userEmail:action.userEmail, userPass: action.userPass, status: action.status}
         }
         case ORDER:{
             return {...state, order: action.order, userPass: action.userPass, userEmail:action.userEmail}
@@ -47,11 +47,12 @@ export default (state = initState, action) => {
 }
 
 export const getUserDatals = (userData) => {
-    return (dispatch) => {
+    return (dispatch, getState) => {
+        const {userEmail, userPass} = getState
+        console.log('====>',userEmail, userPass)
         if(Object.keys(userData).length !== 0){
-            dispatch({type: GETUSERDATA, authData: userData, status: 'signed-in'})
+            dispatch({type: GETUSERDATA, authData: userData, userEmail: userEmail, userPass: userPass, status: 'signed-in'})
         } else dispatch({type: GETUSERDATA, authData: userData})
-
     }
 }
 

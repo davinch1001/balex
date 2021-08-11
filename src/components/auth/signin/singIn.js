@@ -20,11 +20,11 @@ const SingIn = ({setActive}) => {
             <form onSubmit={loginHandler} className='sign-in__form'>
                 <div className="sign-in__input-block">
                     <span className="input-text">eMail</span>
-                    <input type="text" className="sign-in__input"/>
+                    <input type="email" className="sign-in__input"/>
                 </div>
                 <div className="sign-in__input-block">
                     <span className="input-text">Password</span>
-                    <input type="text" className="sign-in__input"/>
+                    <input type="password" className="sign-in__input"/>
                 </div>
                 <button type='submit' className="sign-in__btn">Войти</button>
             </form>

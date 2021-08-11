@@ -1,5 +1,5 @@
 .home{
-  margin-top: 73px;
+  margin-top: 63px;
   background: #40328A;
   padding-bottom: 30px;
   &__home-block{
@@ -134,15 +134,21 @@
     font-size: 38px
   }
 }
+@media (max-width: 400px) {
+  .home__get-address-btn{
+  }
+}
 
 @media (max-width: 634px) {
   .home__title{
-    width: 320px;
+    width: 258px  ;
     font-weight: bold;
     font-size: 24px;
     line-height: 31px;
-
     color: #FFFFFF;
+  }
+  .home__home-block{
+    margin-left: 0;
   }
   .home__abouts{
     width: 272px;

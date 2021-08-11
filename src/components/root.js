@@ -20,7 +20,7 @@ const Root = () => {
     <Route exact path='/' component={() => <Home activeSignIn={activeModalSignIn} setActiveSignIn={setActiveModalSignIn} activeModal={activeModal} setActiveModal={setActiveModal}/>}/>
     <Route exact path='/' component={PrevStore}/>
     <Route exact path='/' component={Delivery}/>
-    <Route exact path='/' component={Calc}/>
+    {/*<Route exact path='/' component={Calc}/>*/}
     <Route exact path='/' component={Contacts}/>
     <Route exact path='/' component={() => <Faq title={'F.A.Q'}/>}/>
     <Route exact path='/' component={Footer}/>

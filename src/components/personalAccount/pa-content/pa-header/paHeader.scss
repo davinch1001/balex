@@ -75,13 +75,14 @@
     align-items: center;
     cursor:pointer;
     position: relative;
+    margin-right: 10px;
     .user{
       font-style: normal;
       font-weight: normal;
       font-size: 18px;
       line-height: 23px;
       color: #FFFFFF;
-      margin: 0 10px;
+      margin: 0 10px 0 10px;
     }
   }
   &__view-more-btn{
@@ -183,4 +184,21 @@
   opacity: 0;
   transform: scale(0.9);
   transition: opacity 300ms, transform 300ms;
+}
+
+@media(max-width: 609px){
+  .user{
+    display: none;
+  }
+}
+
+@media(max-width: 492px){
+  .pa-header__price-balance{
+    display: none;
+  }
+}
+@media(max-width: 405px){
+  .pa-header__price-value{
+    display: none;
+  }
 }
