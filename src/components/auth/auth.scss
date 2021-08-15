@@ -1,6 +1,6 @@
 .auth {
   max-width: 556px;
-  height: 703px;
+  max-height: 1000px;
   background: #40328A;
   padding: 35px 34px;
   position: absolute;
@@ -12,6 +12,7 @@
     display: none;
     &.active{
       display: block;
+
     }
   }
   &__post-code-block{
@@ -25,5 +26,50 @@
     &.active{
       display: block;
     }
+  }
+  &__closeBtn{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    .fa-times{
+      font-size: 20px;
+      color: white;
+      &:hover{
+        color: #EF8C3B;
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@media(max-width: 960px){
+  .auth{
+    padding: 29px;
+    width: 500px;
+  }
+}
+
+@media(max-width: 720px){
+  .auth{
+    padding: 29px;
+    width: 490px;
+  }
+}
+
+@media(max-width: 520px){
+  .auth{
+    padding: 29px;
+    width: 450px;
+  }
+}
+
+@media(max-width: 460px){
+  .auth{
+    padding: 20px;
+    width: 300px;
   }
 }

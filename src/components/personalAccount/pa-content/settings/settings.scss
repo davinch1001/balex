@@ -27,7 +27,6 @@
     }
   }
   &__input-block{
-    width: 330px;
     display: flex;
     flex-direction: column;
     margin-right: 30px;
@@ -51,7 +50,6 @@
       @include address-input(330px, 50px)
     }
     &.data{
-      width: 689px;
       margin-top: 12px;
       &:last-child{
         margin-bottom: 12px;
@@ -73,4 +71,73 @@
     color: #fff;
     margin-top: 27px;
   }
+}
+
+@media(max-width: 1010px){
+  .settings__settings-input-data{
+    @include address-input(330px, 50px)
+  }
+  .settings__form{
+    max-width: 490px;
+  }
+}
+
+
+@media(max-width: 600px){
+  .settings__settings-input-data{
+    @include address-input(300px, 50px)
+  }
+  .settings__form{
+    max-width: 490px;
+  }
+  .settings__input-block .settings-input{
+    @include address-input(300px, 50px)
+  }
+}
+
+@media(max-width: 530px){
+  .settings__input-block .settings-input{
+    @include address-input(250px, 45px)
+  }
+  .settings__settings-input-data{
+    @include address-input(250px, 45px)
+  }
+}
+
+@media (max-width: 485px) {
+  .settings__input-block .settings-input{
+    @include address-input(200px, 45px)
+  }
+  .settings__settings-input-data{
+    @include address-input(200px, 45px)
+  }
+  .settings__form{
+    padding: 16px 34px 10px;
+  }
+}
+
+@media(max-width: 330px){
+  .settings__input-block .settings-input{
+    @include address-input(180px, 45px)
+  }
+  .settings__settings-input-data{
+    @include address-input(180px, 45px)
+  }
+  .settings__form{
+    padding: 20px 32px 10px;
+  }
+
+}
+
+@media(max-width: 300px){
+  .settings__input-block .settings-input{
+    @include address-input(160px, 45px)
+  }
+  .settings__settings-input-data{
+    @include address-input(160px, 45px)
+  }
+  .settings__form{
+    padding: 20px 32px 10px;
+  }
+
 }

@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   &__title{
     text-align: center;
     font-style: normal;
@@ -16,16 +17,25 @@
     font-size: 36px;
     line-height: 47px;
     /* identical to box height */
-    margin-bottom: 121px;
     color: #FFFFFF;
   }
   &__subtitle{
+    margin-top: 127px;
     text-align: center;
     font-style: normal;
     font-weight: 200;
     font-size: 24px;
     line-height: 31px;
     color: #FFFFFF
+  }
+  &__err{
+    margin-top: 95px;
+    color: #EF8C3B;
+    text-align: center;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 31px;
   }
   &__form{
     margin-top: 67px;
@@ -67,5 +77,85 @@
     align-items: center;
     margin-top: 98px;
   }
+  &__closeBtn{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    .fa-times{
+      font-size: 20px;
+      color: white;
+      &:hover{
+        color: #EF8C3B;
+        font-size: 22px;
+      }
+    }
+  }
+}
 
+@media(max-width: 960px){
+  .sign-in{
+    padding: 28px 115px;
+    width: 456px;
+  }
+  .sign-in__btn{
+    width: 253px;
+    height: 40px;
+  }
+}
+
+@media(max-width: 720px){
+  .sign-in{
+    padding: 23px 108px;
+    width: 356px;
+  }
+  .sign-in__subtitle{
+    margin-top: 100px;
+  }
+  .sign-in__btn{
+    margin-top: 78px;
+    width: 250px;
+    height: 45px;
+  }
+}
+
+@media(max-width: 520px){
+  .sign-in{
+    padding: 18px 100px;
+    width: 320px;
+  }
+  .sign-in__subtitle{
+    margin-top: 70px;
+  }
+  .sign-in__btn{
+    margin-top: 50px;
+    width: 220px;
+    height: 45px;
+  }
+}
+
+@media(max-width: 375px){
+  .sign-in{
+    padding: 18px 50px;
+    width: 300px;
+  }
+  .sign-in__subtitle{
+    margin-top: 20px;
+  }
+  .sign-in__btn{
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+  }
+  .sign-in__input{
+    @include address-input(200px, 40px);
+    display: block;
+    margin: 0 auto
+  }
+  .sign-in__input-block .input-text{
+    margin-left: 36px;
+  }
 }

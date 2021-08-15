@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import storeCatalogs from '../../store-catalog.json'
 import {Link} from "react-router-dom";
+import StoreHeader from "./store-header/store-header";
 
-const Store = () => {
+const Store = ({activeSignIn,setActiveSignIn, setActiveModal,activeModal}) => {
 
     const [storeTabs, setStoreTabs] = useState(1)
 
@@ -11,13 +12,14 @@ const Store = () => {
 
     const category = ['Автозапчасти','Для будущих мам', 'Для детей', 'Аксесуары','Игрушки', 'Обувь', 'Для экстримального спорта', 'Женское белье']
     return (
+        <>
+        <StoreHeader activeSignIn={activeSignIn} setActiveSignIn={setActiveSignIn } setActiveModal={setActiveModal} activeModal={activeModal}/>
         <div className='store'>
-            <Link className="go-back" to='/'>Вернуться на главную</Link>
             <div className="container">
             <div className="store__tabs">
                 {
                     category.map((el, idx) => (
-                            <button onClick={() => setStoreTabs(idx+1)} className='store__tabs-btn' key={idx}>{el}</button>
+                            <button onClick={() => setStoreTabs(idx+1)} className={storeTabs === idx+1 ? 'store__tabs-btn active' : 'store__tabs-btn'} key={idx}>{el}</button>
                     ))
                 }
             </div>
@@ -139,6 +141,7 @@ const Store = () => {
             </div>
             </div>
         </div>
+        </>
     );
 };
 

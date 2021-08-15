@@ -121,3 +121,65 @@
     }
   }
 }
+
+@media (max-width: 844px) {
+  .price-calc{
+    max-width: 400px;
+    &__box {
+      padding: 32px 32px 12px 32px;
+      max-width: 370px;
+      margin: 0 auto;
+    }
+
+    &__kilogram-input, &__centimeter-input {
+      @include input(64px, 27px);
+      margin-right: 19px;
+      &:last-child{
+        margin-right: 0;
+      }
+      font-size: 16px;
+    }
+
+    &__mass-input, &__length-input, &__width-input, &__height-input {
+      @include input(31px, 27px);
+      margin-right: 7px;
+      font-size: 14px;
+      &::placeholder{
+        font-size: 0;
+      }
+    }
+
+    &__price-box{
+      width: 114px;
+      margin-left: 44px;
+      .prices{
+        width: 76px;
+      }
+    }
+    &__prices {
+      padding: 0;
+      @include input(116px, 63px);
+      .price-btn {
+        margin-top: 30px;
+        padding: 12.5px 18.5px;
+        font-size: 14px;
+      }
+    }
+
+    &__country-input {
+      @include input(148px, 30px);
+    }
+  }
+  .w-h{
+    display: flex;
+  }
+}
+
+@media(max-width: 330px){
+  .calc{
+    &__box{
+      padding: 16px 11px 12px 5px;
+      max-width: 320px;
+    }
+  }
+}

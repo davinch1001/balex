@@ -7,6 +7,7 @@
  &__tabs{
    display: flex;
    flex-wrap: wrap;
+   justify-content: space-between;
    margin-bottom: 100px;
  }
   &__tabs-btn{
@@ -15,12 +16,14 @@
     height: 45px;
     background: #40328A;
     border-radius: 10px;
-    margin-right: 12px;
     color: white;
-    &:last-child{
-      margin-right: 0;
+    &:first-child{
+      margin-left: 0;
     }
     &:hover{
+      background: #EF8C3B;
+    }
+    &.active{
       background: #EF8C3B;
     }
   }
@@ -31,7 +34,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
     border-radius: 10px;
     position: relative;
     cursor: pointer;
@@ -61,6 +63,7 @@
   &__block{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
   &__auto-parts{
     display: none;

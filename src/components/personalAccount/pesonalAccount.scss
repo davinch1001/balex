@@ -1,13 +1,38 @@
 .personal-account{
-  height: calc(100vh - 60px);
+  height: 100vh;
+  position: relative;
 }
 
 
 .menu{
+  z-index: 4;
   padding: 43px 0 0 34px;
-  width: 17.5%;
-  height: calc(100vh - 113px);
+  width: 278px;
+  height: 100vh;
   border-right: 1px solid #40328A;
+  background: white;
+  transition: 0.5s;
+  transform: translateX(0);
+  &.active{
+    transition: 0.5s;
+    transform: translateX(-255px);
+  }
+  &__open-menu-btn{
+    position: absolute;
+    top: 13px;
+    right: -21px;
+    border: 1px solid #40328A;
+    border-left: 1px solid white;
+    background: transparent;
+    .fa-chevron-left{
+      font-size: 30px;
+      transition: 0.5s;
+      transform: rotate(0);
+      &.active{
+        transform: rotate(180deg);
+      }
+    }
+  }
   .btn-add{
     color: #FFFFFF;
     border-style: none;
@@ -69,7 +94,6 @@
       background-color: #40328A;
     }
   }
-
 }
 
 .order{
@@ -93,7 +117,11 @@
 
 @media (max-width: 1105px){
   .menu{
-    display: none;
-    transform: translateX(-200px);
+    position: absolute;
+    transform: translateX(-278px);
+    height: 100%;
+    &.active{
+      transform: translateX(0);
+    }
   }
 }

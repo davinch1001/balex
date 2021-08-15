@@ -55,13 +55,15 @@
     .user-first-name{
       display: flex;
       flex-direction: column;
-      margin-right: 30px;
       margin-bottom: 24px;
 
     }
     .user-last-name{
       display: flex;
       flex-direction: column;
+    }
+    .street-name{
+      display: grid;
     }
   }
   &__street{
@@ -78,9 +80,13 @@
       display: flex;
       flex-direction: column;
     }
+    .street-name{
+      display: grid;
+    }
   }
   &__input{
     @include address-input(330px, 50px);
+    margin-right: 20px;
   }
   &__input-block{
     display: flex;
@@ -114,4 +120,111 @@
     left: 150%;
   }
 
+}
+
+@media(max-width: 1010px){
+  .address__user-name{
+    display: flex;
+    flex-direction: column;
+  }
+  .address__street{
+    display: flex;
+    flex-direction: column;
+  }
+  .address__input-block{
+    display: flex;
+    flex-direction: column;
+  }
+  .address__input-block .inputs {
+    @include address-input(330px, 50px)
+  }
+  .address__city-name{
+    display: flex;
+    flex-direction: column;
+  }
+  .address__subtitle{
+    width: 400px;
+  }
+}
+
+@media(max-width: 625px){
+  .address__city-name{
+    display: flex;
+    flex-direction: column;
+  }
+  #de:after{
+    display: none;
+  }
+  .address__title{
+    font-size: 28px;
+    margin-left: 81px;
+  }
+  .address__subtitle{
+    margin-left: 81px;
+  }
+}
+
+@media(max-width: 581px) {
+  .address__input{
+    @include address-input(280px, 50px)
+  }
+  .address__input-block .inputs{
+    @include address-input(280px, 50px)
+  }
+  .address__form{
+    padding: 30px 52px 12px;
+  }
+  .address__subtitle{
+    width: 350px;
+  }
+}
+
+@media(max-width: 443px){
+  .address__form{
+    padding: 30px 11px 12px;
+  }
+  .address__title{
+    font-size: 20px;
+    margin-left: 34px;
+  }
+  .address__subtitle{
+    width: 300px;
+    margin-left: 30px;
+  }
+  .address__title{
+    font-size: 20px;
+    margin-left: 0;
+  }
+  .address__subtitle{
+    margin-left: 0;
+    width: 290px;
+    margin-bottom: 18px;
+  }
+}
+
+@media(max-width: 385px){
+  .address__input{
+    @include address-input(250px, 50px)
+  }
+  .address__input-block .inputs{
+    @include address-input(250px, 50px)
+  }
+  .address__title{
+    font-size: 20px;
+    margin-left: 0;
+  }
+  .address__subtitle{
+    margin-left: 0;
+    width: 290px;
+  }
+}
+
+
+@media(max-width: 385px){
+  .address__input{
+    @include address-input(200px, 50px)
+  }
+  .address__input-block .inputs{
+    @include address-input(200px, 50px)
+  }
 }

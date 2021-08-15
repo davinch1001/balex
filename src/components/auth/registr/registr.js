@@ -7,9 +7,6 @@ const Registr = ({getIndex, stepsTabs}) => {
     const dispatch = useDispatch()
 
 
-
-
-
     const formHandler = (e) => {
         e.preventDefault()
         dispatch(postUserData(e.target.children[0].children[1].value, e.target.children[1].children[1].value, e.target.children[2].children[1].value, e.target.children[3].children[1].value, e.target.children[4].children[1].value))
@@ -17,7 +14,7 @@ const Registr = ({getIndex, stepsTabs}) => {
         console.log('e.target',e.target.children[1].children[1].value,e.target.children[2].children[1].value)
     }
     return (
-        <>
+        <div className='registr-block'>
             <h2 className='registr__title'>Регистрация</h2>
             <p className='registr__subtitle'>уже есть акканут? <span style={{color:"#EF8C3B"}}>Войдите</span></p>
             <StepBtn stepsTabs={stepsTabs}/>
@@ -60,7 +57,7 @@ const Registr = ({getIndex, stepsTabs}) => {
                 <button type='submit' className="registr__btn">Далее</button>
             </div>
         </form>
-        </>
+        </div>
     );
 };
 

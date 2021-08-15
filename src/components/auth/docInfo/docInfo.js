@@ -27,7 +27,7 @@ const DocInfo = ({getIndex, stepsTabs, setActiveModal}) => {
             <form onSubmit={postDocHadndler} className='doc__form'>
                <div className="doc__input-block">
                    <span className="input-text">Type</span>
-                   <select className='input select' name="" id="0">
+                   <select required className='input select' name="" id="0">
                        <option value="PASSPORT">Паспорт</option>
                        <option value="ID_CARD">Карта</option>
                        <option value="DRIVERS_LICENSE">Водительское удостоверение</option>
@@ -36,17 +36,17 @@ const DocInfo = ({getIndex, stepsTabs, setActiveModal}) => {
 
                 <div className="doc__input-block">
                     <span className="input-text">Type</span>
-                    <input type="text" placeholder="Данные" className="doc__input"/>
+                    <input required type="text" placeholder="Данные" className="doc__input"/>
                 </div>
 
                 <div className="doc__input-block">
                     <span className="input-text">Type</span>
-                    <input type="text" placeholder="Адрес" className="doc__input"/>
+                    <input required type="text" placeholder="Адрес" className="doc__input"/>
                 </div>
 
                 <div className="doc__input-block">
                     <span className="input-text">Type</span>
-                    <select className='select' name="" id="0">
+                    <select required className='select' name="" id="0">
                         <option value="KG">Кыргызстан</option>
                         <option value="KZ">Казахстан </option>
                         <option value="UZB">Узбекистан</option>

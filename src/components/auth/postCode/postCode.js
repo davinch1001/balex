@@ -30,7 +30,7 @@ const PostCode = ({getIndex, stepsTabs, setActiveSignIn, setActiveModal}) => {
             <p className="post-code__description">Вам на почту отправлен код. Введите код для подтверждение аккаутнта</p>
             <div className='post-code__input-block'>
                 <span className="input-text">Code</span>
-                <input type="text" className="post-code__input"/>
+                <input required  type="text" className="post-code__input"/>
             </div>
             <div className="post-code__btns">
                 <button onClick={formHandler} className='post-code__btn cancel' >Отмена</button>

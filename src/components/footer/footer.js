@@ -1,7 +1,7 @@
 import React from 'react';
 import footerLogo from '../../../src/img/footer/footer-logo.png'
 
-const Footer = () => {
+const Footer = ({setActiveModal}) => {
     return (
         <footer className='footer'>
             <div className="container">
@@ -11,7 +11,7 @@ const Footer = () => {
                     <p className="footer__description">Сервис доставки посылок
                         из США</p>
                 </div>
-                <button className="footer__get-address-btn">Получить адрес</button>
+                <button onClick={() => setActiveModal(true)} className="footer__get-address-btn">Получить адрес</button>
                 <div className="footer__support">
                     <h2 className='support-title'>Поддержка</h2>
                     <p className="email">Email:balex@gmail.com</p>

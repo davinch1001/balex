@@ -1,14 +1,45 @@
 .order{
-  padding: 35px 34px;
-  background: #40328A;
+  &__title{
+    margin-bottom: 10px;
+  }
+  max-width: 625px;
+  padding: 25px 40px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid #40328A;
+  &__input-block{
+    width: 250px;
+    &.price-prod{
+      width: 100px;
+      margin-left: 10px;
+    }
+    &.track{
+      width: 100%;
+    }
+  }
   &__input{
-    @include address-input(250px, 45px)
+    @include address-input(100%, 45px);
+    text-align: center;
+    padding-right: 20px;
+    &::placeholder{
+      color:#A3B1BB;
+      padding-left: 10px;
+      text-align: left;
+
+    }
+  }
+  &__input-text{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    margin-left: 10px;
   }
   &__btns{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -16,10 +47,13 @@
   &__btn{
     width: 154px;
     height: 37px;
-    border-radius: 10px;
+    border-radius: 8px;
+    border-style: none;
     &.cancel{
       width: 100px;
-      border-style: none  ;
+      border-style: none;
+      background: gray;
+      color: white;
     }
     &.save{
       background: #EF8C3B;

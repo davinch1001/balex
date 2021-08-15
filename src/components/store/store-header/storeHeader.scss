@@ -1,0 +1,17 @@
+.store-header{
+  width: 100%;
+  background: #40328A;
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    height: 60px;
+  }
+  &__go-home{
+    color: white;
+  }
+  &__search{
+    @include address-input(200px, 45px)
+  }
+}

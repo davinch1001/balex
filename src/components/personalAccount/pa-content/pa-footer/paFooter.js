@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PaFooter = () => {
+const PaFooter = ({setActiveModal}) => {
     return (
         <footer className='pa-footer'>
                 <div className="container">

@@ -193,12 +193,24 @@
 }
 
 @media(max-width: 492px){
-  .pa-header__price-balance{
+  .pa-header__price{
     display: none;
   }
 }
 @media(max-width: 405px){
   .pa-header__price-value{
     display: none;
+  }
+  .pa-header__user-data{
+    margin-left: 10px;
+  }
+}
+
+@media(max-width:333px){
+  .pa-header__price{
+    display: none;
+  }
+  .pa-header__user-data{
+    margin-left: 10px;
   }
 }

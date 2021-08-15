@@ -42,7 +42,7 @@
   &__btns{
     display: flex;
     justify-content: space-between;
-    width: 488px;
+    width: 100%;
     align-items: flex-end;
   }
   &__btn{
@@ -64,5 +64,26 @@
       line-height: 23px;
       width: 53px;
     }
+  }
+}
+
+@media(max-width: 520px){
+  .post-code__description{
+    margin-bottom: 120px;
+  }
+}
+
+@media(max-width: 460px){
+  .post-code__description{
+    margin-bottom: 27px;
+  }
+  .post-code__title{
+    font-size: 29px;
+  }
+  .post-code__input-block{
+    margin-bottom: 35px;
+  }
+  .post-code__btn{
+    width: 152px;
   }
 }

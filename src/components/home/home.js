@@ -13,32 +13,28 @@ import {getUserDatals} from "../../redux/reducers/auth";
 const Home = ({activeModal, setActiveModal, activeSignIn, setActiveSignIn}) => {
     const dispatch = useDispatch()
 
-    const authDatas = useSelector(s => s.auth.authData)
-
-    useEffect(() => {
-        const userData = JSON.parse(localStorage.getItem('auth'))
-        dispatch(getUserDatals(userData))
-    }, [])
-
-    useEffect(() => {
-        localStorage.setItem('auth', JSON.stringify(authDatas))
-    },[authDatas])
-
-
+    const closeSignIn = () => {
+        setActiveModal(!activeModal)
+        if(activeSignIn){
+        setActiveSignIn(false)
+        }else{
+            setActiveSignIn(false)
+        }
+    }
 
 
     return (
         <section className="home" id='home'>
 
-            <div onClick={() => setActiveModal(false)}
-                 className={activeModal ? 'authorization active' : 'authorization'}>
+            <div onClick={() => setActiveModal(!activeModal)}
+                 className={activeModal  ? 'authorization active' : 'authorization'}>
                 <div onClick={e => e.stopPropagation()} className="auth-block"><Auth activeSignIn={setActiveSignIn} activeModal={activeModal}
                                                                                      setActiveModal={setActiveModal}/>
                 </div>
             </div>
 
-            <div onClick={() => setActiveSignIn(false)}
-                 className={activeSignIn ? 'authorization active' : 'authorization'}>
+            <div onClick={() => setActiveSignIn(!activeSignIn)}
+                 className={activeSignIn? 'authorization-sign-in active' : 'authorization-sign-in'}>
                 <div onClick={e => e.stopPropagation()} className="auth-block"><SingIn setActive={setActiveSignIn}/>
                 </div>
             </div>
@@ -60,7 +56,7 @@ const Home = ({activeModal, setActiveModal, activeSignIn, setActiveSignIn}) => {
                             посылке.
                         </p>
                         <img src={air} className='home__air' alt=""/>
-                        <button className="home__get-address-btn">Получить адрес</button>
+                        <button  onClick={() => setActiveModal(true)} className="home__get-address-btn">Получить адрес</button>
 
                     </div>
                     <div className="home__img-block">

@@ -13,6 +13,7 @@ const Auth = ({activeModal, setActiveModal, activeSignIn}) => {
 
     return (
         <div className='auth'>
+            <button onClick={() => setActiveModal(false)} className="auth__closeBtn"><i className="fas fa-times"></i></button>
 
             <div className="auth__tabs-content">
 

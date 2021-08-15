@@ -4,12 +4,14 @@ import './index.css';
 import Root from "./components/root";
 import store from "./redux";
 import {Provider} from "react-redux";
+import LocalStorage from "./components/localStorage";
 
 
 ReactDOM.render(
   <React.StrictMode>
       <Provider store={store}>
           <Root />
+          <LocalStorage/>
       </Provider>
   </React.StrictMode>,
   document.getElementById('root')

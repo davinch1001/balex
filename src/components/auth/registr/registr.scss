@@ -1,4 +1,12 @@
+.registr-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
 .registr{
+  width: 100%;
   &__title{
     font-style: normal;
     font-weight: 600;
@@ -24,7 +32,7 @@
   align-items: center;
   flex-wrap: wrap;
   &__input{
-    @include address-input(229px, 45px);
+    @include address-input(100%, 45px);
 
   }
   &__btn{
@@ -43,7 +51,7 @@
     justify-content: flex-end;
   }
   &__input-block{
-    width: 229px;
+    width: 220px;
     display: flex;
     flex-direction: column;
     margin-bottom: 59px;
@@ -61,5 +69,64 @@
 
     color: #FFFFFF;
     margin-left: 11px;
+  }
+}
+
+@media(max-width: 960px){
+  .registr__input-block{
+    width: 200px;
+  }
+  .registr__input-block{
+    margin-bottom: 40px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    margin-right: 30px;
+  }
+  .auth__steps-tabs{
+    width: 440px;
+  }
+}
+
+@media(max-width: 720px){
+  .registr__input-block{
+    width: 180px;
+  }
+  .registr__input-block{
+    margin-bottom: 30px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    margin-right: 72px;
+
+  }
+}
+
+@media(max-width: 520px){
+  .registr__input-block{
+    width: 180px;
+  }
+  .registr__input-block{
+    margin-bottom: 30px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    margin-right: 32px;
+  }
+}
+
+@media(max-width: 320px){
+  .registr__input-block{
+    width: 180px;
+  }
+  .registr__input-block{
+    margin-bottom: 30px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    margin-right: 32px;
+  }
+  .auth__steps-tabs{
+    width: 300px;
   }
 }

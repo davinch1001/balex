@@ -19,11 +19,13 @@ import {getUserDatals} from "../../redux/reducers/auth";
 const PersonalAccount = () => {
 
     const [toggleState, setToggleState] = useState(2)
+    const [openMenu, setOpenMenu] = useState(false)
     console.log(toggleState)
     const menuItem = [{value: 'Добавить'},{img: packagesIcon, value: 'Посылка'},{img: priceIcon, value: 'Стоимость'},{img: adressIcon, value: 'Адрес'},{img: helpIcon, value: 'Помощь'},{img: settingsIcon, value: 'Настройки'}]
 
     const toggleTab = (idx) => {
         setToggleState(idx)
+        setOpenMenu(false)
     }
 
 
@@ -31,7 +33,8 @@ const PersonalAccount = () => {
         <div className='personal-account'>
             <PaHeader toggleTab={toggleTab}/>
             <div className="tabs">
-                <div className='menu'>
+                <div className={openMenu ? 'menu active' : 'menu'}>
+                    <button className="menu__open-menu-btn" onClick={() =>setOpenMenu(!openMenu) }><i className={openMenu ? 'fas fa-chevron-left active' : 'fas fa-chevron-left'}></i></button>
                     {
                         menuItem.map((el, idx) => (
                             <div className='menu__menu-item' key={idx}>

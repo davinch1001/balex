@@ -3,6 +3,7 @@
     width: 490px;
     display: flex;
     justify-content: space-around;
+    position: relative;
     .step-tab{
       font-weight: 200;
       font-size: 36px;
@@ -14,11 +15,35 @@
       width: 60px;
       border-radius: 50%;
       margin-bottom: 30px;
-      border: 2px solid black;
+      border: 1px solid black;
+      position: relative;
       &.active{
         background: #fff;
         color: #EF8C3B;
       }
+      span{
+        position: absolute;
+        top: 50%;
+        left: 58px;
+        width: 105px;
+        height: 1px;
+        background: #000;
+      }
     }
+  }
+}
+
+@media(max-width: 460px){
+  .auth__steps-tabs{
+    width: 300px;
+  }
+  .auth__steps-tabs .step-tab span{
+    width: 50px;
+    position: absolute;
+    left: 49px;
+  }
+  .auth__steps-tabs .step-tab{
+    width: 50px;
+    height: 50px;
   }
 }

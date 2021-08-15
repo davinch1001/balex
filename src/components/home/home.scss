@@ -1,7 +1,7 @@
 .home{
   margin-top: 63px;
   background: #40328A;
-  padding-bottom: 30px;
+  padding: 63px 0;
   &__home-block{
     position: relative;
     display: flex;
@@ -121,6 +121,18 @@
 
 }
 
+@media(max-width: 1262px){
+  .home__home-block{
+    display: flex;
+    margin-left: 60px;
+    justify-content: center;
+    align-items: center;
+  }
+  .home__title{
+    width: 100%;
+  }
+}
+
 @media (max-width: 1080px) {
   .home__home-block{
     display: flex;
@@ -170,12 +182,13 @@
 
 .authorization-sign-in{
   display: none;
-  width: 99vw;
+  width: 100vw;
   height: 100vh;
   background: #ffffff90;
   position: fixed;
   top: 0;
   z-index: 2;
+  overflow: hidden;
   &.active{
     display: block;
   }
@@ -189,12 +202,13 @@
 
 .authorization{
   display: none;
-  width: 99vw;
+  width: 100vw;
   height: 100vh;
   background: #ffffff90;
   position: fixed;
   top: 0;
   z-index: 2;
+  overflow: hidden;
   &.active{
     display: block;
   }

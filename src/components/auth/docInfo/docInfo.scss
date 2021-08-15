@@ -1,4 +1,7 @@
 .doc{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &__title{
     font-style: normal;
     font-weight: 600;
@@ -15,6 +18,7 @@
     flex-wrap: wrap;
     .select{@include address-input(229px, 45px)}
 
+    width: 100%;
     margin-top: 124px;
   }
   &__input-block{
@@ -22,6 +26,7 @@
     flex-direction: column;
     margin-right: 30px;
     margin-bottom: 24px;
+    width: 229px;
     &:nth-child(even){
       margin-right: 0;
     }
@@ -35,14 +40,15 @@
     }
   }
   &__input{
-    @include address-input(229px, 45px);
+    @include address-input(100%, 45px);
   }
   &__btns{
     display: flex;
     justify-content: space-between;
-    width: 488px;
     margin-top: 69px;
     align-items: flex-end;
+    width: 100%;
+
   }
   &__btn{
     font-style: normal;
@@ -52,7 +58,7 @@
     background: #EF8C3B;
     border-radius: 10px;
     color: #FFFFFF;
-    width: 269px;
+    width: 200px;
     &.cancel{
       border-style: none;
       color: #EF8C3B;
@@ -64,4 +70,66 @@
       width: 53px;
     }
   }
+}
+
+@media (max-width: 720px) {
+  .doc__form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: center;
+  }
+  .registr__subtitle{
+    margin-bottom: 30px;
+  }
+  .doc__btns{
+    margin-top: 30px;
+  }
+  .doc__input-block{
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .doc__form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: center;
+  }
+  .registr__subtitle{
+    margin-bottom: 30px;
+  }
+  .doc__btns{
+    margin-top: 30px;
+  }
+  .doc__input-block{
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 475px) {
+  .doc__form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: center;
+  }
+  .registr__subtitle{
+    margin-bottom: 20px;
+  }
+  .doc__btns{
+    margin-top: 0;
+  }
+  .doc__input-block{
+    margin-right: 0;
+  }
+  .doc__btn{
+    width: 150px;
+    font-size: 18px;
+  }
+  .doc__input-block{
+    margin-bottom: 10px;
+  }
+
 }

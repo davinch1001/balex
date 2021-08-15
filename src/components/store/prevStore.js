@@ -12,7 +12,7 @@ const PrevStore = () => {
                     <img src="https://cdn.freelogovectors.net/wp-content/uploads/2018/04/zappos-logo.png" alt=""/>
                     <img src="https://logos-download.com/wp-content/uploads/2016/02/Walmart_logo_transparent_png.png" alt=""/>
                 </div>
-                <Link to='store' className="prev-store__view-more">Все Магазины</Link>
+                <Link to='/store' className="prev-store__view-more">Все Магазины</Link>
             </div>
         </div>
     );
