@@ -61,10 +61,7 @@ body {
   margin-right: 59px;
 }
 .header__nav-link:hover {
-  background: #EF8C3B;
-  padding: 10px 20px;
-  -webkit-box-shadow: 0px 5px 16px -5px rgba(0, 0, 0, 0.65);
-          box-shadow: 0px 5px 16px -5px rgba(0, 0, 0, 0.65);
+  color: #EF8C3B;
 }
 .header__logo {
   margin-right: 20px;
@@ -244,10 +241,14 @@ body {
     -webkit-transform: translateX(-300px);
             transform: translateX(-300px);
     border: 1px solid black;
+    -webkit-transition: 1s;
+    transition: 1s;
   }
   .header__burger.active {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+    -webkit-transition: 1s;
+    transition: 1s;
   }
 
   .header__personal-account img {
@@ -4139,6 +4140,9 @@ body {
 }
 
 .registr {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   color: white;
   display: -webkit-box;
@@ -4182,6 +4186,7 @@ body {
   border-radius: 10px;
   width: 100%;
   height: 45px;
+  padding-left: 12px;
 }
 .registr__btn {
   font-style: normal;
@@ -4192,6 +4197,22 @@ body {
   border-radius: 10px;
   color: #FFFFFF;
   width: 269px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.registr__load {
+  display: none;
+}
+.registr__load.active {
+  display: block;
 }
 .registr__btns {
   width: 484px;
@@ -4203,6 +4224,7 @@ body {
           justify-content: flex-end;
 }
 .registr__input-block {
+  position: relative;
   width: 220px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4216,6 +4238,20 @@ body {
 }
 .registr__input-block:nth-child(even) {
   margin-right: 0;
+}
+.registr__input-block .fa-eye {
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  font-size: 21px;
+  color: gray;
+}
+.registr__input-block .fa-eye-slash {
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  font-size: 21px;
+  color: gray;
 }
 .registr__input-text {
   font-style: normal;
@@ -4250,7 +4286,6 @@ body {
 
   .registr__input-block {
     margin-bottom: 30px;
-    margin-right: 72px;
   }
   .registr__input-block:last-child {
     margin-bottom: 0;
@@ -4259,14 +4294,49 @@ body {
 @media (max-width: 520px) {
   .registr__input-block {
     width: 180px;
+    margin-right: 0;
   }
 
   .registr__input-block {
-    margin-bottom: 30px;
-    margin-right: 32px;
+    margin-bottom: 8px;
   }
   .registr__input-block:last-child {
     margin-bottom: 0;
+  }
+
+  .auth__steps-tabs .step-tab {
+    margin-bottom: 6px;
+  }
+
+  .auth {
+    padding: 0;
+  }
+
+  .registr__input-text {
+    font-size: 16px;
+  }
+
+  .registr__title {
+    font-size: 33px;
+  }
+
+  .registr__subtitle {
+    font-size: 17px;
+  }
+
+  .registr__btns {
+    margin-bottom: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .registr__btn {
+    width: 181px;
+    font-size: 20px;
   }
 }
 @media (max-width: 320px) {
@@ -4276,7 +4346,6 @@ body {
 
   .registr__input-block {
     margin-bottom: 30px;
-    margin-right: 32px;
   }
   .registr__input-block:last-child {
     margin-bottom: 0;
@@ -4354,7 +4423,7 @@ body {
 }
 @media (max-width: 460px) {
   .auth {
-    padding: 20px;
+    padding: 0;
     width: 300px;
   }
 }
@@ -4387,6 +4456,9 @@ body {
   text-align: center;
   color: #FFFFFF;
   margin-bottom: 165px;
+}
+.post-code__description.err {
+  color: #EF8C3B;
 }
 .post-code__input-block {
   display: -webkit-box;
@@ -4648,7 +4720,7 @@ body {
   }
 
   .registr__subtitle {
-    margin-bottom: 20px;
+    margin-bottom: 14px;
   }
 
   .doc__btns {
@@ -4718,6 +4790,7 @@ body {
   .auth__steps-tabs .step-tab {
     width: 50px;
     height: 50px;
+    margin-bottom: 12px;
   }
 }
 .sign-in {
@@ -4782,6 +4855,21 @@ body {
 .sign-in__input-block {
   width: 250px;
   margin-bottom: 24px;
+  position: relative;
+}
+.sign-in__input-block .fa-eye {
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  font-size: 21px;
+  color: gray;
+}
+.sign-in__input-block .fa-eye-slash {
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  font-size: 21px;
+  color: gray;
 }
 .sign-in__input-block:last-child {
   margin-bottom: 0;
@@ -4915,6 +5003,19 @@ body {
 
   .sign-in__input-block .input-text {
     margin-left: 36px;
+  }
+
+  .sign-in__input-block .fa-eye {
+    position: absolute;
+    right: 31px;
+  }
+
+  .sign-in__input-block .fa-eye-slash {
+    position: absolute;
+    right: 31px;
+    top: 50%;
+    font-size: 21px;
+    color: gray;
   }
 }
 .order {

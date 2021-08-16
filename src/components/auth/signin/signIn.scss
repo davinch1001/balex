@@ -47,6 +47,21 @@
   &__input-block{
     width: 250px;
     margin-bottom: 24px;
+    position: relative;
+    .fa-eye{
+      position: absolute;
+      right: 9px;
+      top: 50%;
+      font-size: 21px;
+      color: gray;
+    }
+    .fa-eye-slash{
+      position: absolute;
+      right: 9px;
+      top: 50%;
+      font-size: 21px;
+      color: gray;
+    }
     &:last-child{
       margin-bottom: 0;
     }
@@ -157,5 +172,16 @@
   }
   .sign-in__input-block .input-text{
     margin-left: 36px;
+  }
+  .sign-in__input-block .fa-eye{
+    position: absolute;
+    right: 31px;
+  }
+  .sign-in__input-block .fa-eye-slash {
+    position: absolute;
+    right: 31px;
+    top: 50%;
+    font-size: 21px;
+    color: gray;
   }
 }

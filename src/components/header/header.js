@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {Link} from "react-router-dom";
 import logoHeader from '../../../src/img/header/logo-header-2.png'
 import lengTrans from '../../../src/img/header/leng-icon.svg'
@@ -6,9 +6,10 @@ import account from '../../../src/img/header/account.png'
 import {useSelector} from "react-redux";
 
 const Header = ({activeModal, setActiveModal, setActiveSignIn, activeSignIn}) => {
+    const user = localStorage.getItem('auth')
     const [openBurger, setOpenBurger] = useState(false)
-    const userSignIn = useSelector(s => s.auth.status)
-    const wdt = window.innerWidth
+    const userData = useSelector(s => s.auth.authData)
+
     return (
         <header className="header">
             <div className="container">
@@ -25,7 +26,7 @@ const Header = ({activeModal, setActiveModal, setActiveSignIn, activeSignIn}) =>
                 <div className={openBurger ? 'header__personal-account active' : 'header__personal-account'}>
                     <img  src={lengTrans} alt=""/> <span className='after'></span>
 
-                    {userSignIn === 'signed-in' ? <div style={{display:"flex", alignItems: "center"}}> <img src={account} alt=""/><Link className='personal-account-text' to='/personalAccount'> Личный кабинет</Link></div> :
+                    {userData !== '' ? <div style={{display:"flex", alignItems: "center"}}> <img src={account} alt=""/><Link className='personal-account-text' to='/personalAccount'> Личный кабинет</Link></div> :
                        <div>
                            <button className='header__auth-btn' onClick={() => setActiveSignIn(!activeSignIn)}>Войти </button>
                            <button className='header__auth-btn' onClick={() => setActiveModal(!activeModal)}>Регистрация</button>

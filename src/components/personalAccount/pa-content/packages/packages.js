@@ -6,7 +6,7 @@ import {useSelector} from "react-redux";
 const order = {name:'nb745h3', remain: '4 дня', price: '1800₽', date:'08.07.2021'}
 
 const Packages = () => {
-    const packages = useSelector(s => s.auth.order)
+    const packages = useSelector(s => s.auth.myOrders)
     console.log('packages====>',packages)
     return (
         <>

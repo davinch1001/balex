@@ -8,12 +8,10 @@ const Calc = () => {
 const dispatch = useDispatch()
 
     const price = useSelector(s => s.auth.sum)
-    console.log(price)
 
     const calcHandler = (e) => {
     e.preventDefault()
      dispatch(getCalcValue2(e.target.children[0].children[1].children[0].value,e.target.children[0].children[1].children[1].value,e.target.children[0].children[2].children[0].value,e.target.children[0].children[2].children[1].value,e.target.children[0].children[2].children[2].value,e.target.children[0].children[2].children[3].value))
-        console.log(e.target.children[0].children[1].children[1].value)
     }
 
 

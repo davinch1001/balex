@@ -1,18 +1,50 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {getUserDatals, postUserData} from "../../../redux/reducers/auth";
 import StepBtn from "../stepBtn/stepBtn";
+import load from '../../../img/loading-buffering.gif'
 
 const Registr = ({getIndex, stepsTabs}) => {
-    const dispatch = useDispatch()
 
+    const [preloader, setPreloader] = useState(false)
+    const [show, setShow] = useState(false)
+    const [show2, setShow2] = useState(false)
+
+    const dispatch = useDispatch()
+    const userData = useSelector(s => s.auth.authData)
 
     const formHandler = (e) => {
         e.preventDefault()
-        dispatch(postUserData(e.target.children[0].children[1].value, e.target.children[1].children[1].value, e.target.children[2].children[1].value, e.target.children[3].children[1].value, e.target.children[4].children[1].value))
-        getIndex(2)
-        console.log('e.target',e.target.children[1].children[1].value,e.target.children[2].children[1].value)
+        dispatch(postUserData(e.target.children[0].children[1].value, e.target.children[1].children[1].value, e.target.children[2].children[1].value, e.target.children[3].children[1].value, e.target.children[4].children[1].value,e.target.children[5].children[1].value))
+        const pass = e.target.children[3].children[1].value
+        const passAgain = e.target.children[5].children[1].value
+        if(Object.keys(userData).length !== 0){
+            getIndex(2)
+        }
+        setPreloader(true)
+        console.log('userpass' ,'num=',pass, 'pass=',passAgain )
     }
+
+    const showPass = () => {
+        let input = document.querySelector('#registr__pass')
+        setShow(!show)
+        if(input.type === 'password'){
+            input.type = 'text'
+        }else{
+            input.type = 'password'
+        }
+    }
+
+    const showPassAgain = () => {
+        let input = document.querySelector('#registr__pass2')
+        setShow2(!show2)
+        if(input.type === 'password'){
+            input.type = 'text'
+        }else{
+            input.type = 'password'
+        }
+    }
+
     return (
         <div className='registr-block'>
             <h2 className='registr__title'>Регистрация</h2>
@@ -42,19 +74,35 @@ const Registr = ({getIndex, stepsTabs}) => {
 
             <div className='registr__input-block'>
                 <span className='registr__input-text'>Пароль</span>
-                <input required type="password"  className="registr__input"/>
+                <input required type="password" id='registr__pass'  className="registr__input"/>
+                <p onClick={() => showPass()}>
+                    {
+                        show ?  <i className="far fa-eye-slash"></i> :
+                            <i className='far fa-eye'></i>
+                    }
+                </p>
             </div>
 
             <div className='registr__input-block'>
                 <span className='registr__input-text'>Повторите пароль</span>
-                <input required type="password"  className="registr__input"/>
+                <input required type="password" id='registr__pass2' className="registr__input"/>
+                <p onClick={() => showPassAgain()}>
+                    {
+                        show2 ?  <i className="far fa-eye-slash"></i> :
+                            <i className='far fa-eye'></i>
+                    }
+                </p>
             </div>
 
 
-
             <div className="registr__btns">
+                {
+                    userData === '' ? <button type='submit' className='registr__btn'>Отправить<img className={preloader ? 'registr__load active' : 'registr__load'} width='20px' src={load}
+                                                                                                                      alt=""/></button> :
+                        <button type='submit' className='registr__btn'>Далее</button>
 
-                <button type='submit' className="registr__btn">Далее</button>
+
+                }
             </div>
         </form>
         </div>

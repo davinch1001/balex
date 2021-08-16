@@ -6,6 +6,7 @@
 }
 
 .registr{
+  justify-content: center;
   width: 100%;
   &__title{
     font-style: normal;
@@ -33,7 +34,7 @@
   flex-wrap: wrap;
   &__input{
     @include address-input(100%, 45px);
-
+    padding-left: 12px;
   }
   &__btn{
     font-style: normal;
@@ -44,6 +45,16 @@
     border-radius: 10px;
     color: #FFFFFF;
     width: 269px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__load{
+    display: none;
+    &.active{
+      display: block;
+    }
   }
   &__btns{
     width: 484px;
@@ -51,6 +62,7 @@
     justify-content: flex-end;
   }
   &__input-block{
+    position: relative;
     width: 220px;
     display: flex;
     flex-direction: column;
@@ -59,7 +71,20 @@
     &:nth-child(even){
       margin-right: 0;
     }
-
+    .fa-eye{
+      position: absolute;
+      right: 9px;
+      top: 50%;
+      font-size: 21px;
+      color: gray;
+    }
+    .fa-eye-slash{
+      position: absolute;
+      right: 9px;
+      top: 50%;
+      font-size: 21px;
+      color: gray;
+    }
   }
   &__input-text{
     font-style: normal;
@@ -97,7 +122,7 @@
     &:last-child{
       margin-bottom: 0;
     }
-    margin-right: 72px;
+
 
   }
 }
@@ -105,13 +130,38 @@
 @media(max-width: 520px){
   .registr__input-block{
     width: 180px;
+    margin-right: 0;
   }
   .registr__input-block{
-    margin-bottom: 30px;
+    margin-bottom: 8px;
     &:last-child{
       margin-bottom: 0;
     }
-    margin-right: 32px;
+
+  }
+  .auth__steps-tabs .step-tab{
+    margin-bottom: 6px;
+  }
+  .auth{
+    padding: 0;
+  }
+  .registr__input-text{
+    font-size: 16px;
+  }
+  .registr__title{
+    font-size: 33px;
+  }
+  .registr__subtitle{
+    font-size: 17px;
+  }
+  .registr__btns{
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+  }
+  .registr__btn{
+    width: 181px;
+    font-size: 20px;
   }
 }
 
@@ -124,7 +174,7 @@
     &:last-child{
       margin-bottom: 0;
     }
-    margin-right: 32px;
+
   }
   .auth__steps-tabs{
     width: 300px;

@@ -19,6 +19,9 @@
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 165px;
+    &.err{
+      color: #EF8C3B;
+    }
   }
   &__input-block{
     display: flex;

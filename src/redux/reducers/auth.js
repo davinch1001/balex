@@ -6,6 +6,7 @@ const AUTH = 'AUTH'
 const ORDER = 'ORDER'
 const DOC = 'DOC'
 const LOGIN = 'LOGIN'
+const LOGOUT = 'LOGOUT'
 const GETORDER = 'GETORDER'
 const GETUSERDATA = 'GETUSERDATA'
 const USEREMAILUSERPASS = 'USEREMAILUSERPASS'
@@ -21,7 +22,7 @@ const initState = {
     order: {},
     myOrders: {},
     sum: [],
-    userEmailPass: []
+    userEmailPass: {}
 }
 
 
@@ -33,7 +34,7 @@ export default (state = initState, action) => {
             return{...state, sum: action.sum}
         }
         case AUTH: {
-            return {...state, authData: action.authData, userPass: action.userPass, userEmail:action.userEmail, status: "signed-in", success: action.success}
+            return {...state, authData: action.authData, userEmailPass: action.userEmailPass, userPass: action.userPass, userEmail:action.userEmail, status: "signed-in", success: action.success}
         }
         case GETUSERDATA: {
             return {...state, authData: action.authData, userEmail:action.userEmail, userPass: action.userPass, status: action.status,success: action.success}
@@ -48,7 +49,10 @@ export default (state = initState, action) => {
             return {...state, authData: action.authData, userPass: action.userPass, userEmail:action.userEmail }
         }
         case LOGIN:{
-            return {...state, authData: action.authData, userPass: action.userPass, userEmail:action.userEmail, status: 'signed-in', success: action.success}
+            return {...state, authData: action.authData,userEmailPass:action.userEmailPass, userPass: action.userPass, userEmail:action.userEmail, status: 'signed-in', success: action.success}
+        }
+        case LOGOUT:{
+            return {...state, authData: action.authData, status: 'signed-out'}
         }
         case GETORDER:{
             return {...state ,myOrders: action.myOrders,userPass: action.userPass, userEmail:action.userEmail, status: 'signed-in'}
@@ -59,11 +63,18 @@ export default (state = initState, action) => {
     }
 }
 
-export const getUserDatals = (userData) => {
-    return (dispatch) => {
-        if(Object.keys(userData).length !== 0){
-            dispatch({type: GETUSERDATA, authData: userData, status: 'signed-in'})
-        } else dispatch({type: GETUSERDATA  , authData: userData})
+// export const getUserDatals = (userData) => {
+//     return (dispatch) => {
+//         if(Object.keys(userData).length !== 0){
+//             dispatch({type: GETUSERDATA, authData: userData, status: 'signed-in'})
+//         } else dispatch({type: GETUSERDATA  , authData: userData})
+//     }
+// }
+
+export const getUserData = (userData, userEmailPass) => {
+    return (dispatch, getState) => {
+        const {userEmail, userPass} = getState().auth
+        dispatch({type: GETUSERDATA, authData: userData, userEmailPass: userEmailPass, userEmail: userEmail, userPass: userPass, status: 'signed-in'})
     }
 }
 
@@ -94,7 +105,7 @@ export const postUserData = (user_name, user_last_name, user_email, user_pass, u
         })
             .then((data) => {
                 if(data.data.successful){
-                    dispatch({type: AUTH, authData: data.data.object, userEmail: user_email, userPass: user_pass, status: 'sign-in', success: data.data.successful})
+                    dispatch({type: AUTH, authData: data.data.object, userEmail: user_email, userPass: user_pass, userEmailPass: {user_email,user_pass}, status: 'sign-in', success: data.data.successful})
                 }
             })
     }
@@ -121,7 +132,7 @@ export const postCode = (code) => {
             }
         }).then((data) => {
             if(data.data.successful){
-                dispatch({type: AUTH, authData: data.data.object,userEmail: userEmail, userPass: userPass, status: 'sign-in', success: data.data.successful})
+                dispatch({type: AUTH, authData: data.data.object,userEmail: userEmail, userEmailPass: {userEmail,userPass}, userPass: userPass, status: 'sign-in', success: data.data.successful})
             }
         })
     }
@@ -146,7 +157,7 @@ export const postDocInfo = (documentType, documentNumber, address, country) => {
             }
         }).then( (data) => {
                 if(data.data.successful){
-                    dispatch({type: DOC, authData: data.data.object, userEmail:userEmail, userPass: userPass, status: 'signed-in',success: data.data.successful})
+                    dispatch({type: DOC, authData: data.data.object,userEmailPass: {userEmail,userPass}, userEmail:userEmail, userPass: userPass, status: 'signed-in',success: data.data.successful})
                 }
             }
 
@@ -166,15 +177,15 @@ export const login = (userEmail, userPass) => {
         })
             .then((data) => {
                 if(data.data.successful){
-                    dispatch({type: LOGIN, authData: data.data.object,userEmail: userEmail, userPass: userPass,  status: 'signed-in', success: data.data.successful}) /*??*/
+                    dispatch({type: LOGIN, authData: data.data.object, userEmailPass: {userEmail, userPass}, userEmail: userEmail, userPass: userPass,  status: 'signed-in', success: data.data.successful}) /*??*/
                 }
             })
     }
 };
 
-export const logout = (username, password) => {
+export const logout = () => {
     return (dispatch) => {
-        dispatch({type: AUTH, authData: null, status: 'signed-out'})
+        dispatch({type: LOGOUT, authData: '', userEmailPass: '', order: '', userEmail: '', userPass: '', status: 'signed-out'})
     }
 };
 
@@ -217,16 +228,16 @@ export const changePassword = (oldPassword, securityCode, newPassword) => {
                 if(data.data.successful){
                     dispatch({type: AUTH, authData: data.data.object, status: 'signed-out-password-changed'}) /*??*/
                 }else {
-                    dispatch({type: AUTH, authData: null, status: 'signed-out'}) /*??*/
+                    dispatch({type: AUTH, authData: null, userEmailPass: '', status: 'signed-out'}) /*??*/
                 }
             })
     }
 };
 
 
-export const createOrder = ( trackNumber, description, price) => {
-    return (dispatch, getState) => {
-        const {userEmail, userPass} = getState().auth
+export const createOrder = ( trackNumber, description, price,userEmail, userPass) => {
+    return (dispatch) => {
+        console.log((userEmail, userPass, price))
         axios({
             method: 'post',
             url: 'https://shipper-back.herokuapp.com/api/order/create',
@@ -237,7 +248,7 @@ export const createOrder = ( trackNumber, description, price) => {
             data: {
                 trackNumber: trackNumber,
                 description: description,
-                priceFromInvoice: price
+                priceFromInvoice: +price
             }
         })
             .then((data) => {
@@ -246,9 +257,8 @@ export const createOrder = ( trackNumber, description, price) => {
     }
 };
 
-export const getAllOrders = () =>{
-    return (dispatch, getState) => {
-        const {userEmail, userPass} = getState().auth
+export const getAllOrders = (userEmail, userPass) =>{
+    return (dispatch) => {
         console.log('order get=====>', userEmail, userPass)
         axios({
             method: 'get',
@@ -259,7 +269,7 @@ export const getAllOrders = () =>{
             }
         })
             .then((data) => {
-                dispatch({type: GETORDER, userEmail:userEmail, userPass:userPass, myOrders: data.object, success: data.data.successful})
+                dispatch({type: GETORDER,myOrders: data.object, userEmail:userEmail, userPass:userPass, success: data.data.successful})
             })
     }
 };

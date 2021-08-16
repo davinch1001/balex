@@ -3,12 +3,13 @@ import {useDispatch} from "react-redux";
 import {createOrder, getAllOrders} from "../../../../redux/reducers/auth";
 
 const AddOrder = () => {
+    const user = JSON.parse(localStorage.getItem('userEmailPass'))
+    console.log(user)
     const dispatch = useDispatch()
     const orderHandler = (e) => {
         e.preventDefault()
-        dispatch(createOrder(e.target.children[1].children[0].children[1].value, e.target.children[1].children[1].children[1].value,e.target.children[2].children[1].value ))
-        console.log('form',)
-        dispatch(getAllOrders())
+        dispatch(createOrder(e.target.children[1].children[0].children[1].value, e.target.children[1].children[1].children[1].value,e.target.children[2].children[1].value, user.userEmail, user.userPass ))
+        dispatch(getAllOrders(user.userEmail,user.userPass))
     }
     return (
         <form onSubmit={orderHandler} action="" className="order">
