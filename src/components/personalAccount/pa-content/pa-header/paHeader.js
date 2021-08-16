@@ -45,7 +45,7 @@ const PaHeader = ({toggleTab}) => {
                         <div className="pa-header__price"><span className="pa-header__price-balance">Balance:</span>  <span className="pa-header__price-value">00.00$</span></div>
                         <div onClick={() => openLoginModal()} className="pa-header__user-login">
                             <img src='https://yt3.ggpht.com/ytc/AAUvwnj4s2E8uJIUHYmKsCObyucfmcYMF35PuYkWDgB4=s900-c-k-c0x00ffffff-no-rj' alt="" className="user-login-ava"/>
-                            <div className="user">{user === null ? 'UserName' : `${user.name} ${user.surName}`}</div>
+                            <div className="user">User Name</div>
                             <button className="pa-header__view-more-btn"><img src={vectorDown} alt="" className="pa-header__view-more"/></button>
                             <CSSTransition
                                 in={addActive}
@@ -55,8 +55,8 @@ const PaHeader = ({toggleTab}) => {
                             >
                                <div onClick={e => e.stopPropagation()} className='user-data-modal'>
                                    <img src='https://yt3.ggpht.com/ytc/AAUvwnj4s2E8uJIUHYmKsCObyucfmcYMF35PuYkWDgB4=s900-c-k-c0x00ffffff-no-rj' alt="" className="user-login-ava"/>
-                                   <div className="user-names">{user === '' ? 'UserName' : `${user.name} ${user.surName}`}</div>
-                                   <span className='user-email'>{user === '' ? 'UserName' : user.email}</span>
+                                   <div className="user-names">User Name</div>
+                                   <span className='user-email'> User Name</span>
                                    <div className="btns">
                                        <button onClick={() => toggleTab(1)} className='add-order-btn'>Добвить</button>
                                        <button onClick={() => toggleTab(5)} className='help-btn'>Помощь</button>
