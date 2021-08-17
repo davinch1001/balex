@@ -29,6 +29,7 @@ const PaHeader = ({toggleTab}) => {
     const removeLocalStorage = () => {
         dispatch(logout())
         localStorage.clear('auth')
+        localStorage.clear('userEmailPass')
         histoty.push('/')
     }
 

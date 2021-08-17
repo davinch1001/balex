@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {getCalcValue} from "../../redux/reducers/calc";
-import {getCalcValue2} from "../../redux/reducers/auth";
 
 
 const Calc = () => {
@@ -11,7 +10,7 @@ const dispatch = useDispatch()
 
     const calcHandler = (e) => {
     e.preventDefault()
-     dispatch(getCalcValue2(e.target.children[0].children[1].children[0].value,e.target.children[0].children[1].children[1].value,e.target.children[0].children[2].children[0].value,e.target.children[0].children[2].children[1].value,e.target.children[0].children[2].children[2].value,e.target.children[0].children[2].children[3].value))
+     dispatch(getCalcValue(e.target.children[0].children[1].children[0].value,e.target.children[0].children[1].children[1].value,e.target.children[0].children[2].children[0].value,e.target.children[0].children[2].children[1].value,e.target.children[0].children[2].children[2].value,e.target.children[0].children[2].children[3].value))
     }
 
 

@@ -8,223 +8,64 @@
 }
 
 .address{
-  &__title{
-    margin-left: 109px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 42px;
-    /* identical to box height */
-    margin-bottom: 19px;
-    color: #000000;
-  }
-  &__subtitle{
-    margin-left: 109px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 23px;
-    width: 689px;
-    margin-bottom: 78px;
-    color: #000000;
-  }
-  &__form{
-    max-width: 846px;
-    background: #FCFAFF;
-    border: 1px solid #40328A;
-    box-sizing: border-box;
+  &__user-address {
+    max-width: 585px;
+    padding: 15px;
     border-radius: 10px;
-    padding: 30px 80px 12px;
+    border: 1px solid #40328A;
+    .text{
+    color: #9b9797;
+  }
+  }
+  &__standard{
+    width: 100%;
+    height: 50px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #d2d2d2;
   }
-  &__city-name{
-    display: flex;
-    justify-content: space-around;
-    .city-name{
-      font-style: normal;
-      font-weight: normal;
-      font-size: 28px;
-      line-height: 36px;
-      margin-bottom: 21px;
-      color: #000000;
-    }
-  }
-  &__user-name{
-    display: flex;
-    .user-first-name{
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 24px;
-
-    }
-    .user-last-name{
-      display: flex;
-      flex-direction: column;
-    }
-    .street-name{
-      display: grid;
-    }
-  }
-  &__street{
-    display: flex;
-    margin-bottom: 24px;
-    .user-first-name{
-      display: flex;
-      flex-direction: column;
-      margin-right: 30px;
-      margin-bottom: 24px;
-
-    }
-    .user-last-name{
-      display: flex;
-      flex-direction: column;
-    }
-    .street-name{
-      display: grid;
-    }
-  }
-  &__input{
-    @include address-input(330px, 50px);
-    margin-right: 20px;
-  }
-  &__input-block{
+  &__user-names{
     display: flex;
     justify-content: space-between;
-    margin-top: 24px;
-    .bottom-inputs{
-      width: 190px
+    border-bottom: 1px solid #d2d2d2;
+    padding: 20px 0;
+    .user-first-name {
+      display: flex;
+      flex-direction: column;
     }
-    .inputs{
-      @include address-input(190px, 50px)
+    .user-last-name{
+      display: flex;
+      flex-direction: column;
     }
   }
-  .name-text{
-    margin-left: 30px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
-    color: #000000;
-  }
-}
-
-#de{
-  position: relative;
-  &:after{
-    position: absolute;
-    content: '';
-    width: 1px;
-    height: 50px;
-    background: #000;
-    left: 150%;
-  }
-
-}
-
-@media(max-width: 1010px){
-  .address__user-name{
+  &__user-address-data{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #d2d2d2;
+    .user-street{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .user-street{
+      display: flex;
+      flex-direction: column;
+    }
   }
-  .address__street{
+  &__city-state{
+    padding: 20px 0;
+
     display: flex;
-    flex-direction: column;
-  }
-  .address__input-block{
-    display: flex;
-    flex-direction: column;
-  }
-  .address__input-block .inputs {
-    @include address-input(330px, 50px)
-  }
-  .address__city-name{
-    display: flex;
-    flex-direction: column;
-  }
-  .address__subtitle{
-    width: 400px;
-  }
-}
-
-@media(max-width: 625px){
-  .address__city-name{
-    display: flex;
-    flex-direction: column;
-  }
-  #de:after{
-    display: none;
-  }
-  .address__title{
-    font-size: 28px;
-    margin-left: 81px;
-  }
-  .address__subtitle{
-    margin-left: 81px;
-  }
-}
-
-@media(max-width: 581px) {
-  .address__input{
-    @include address-input(280px, 50px)
-  }
-  .address__input-block .inputs{
-    @include address-input(280px, 50px)
-  }
-  .address__form{
-    padding: 30px 52px 12px;
-  }
-  .address__subtitle{
-    width: 350px;
-  }
-}
-
-@media(max-width: 443px){
-  .address__form{
-    padding: 30px 11px 12px;
-  }
-  .address__title{
-    font-size: 20px;
-    margin-left: 34px;
-  }
-  .address__subtitle{
-    width: 300px;
-    margin-left: 30px;
-  }
-  .address__title{
-    font-size: 20px;
-    margin-left: 0;
-  }
-  .address__subtitle{
-    margin-left: 0;
-    width: 290px;
-    margin-bottom: 18px;
-  }
-}
-
-@media(max-width: 385px){
-  .address__input{
-    @include address-input(250px, 50px)
-  }
-  .address__input-block .inputs{
-    @include address-input(250px, 50px)
-  }
-  .address__title{
-    font-size: 20px;
-    margin-left: 0;
-  }
-  .address__subtitle{
-    margin-left: 0;
-    width: 290px;
-  }
-}
-
-
-@media(max-width: 385px){
-  .address__input{
-    @include address-input(200px, 50px)
-  }
-  .address__input-block .inputs{
-    @include address-input(200px, 50px)
+    justify-content: space-between;
+    .user-city{
+      display: flex;
+      flex-direction: column;
+    }
+    .user-state{
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

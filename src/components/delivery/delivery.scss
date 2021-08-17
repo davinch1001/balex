@@ -76,7 +76,6 @@
   &__step-box{
     padding: 32px 17px 16px 42px;
     width: 407px;
-    height: 407px;
     background: #40328A;
     border-radius: 10px;
     margin-bottom: 12px;
@@ -127,7 +126,6 @@
   .delivery__step-box{
     margin-right: 0;
     width: 350px;
-    height: 360px;
   }
 }
 
@@ -142,8 +140,7 @@
   @media (max-width: 400px) {
     .delivery__step-box{
       margin-right: 0;
-      width: 350px;
-      height: 360px;
+      width: 300px;
     }
     }
   .delivery__step-box .step-title{

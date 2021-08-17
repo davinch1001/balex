@@ -9,6 +9,7 @@ export default (state = initState, action) => {
         case CALC:{
             return{...state, sum: action.sum}
         }
+        default: return state
     }
 }
 

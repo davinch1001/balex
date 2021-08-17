@@ -10,8 +10,8 @@ import LocalStorage from "./components/localStorage";
 ReactDOM.render(
   <React.StrictMode>
       <Provider store={store}>
-          <Root />
           <LocalStorage/>
+          <Root />
       </Provider>
   </React.StrictMode>,
   document.getElementById('root')

@@ -1,13 +1,18 @@
 import React from 'react';
 
 import packagesImg from '../../../../img/persAcc/packages-img.png'
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {getAllOrders} from "../../../../redux/reducers/order";
 
 const order = {name:'nb745h3', remain: '4 дня', price: '1800₽', date:'08.07.2021'}
 
 const Packages = () => {
-    const packages = useSelector(s => s.auth.myOrders)
-    console.log('packages====>',packages)
+    const user = JSON.parse(localStorage.getItem('userEmailPass'))
+    const dispatch = useDispatch()
+
+
+    const packages = JSON.parse(localStorage.getItem('myOrders'))
+    console.log('packages====>',packages.map((el) => el))
     return (
         <>
             <h2 className="empty-packages__title">Посылки</h2>
@@ -20,46 +25,48 @@ const Packages = () => {
             <div className="packages">
                 <div className="packages__info">
                     <div className="name"> <p className="packages__name">Имя</p></div>
-                   <div className="time-packages">
-                       <p className="packages__remained packages__item">Осталось</p>
+
                        <p className="packages__price packages__item">Цена</p>
                        <p className="packages__date packages__item">Дата</p>
-                   </div>
+
                 </div>
 
                 <>
-
+                    {packages.map((el) =>(
                         <div className="packages__user-info">
-                            <div className="name"> <p className="packages__name">{order.name}</p></div>
-                            <div className="time-packages">
-                                <p className="packages__remained packages__item">{order.remain}</p>
-                                <p className="packages__price packages__item">{order.price}</p>
-                                <p className="packages__date packages__item">{order.date}</p>
-                            </div>
+                            <div className="name"> <p className="packages__name">{el.trackNumber}</p></div>
+
+
+                                <p className="packages__price packages__item">{el.description}</p>
+                                <p className="packages__date packages__item">{el.dateTime}</p>
                         </div>
+                    ))
+
+                    }
+
                 </>
 
+                {
+                    packages.map((el) => (
+                        <div className='packages__responsive-packages-info'>
+                            <div className="packages__user-packages-info">
+                                <div className="headings">
+                                    <p className="heading">Имя</p>
+                                    <p className="heading">Цена</p>
+                                    <p className="heading">Дата</p>
+                                </div>
+                                <div className="user-packages-info">
+                                    <p className="user-packages-item">{el.trackNumber}</p>
+                                    <p className="user-packages-item">{el.description}</p>
+                                    <p className="user-packages-item">{el.dateTime}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
 
-                <div className='packages__responsive-packages-info'>
-                    <div className="packages__user-packages-info">
-                        <div className="headings">
-                            <p className="heading">Имя</p>
-                            <p className="heading">Осталось</p>
-                            <p className="heading">Цена</p>
-                            <p className="heading">Дата</p>
-                        </div>
-                        <div className="user-packages-info">
-                            <p className="user-packages-item">{order.name}</p>
-                            <p className="user-packages-item">{order.remain}</p>
-                            <p className="user-packages-item">{order.price}</p>
-                            <p className="user-packages-item">{order.date}</p>
-                        </div>
-                    </div>
-                </div>
 
             </div>
-
-
 
         </>
 

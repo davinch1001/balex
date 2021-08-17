@@ -15,14 +15,14 @@ const Registr = ({getIndex, stepsTabs}) => {
 
     const formHandler = (e) => {
         e.preventDefault()
-        dispatch(postUserData(e.target.children[0].children[1].value, e.target.children[1].children[1].value, e.target.children[2].children[1].value, e.target.children[3].children[1].value, e.target.children[4].children[1].value,e.target.children[5].children[1].value))
-        const pass = e.target.children[3].children[1].value
+        dispatch(postUserData(e.target.children[0].children[1].value, e.target.children[1].children[1].value, e.target.children[2].children[1].value,e.target.children[3].children[1].value, e.target.children[4].children[1].value,))
+        const pass = e.target.children[4].children[1].value
         const passAgain = e.target.children[5].children[1].value
         if(Object.keys(userData).length !== 0){
             getIndex(2)
         }
         setPreloader(true)
-        console.log('userpass' ,'num=',pass, 'pass=',passAgain )
+        console.log('userpass' ,pass,e.target.children[0].children[1].value, e.target.children[1].children[1].value, e.target.children[2].children[1].value, e.target.children[3].children[1].value, e.target.children[4].children[1].value,e.target.children[5].children[1].value )
     }
 
     const showPass = () => {

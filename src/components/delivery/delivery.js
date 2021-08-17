@@ -70,7 +70,7 @@ const Delivery = () => {
                         <h2 className="step-number">Шаг 2</h2>
                         <p className="step-title">Примите посылки в Бишкеке</p>
                         <p className="step-subtitle">Доставка займет от 7 дней с момента отправки. В кабинете можно следить за статусом доставки и отслеживать вашу посылку.</p>
-                        <img className='delivery__steps' src={step3} alt=""/>
+                        <img className='delivery__steps' style={{margin: '0 auto'}} src={step3} alt=""/>
                     </div>
                 </div>
             </div>

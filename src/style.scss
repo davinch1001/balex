@@ -19,6 +19,9 @@ body{
   margin: 0 auto;
 }
 
+input{
+  padding-left: 15px;
+}
 
 @import "../src/components/header/header";
 @import "../src/components/home/home";
