@@ -7,7 +7,6 @@ const Settings = () => {
 
     const user = JSON.parse(localStorage.getItem('userEmailPass'))
     const userData = JSON.parse(localStorage.getItem('auth'))
-    console.log('========>',user.userEmail, user.userPass)
 
     const dispatch = useDispatch()
     const updateUserHandler = (e) => {

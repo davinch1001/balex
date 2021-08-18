@@ -12,7 +12,6 @@ const Packages = () => {
 
 
     const packages = JSON.parse(localStorage.getItem('myOrders'))
-    console.log('packages====>',packages.map((el) => el))
     return (
         <>
             <h2 className="empty-packages__title">Посылки</h2>
@@ -32,22 +31,42 @@ const Packages = () => {
                 </div>
 
                 <>
-                    {packages.map((el) =>(
-                        <div className="packages__user-info">
-                            <div className="name"> <p className="packages__name">{el.trackNumber}</p></div>
-
-
-                                <p className="packages__price packages__item">{el.description}</p>
-                                <p className="packages__date packages__item">{el.dateTime}</p>
-                        </div>
-                    ))
+                    {
+                        packages === null ? (
+                            <div className="packages__user-info">
+                                <div className="name"> <p className="packages__name">Mac</p></div>
+                                <p className="packages__price packages__item">12$</p>
+                                <p className="packages__date packages__item">12221</p>
+                            </div>
+                        ) : packages.map((el) =>(
+                                <div className="packages__user-info">
+                                    <div className="name"> <p className="packages__name">{el.trackNumber}</p></div>
+                                    <p className="packages__price packages__item">{el.description}</p>
+                                    <p className="packages__date packages__item">{el.dateTime}</p>
+                                </div>
+                            ))
 
                     }
 
+
                 </>
 
-                {
-                    packages.map((el) => (
+                { packages === null ? (
+                        <div className='packages__responsive-packages-info'>
+                            <div className="packages__user-packages-info">
+                                <div className="headings">
+                                    <p className="heading">Имя</p>
+                                    <p className="heading">Цена</p>
+                                    <p className="heading">Дата</p>
+                                </div>
+                                <div className="user-packages-info">
+                                    <p className="user-packages-item">avs</p>
+                                    <p className="user-packages-item">avs</p>
+                                    <p className="user-packages-item">avs</p>
+                                </div>
+                            </div>
+                        </div>
+                    ) : packages.map((el) => (
                         <div className='packages__responsive-packages-info'>
                             <div className="packages__user-packages-info">
                                 <div className="headings">
