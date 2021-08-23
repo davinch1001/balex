@@ -1,5 +1,4 @@
 .empty-packages{
-  display: none;
   &__title{
     font-style: normal;
     font-weight: bold;
@@ -51,6 +50,7 @@
     max-width: 850px;
     height: 50px;
     align-items: center;
+    margin-bottom: 10px;
     .time-packages{
       display: flex;
     }
@@ -65,6 +65,7 @@
     display: none;
   }
   &__user-packages-info{
+    margin-bottom: 10px;
     max-width: 414px;
     display: flex;
     border:1px solid #40328A;

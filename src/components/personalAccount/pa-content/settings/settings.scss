@@ -71,6 +71,9 @@
     color: #fff;
     margin-top: 27px;
   }
+  &__user-doc{
+    display: flex;
+  }
 }
 
 @media(max-width: 1010px){
@@ -126,7 +129,13 @@
   .settings__form{
     padding: 20px 32px 10px;
   }
+}
 
+@media(max-width: 1011px){
+  .settings__user-doc{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media(max-width: 300px){

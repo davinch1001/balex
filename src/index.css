@@ -2536,9 +2536,6 @@ input {
   display: flex;
 }
 
-.empty-packages {
-  display: none;
-}
 .empty-packages__title {
   font-style: normal;
   font-weight: bold;
@@ -2601,6 +2598,7 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 10px;
 }
 .packages__user-info .time-packages {
   display: -webkit-box;
@@ -2617,6 +2615,7 @@ input {
   display: none;
 }
 .packages__user-packages-info {
+  margin-bottom: 10px;
   max-width: 414px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3688,6 +3687,11 @@ input {
   color: #fff;
   margin-top: 27px;
 }
+.settings__user-doc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 
 @media (max-width: 1010px) {
   .settings__settings-input-data {
@@ -3798,6 +3802,17 @@ input {
 
   .settings__form {
     padding: 20px 32px 10px;
+  }
+}
+@media (max-width: 1011px) {
+  .settings__user-doc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 @media (max-width: 300px) {
@@ -3940,6 +3955,12 @@ input {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+.registr__err {
+  display: none;
+}
+.registr__err.active {
+  display: block;
 }
 .registr__title {
   font-style: normal;
@@ -4608,13 +4629,13 @@ input {
   color: #FFFFFF;
 }
 .sign-in__subtitle {
-  margin-top: 127px;
+  margin-top: 30px;
   text-align: center;
   font-style: normal;
   font-weight: 200;
   font-size: 24px;
   line-height: 31px;
-  color: #FFFFFF;
+  color: #FFFFFf;
 }
 .sign-in__err {
   margin-top: 95px;
@@ -4624,6 +4645,10 @@ input {
   font-weight: 200;
   font-size: 22px;
   line-height: 31px;
+  display: none;
+}
+.sign-in__err.active {
+  display: block;
 }
 .sign-in__form {
   margin-top: 67px;
@@ -4805,6 +4830,13 @@ input {
     color: gray;
   }
 }
+.test {
+  display: none;
+}
+.test.active {
+  display: block;
+}
+
 .order {
   max-width: 625px;
   padding: 25px 40px;

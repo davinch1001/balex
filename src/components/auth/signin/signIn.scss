@@ -20,13 +20,13 @@
     color: #FFFFFF;
   }
   &__subtitle{
-    margin-top: 127px;
+    margin-top: 30px;
     text-align: center;
     font-style: normal;
     font-weight: 200;
     font-size: 24px;
     line-height: 31px;
-    color: #FFFFFF
+    color: #FFFFFf;
   }
   &__err{
     margin-top: 95px;
@@ -36,6 +36,10 @@
     font-weight: 200;
     font-size: 22px;
     line-height: 31px;
+    display: none;
+    &.active{
+      display: block;
+    }
   }
   &__form{
     margin-top: 67px;
@@ -183,5 +187,12 @@
     top: 50%;
     font-size: 21px;
     color: gray;
+  }
+}
+
+.test{
+  display: none;
+  &.active{
+    display: block;
   }
 }

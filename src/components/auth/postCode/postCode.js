@@ -24,12 +24,9 @@ const PostCode = ({getIndex, stepsTabs, setActiveSignIn, setActiveModal}) => {
         e.preventDefault()
          dispatch(postCode(e.target.children[4].children[1].value))
         console.log('code===>',e.target.children[4].children[1].value)
-        if(userData.isActivated !== 0){
+        if(userData.isActivated === 1){
             getIndex(3)
-        }
-        if(userData.isActivated === 0){
-            setCodeErr(true)
-        }
+        }setCodeErr(true)
 
     }
     return (
@@ -37,7 +34,7 @@ const PostCode = ({getIndex, stepsTabs, setActiveSignIn, setActiveModal}) => {
             <h2 className="post-code__title">Подтверждение</h2>
             <p className='registr__subtitle'>уже есть акканут? <button onClick={openSingIn} style={{color:"#EF8C3B"}}>Войдите</button></p>
             <StepBtn stepsTabs={stepsTabs}/>
-                    <p className={codeErr ? 'post-code__description err' : 'post-code__description'}>{codeErr ? 'err' : 'Вам на почту был отправлен код поддверждения'}</p>
+                   <p className='post-code__description'>{userData.isActivated === 1 ? 'Success' : 'err'}</p>
             <div className='post-code__input-block'>
                 <span className="input-text">Code</span>
                 <input maxLength={6} required  type="text" className="post-code__input"/>

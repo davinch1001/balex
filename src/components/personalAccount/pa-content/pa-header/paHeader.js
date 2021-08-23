@@ -17,8 +17,8 @@ const PaHeader = ({toggleTab}) => {
 
     const [addActive, setAddActive] = useState(false)
     const userNames = useSelector(s => s.auth.authData)
-    const user = localStorage.getItem('auth')
-    const userData = JSON.parse(user)
+    const user = JSON.parse(localStorage.getItem('auth'))
+
     console.log('name',user)
 
     const openLoginModal = () => {
@@ -45,8 +45,8 @@ const PaHeader = ({toggleTab}) => {
                     <div className="pa-header__user-data">
                         <div className="pa-header__price"><span className="pa-header__price-balance">Balance:</span>  <span className="pa-header__price-value">00.00$</span></div>
                         <div onClick={() => openLoginModal()} className="pa-header__user-login">
-                            <img src='https://yt3.ggpht.com/ytc/AAUvwnj4s2E8uJIUHYmKsCObyucfmcYMF35PuYkWDgB4=s900-c-k-c0x00ffffff-no-rj' alt="" className="user-login-ava"/>
-                            <div className="user">User Name</div>
+                            <i style={{fontSize:'26px'}} className="fas fa-user"></i>
+                            <div className="user">{ user !== '' && user !== null ? `${user.name}${user.surName}`: 'User Name'}</div>
                             <button className="pa-header__view-more-btn"><img src={vectorDown} alt="" className="pa-header__view-more"/></button>
                             <CSSTransition
                                 in={addActive}

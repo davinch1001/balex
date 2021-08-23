@@ -15,36 +15,36 @@ const Packages = () => {
     return (
         <>
             <h2 className="empty-packages__title">Посылки</h2>
-            <div className='empty-packages'>
-                <p className="empty-packages__subtitle">Нет посылки, Зарегистрируйте её.</p>
-                <p className="empty-packages__description">Добавьте номер отслеживания (tracking number) ожидаемой посылки, чтобы знать, когда она поступит на склад.</p>
-                <img src={packagesImg} alt="" className="empty-packages__img"/>
-            </div>
 
             <div className="packages">
-                <div className="packages__info">
-                    <div className="name"> <p className="packages__name">Имя</p></div>
-
-                       <p className="packages__price packages__item">Цена</p>
-                       <p className="packages__date packages__item">Дата</p>
-
-                </div>
-
                 <>
                     {
                         packages === null ? (
-                            <div className="packages__user-info">
-                                <div className="name"> <p className="packages__name">Mac</p></div>
-                                <p className="packages__price packages__item">12$</p>
-                                <p className="packages__date packages__item">12221</p>
+                            <div className='empty-packages'>
+                                <p className="empty-packages__subtitle">Нет посылки, Зарегистрируйте её.</p>
+                                <p className="empty-packages__description">Добавьте номер отслеживания (tracking number) ожидаемой посылки, чтобы знать, когда она поступит на склад.</p>
+                                <img src={packagesImg} alt="" className="empty-packages__img"/>
                             </div>
-                        ) : packages.map((el) =>(
-                                <div className="packages__user-info">
-                                    <div className="name"> <p className="packages__name">{el.trackNumber}</p></div>
-                                    <p className="packages__price packages__item">{el.description}</p>
-                                    <p className="packages__date packages__item">{el.dateTime}</p>
-                                </div>
-                            ))
+
+                        ) : <div>
+                            <div className="packages__info">
+                                <div className="name"> <p className="packages__name">Имя</p></div>
+                                <p className="packages__price packages__item">Цена</p>
+                                <p className="packages__date packages__item">Дата</p>
+                            </div>
+                            {
+                                packages.map((el) => (
+                                    <>
+                                        <div className="packages__user-info">
+                                            <div className="name"><p className="packages__name">{el.trackNumber}</p>
+                                            </div>
+                                            <p className="packages__price packages__item">{el.description}</p>
+                                            <p className="packages__date packages__item">{el.dateTime}</p>
+                                        </div>
+                                    </>
+                                ))
+                            }
+                        </div>
 
                     }
 

@@ -10,6 +10,7 @@ const Header = ({activeModal, setActiveModal, setActiveSignIn, activeSignIn}) =>
     const [openBurger, setOpenBurger] = useState(false)
     const userData = useSelector(s => s.auth.authData)
 
+
     return (
         <header className="header">
             <div className="container">

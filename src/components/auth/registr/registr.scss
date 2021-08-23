@@ -8,6 +8,12 @@
 .registr{
   justify-content: center;
   width: 100%;
+  &__err{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
   &__title{
     font-style: normal;
     font-weight: 600;

@@ -41,7 +41,7 @@ export default (state = initState, action) => {
             return {...state, authData: action.authData,userEmailPass:action.userEmailPass, userPass: action.userPass, userEmail:action.userEmail, status: 'signed-in', success: action.success}
         }
         case LOGOUT:{
-            return {...state, authData: action.authData, status: 'signed-out'}
+            return {...state, authData: action.authData, userEmailPass:action.userEmail, userEmail:action.userEmail, userPass: action.userPass, success: false,  status: 'signed-out'}
         }
         case UPDATE: {
             return {...state, authData: action.authData}
@@ -165,7 +165,7 @@ export const login = (userEmail, userPass) => {
 
 export const logout = () => {
     return (dispatch) => {
-        dispatch({type: LOGOUT, authData: '', userEmailPass: '', order: '', userEmail: '', userPass: '', status: 'signed-out'})
+        dispatch({type: LOGOUT, authData: '', userEmailPass: '', order: '', userEmail: '', userPass: '', success:false, status: 'signed-out'})
     }
 };
 

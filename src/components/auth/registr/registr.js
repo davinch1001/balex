@@ -9,6 +9,7 @@ const Registr = ({getIndex, stepsTabs}) => {
     const [preloader, setPreloader] = useState(false)
     const [show, setShow] = useState(false)
     const [show2, setShow2] = useState(false)
+    const [err, setErr] = useState(false)
 
     const dispatch = useDispatch()
     const userData = useSelector(s => s.auth.authData)
@@ -20,6 +21,12 @@ const Registr = ({getIndex, stepsTabs}) => {
         const passAgain = e.target.children[5].children[1].value
         if(Object.keys(userData).length !== 0){
             getIndex(2)
+        }else{
+            setTimeout(() => {
+                setErr(true)
+                setPreloader(false)
+            }, 2000)
+
         }
         setPreloader(true)
         console.log('userpass' ,pass,e.target.children[0].children[1].value, e.target.children[1].children[1].value, e.target.children[2].children[1].value, e.target.children[3].children[1].value, e.target.children[4].children[1].value,e.target.children[5].children[1].value )
@@ -49,6 +56,7 @@ const Registr = ({getIndex, stepsTabs}) => {
         <div className='registr-block'>
             <h2 className='registr__title'>Регистрация</h2>
             <p className='registr__subtitle'>уже есть акканут? <span style={{color:"#EF8C3B"}}>Войдите</span></p>
+            <p className={err ? 'registr__err active' : 'registr__err'}> Такой пользоватьль уже существует </p>
             <StepBtn stepsTabs={stepsTabs}/>
         <form className='registr' onSubmit={formHandler}>
             <div className='registr__input-block'>

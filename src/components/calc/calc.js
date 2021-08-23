@@ -6,7 +6,7 @@ import {getCalcValue} from "../../redux/reducers/calc";
 const Calc = () => {
 const dispatch = useDispatch()
 
-    const price = useSelector(s => s.auth.sum)
+    const price = useSelector(s => s.calc.sum)
 
     const calcHandler = (e) => {
     e.preventDefault()

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {login} from "../../../redux/reducers/auth";
 import {useHistory} from "react-router";
@@ -6,7 +6,8 @@ import {useHistory} from "react-router";
 const SingIn = ({setActive}) => {
     const history = useHistory()
     const [show, setShow] = useState(false)
-    const [err, serErr] = useState(false)
+    const [err, setErr] = useState(false)
+
 
     const showPass = () => {
         let input = document.querySelector('#pass')
@@ -19,18 +20,15 @@ const SingIn = ({setActive}) => {
     }
 
     const userData = useSelector(s => s.auth.authData)
+    const status = useSelector(s => s.auth.status)
     const dispatch = useDispatch()
 
     const loginHandler = (e) => {
         e.preventDefault()
         dispatch(login(e.target.children[0].children[1].value, e.target.children[1].children[1].value))
-        if(Object.keys(userData).length === 0){
-         serErr(true)
-        }
-        if(Object.keys(userData).length !== 0){
+        if( userData !== ''){
             history.push('/personalAccount')
-        }
-
+        }setErr(true)
     }
 
     return (
@@ -38,7 +36,7 @@ const SingIn = ({setActive}) => {
             <h2 className="sign-in__title">Войти</h2>
             <button onClick={() => setActive(false)} className="auth__closeBtn"><i className="fas fa-times"></i></button>
             {
-                err ? ( <span className="sign-in__err">Ошибка входа, проверьте Email или пароль и повторите попытку</span>) : (<span className="sign-in__subtitle">Добро Пожаловать</span>)
+                !err ? (<span className='sign-in__subtitle' >{err ? 'err' : 'Welcome'}</span>) : (<span className='sign-in__subtitle'> {userData !== '' ? `Вход выполнен нажимите на "перейти" чтоб попасть в личный кабинет` : userData === '' ? <span style={{color:'#EF8C3B'}}>Ошибка входа проверьте данные</span>  : 'err' }</span>)
             }
             <form onSubmit={loginHandler} className='sign-in__form'>
                 <div className="sign-in__input-block">
@@ -56,7 +54,7 @@ const SingIn = ({setActive}) => {
                         </p>
 
                 </div>
-                <button type='submit' className="sign-in__btn">Войти</button>
+                <button type='submit' className="sign-in__btn">{userData !== '' ? 'Перейти' : "Войти" }</button>
             </form>
 
         </div>

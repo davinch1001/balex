@@ -15,6 +15,6 @@ export default (state = initState, action) => {
 
 export const getCalcValue = (kg, sm, mass, length, wtd, hgt) => {
     return (dispatch) =>{
-        dispatch({type: CALC, sum: kg + sm + mass + length + wtd + hgt})
+        dispatch({type: CALC, sum: +kg + +sm + +mass + +length + +wtd + +hgt})
     }
 }

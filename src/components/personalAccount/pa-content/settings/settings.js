@@ -41,7 +41,7 @@ const Settings = () => {
 
                 <div className="settings__user-data data">
 
-                    <div style={{display:'flex'}}>
+                    <div className='settings__user-doc'>
                         <div className="settings__input-block data">
                             <span className="input-text">Номер документа</span>
                             <input type="text" className="settings__settings-input-data"/>
