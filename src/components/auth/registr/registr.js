@@ -21,15 +21,17 @@ const Registr = ({getIndex, stepsTabs}) => {
         const passAgain = e.target.children[5].children[1].value
         if(Object.keys(userData).length !== 0){
             getIndex(2)
-        }else{
+        }else if(userData === ''){
             setTimeout(() => {
                 setErr(true)
                 setPreloader(false)
-            }, 2000)
+            }, 3000)
+            setPreloader(false)
 
+        }else{
+            setErr(false)
         }
         setPreloader(true)
-        console.log('userpass' ,pass,e.target.children[0].children[1].value, e.target.children[1].children[1].value, e.target.children[2].children[1].value, e.target.children[3].children[1].value, e.target.children[4].children[1].value,e.target.children[5].children[1].value )
     }
 
     const showPass = () => {
@@ -55,8 +57,7 @@ const Registr = ({getIndex, stepsTabs}) => {
     return (
         <div className='registr-block'>
             <h2 className='registr__title'>Регистрация</h2>
-            <p className='registr__subtitle'>уже есть акканут? <span style={{color:"#EF8C3B"}}>Войдите</span></p>
-            <p className={err ? 'registr__err active' : 'registr__err'}> Такой пользоватьль уже существует </p>
+            <p className={err ? 'registr__err active' : 'registr__err'}> {err && userData === '' ? 'Такой пользоватьль уже существует' : 'Успешно!'}  </p>
             <StepBtn stepsTabs={stepsTabs}/>
         <form className='registr' onSubmit={formHandler}>
             <div className='registr__input-block'>
@@ -107,7 +108,7 @@ const Registr = ({getIndex, stepsTabs}) => {
                 {
                     userData === '' ? <button type='submit' className='registr__btn'>Отправить<img className={preloader ? 'registr__load active' : 'registr__load'} width='20px' src={load}
                                                                                                                       alt=""/></button> :
-                        <button type='submit' className='registr__btn'>Далее</button>
+                        <button type='submit' className='registr__btn'> {userData === '' ? 'Отправить' : 'Следущий шаг'}</button>
 
 
                 }

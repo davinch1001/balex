@@ -2,11 +2,14 @@ import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {login} from "../../../redux/reducers/auth";
 import {useHistory} from "react-router";
+import {Link} from "react-router-dom";
+import load from '../../../img/loading-buffering.gif'
 
 const SingIn = ({setActive}) => {
     const history = useHistory()
     const [show, setShow] = useState(false)
     const [err, setErr] = useState(false)
+    const [preloader, setPreloader] = useState(false)
 
 
     const showPass = () => {
@@ -26,9 +29,14 @@ const SingIn = ({setActive}) => {
     const loginHandler = (e) => {
         e.preventDefault()
         dispatch(login(e.target.children[0].children[1].value, e.target.children[1].children[1].value))
+        setPreloader(true)
         if( userData !== ''){
+            setPreloader(false)
             history.push('/personalAccount')
-        }setErr(true)
+        }else {
+            setErr(true)
+        }
+
     }
 
     return (
@@ -52,9 +60,11 @@ const SingIn = ({setActive}) => {
                                 <i className='far fa-eye'></i>
                         }
                         </p>
-
                 </div>
-                <button type='submit' className="sign-in__btn">{userData !== '' ? 'Перейти' : "Войти" }</button>
+                <p className='sign-in__to-auth-btn'>Нет Аккаунта?<Link to='/auth' className='sign-in__registr' >Зарегистрируйтесь</Link></p>
+                <button type='submit' className="sign-in__btn">{userData !== '' ? 'Перейти' : "Войти" }
+                    <img className={preloader ? 'sign-in__load active' : 'sign-in__load'} width='20px' src={load} alt=""/>
+                </button>
             </form>
 
         </div>

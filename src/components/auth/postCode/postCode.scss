@@ -11,6 +11,15 @@
     color: #FFFFFF;
     margin-bottom: 12px;
   }
+  &__err{
+    font-style: normal;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 165px;
+  }
   &__description{
     font-style: normal;
     font-weight: 100;
@@ -81,7 +90,7 @@
     margin-bottom: 27px;
   }
   .post-code__title{
-    font-size: 29px;
+    font-size: 27px;
   }
   .post-code__input-block{
     margin-bottom: 35px;

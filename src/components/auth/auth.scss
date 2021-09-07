@@ -1,13 +1,18 @@
+.auth-page{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .auth {
   max-width: 556px;
   max-height: 1000px;
   background: #40328A;
   padding: 35px 34px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   border-radius: 10px;
+  position: relative;
   &__registr-block{
     display: none;
     &.active{
@@ -19,12 +24,14 @@
     display: none;
     &.active{
       display: block;
+      padding: 10px;
     }
   }
   &__doc-info-block{
     display: none;
     &.active{
       display: block;
+      padding: 10px;
     }
   }
   &__closeBtn{
@@ -71,5 +78,11 @@
   .auth{
     padding: 0;
     width: 300px;
+  }
+}
+
+@media(max-width: 320px){
+  .auth-page{
+    margin-top: 112px;
   }
 }

@@ -68,14 +68,18 @@
     /* identical to box height */
     color: #FFFFFF;
     cursor: pointer;
-    border-style: none;
     background: transparent;
     margin-right: 12px;
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 2px ;
     &:last-child{
       margin-right: 0;
     }
     &:hover{
       color: #EF8C3B;
+      border: 1px solid #EF8C3B;
+      padding: 5px;
     }
   }
   &__burger-open-btn{
@@ -167,7 +171,10 @@
 
 @media (max-width:1040px) {
   .header__nav-link{
-    margin-right: -5px;
+    margin-right: 24px;
+  }
+  .header__auth-btn:last-child{
+    margin-right: 20px;
   }
 }
 
@@ -180,6 +187,9 @@
 @media (max-width:1000px) {
   .header__nav-link{
     margin-right: -16px;
+  }
+  .header__auth-btn:last-child{
+    margin-right: 20px;
   }
 }
 

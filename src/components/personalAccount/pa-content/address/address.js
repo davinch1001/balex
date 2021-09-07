@@ -3,6 +3,8 @@ import React from 'react';
 const Address = () => {
     return (
      <div className='address'>
+         <h2 className='address__title'>Ваш персональный Адрес</h2>
+         <p className="address__subtitle">Это адреса складов в Америке, которые вам нужно указывать при оформлении покупок в американских интернет-магазинах</p>
          <div className="address__user-address">
       <div className="address__standard">Standard(DE)</div>
          <div className="address__user-names">

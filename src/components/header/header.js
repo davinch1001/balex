@@ -29,8 +29,7 @@ const Header = ({activeModal, setActiveModal, setActiveSignIn, activeSignIn}) =>
 
                     {userData !== '' ? <div style={{display:"flex", alignItems: "center"}}> <img src={account} alt=""/><Link className='personal-account-text' to='/personalAccount'> Личный кабинет</Link></div> :
                        <div>
-                           <button className='header__auth-btn' onClick={() => setActiveSignIn(!activeSignIn)}>Войти </button>
-                           <button className='header__auth-btn' onClick={() => setActiveModal(!activeModal)}>Регистрация</button>
+                           <button className='header__auth-btn' onClick={() => setActiveSignIn(!activeSignIn)}>Вход</button>
                        </div>
                     }
             </div>

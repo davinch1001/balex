@@ -33,15 +33,15 @@ const Packages = () => {
                                 <p className="packages__date packages__item">Дата</p>
                             </div>
                             {
-                                packages.map((el) => (
-                                    <>
+                                packages.map((el, idx) => (
+                                    <div key={idx}>
                                         <div className="packages__user-info">
                                             <div className="name"><p className="packages__name">{el.trackNumber}</p>
                                             </div>
                                             <p className="packages__price packages__item">{el.description}</p>
                                             <p className="packages__date packages__item">{el.dateTime}</p>
                                         </div>
-                                    </>
+                                    </div>
                                 ))
                             }
                         </div>
@@ -67,7 +67,7 @@ const Packages = () => {
                             </div>
                         </div>
                     ) : packages.map((el) => (
-                        <div className='packages__responsive-packages-info'>
+                        <div className='packages__responsive-packages-info' key={el.trackNumber}>
                             <div className="packages__user-packages-info">
                                 <div className="headings">
                                     <p className="heading">Имя</p>

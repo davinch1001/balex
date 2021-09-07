@@ -10,6 +10,7 @@ import Faq from "./faq/faq";
 import Footer from "./footer/footer";
 import PrevStore from "./store/prevStore";
 import Store from "./store/store";
+import Auth from "./auth/auth";
 
 const Root = () => {
     const [activeModal, setActiveModal] = useState(false)
@@ -26,6 +27,7 @@ const Root = () => {
     <Route exact path='/' component={() => <Footer setActiveModal={setActiveModal}/>}/>
     <Switch>
         <Route exact path='/personalAccount' component={() => <PersonalAccount />}/>
+        <Route exact path='/auth' component={() => <Auth />}/>
         <Route exact path='/store' component={() => <Store activeModal={activeModal} setActiveModal={setActiveModal} activeSignIn={activeModalSignIn} setActiveSignIn={setActiveModalSignIn()} />}/>
     </Switch>
 </BrowserRouter>

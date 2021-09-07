@@ -1,17 +1,19 @@
-import React from 'react';
+    import React from 'react';
 import {useDispatch} from "react-redux";
 
 import {postDocInfo} from "../../../redux/reducers/auth";
 import StepBtn from "../stepBtn/stepBtn";
+    import {useHistory} from "react-router";
 
 
 
 const DocInfo = ({getIndex, stepsTabs, setActiveModal}) => {
+    const histoty = useHistory()
     const dispatch = useDispatch()
     const postDocHadndler = (e) => {
         e.preventDefault()
         dispatch(postDocInfo(e.target.children[0].children[1].value,e.target.children[1].children[1].value, e.target.children[2].children[1].value, e.target.children[3].children[1].value))
-        setActiveModal(false)
+        histoty.push('/personalAccount')
     }
 
     const returnStep2 = (e) => {
@@ -22,7 +24,6 @@ const DocInfo = ({getIndex, stepsTabs, setActiveModal}) => {
     return (
         <div className="doc">
             <h2 className="doc__title">Аккаунт</h2>
-            <p className='registr__subtitle'>уже есть акканут? <span style={{color:"#EF8C3B"}}>Войдите</span></p>
             <StepBtn stepsTabs={stepsTabs}/>
             <form onSubmit={postDocHadndler} className='doc__form'>
                <div className="doc__input-block">

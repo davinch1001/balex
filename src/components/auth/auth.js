@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Registr from "./registr/registr";
 import PostCode from "./postCode/postCode";
 import DocInfo from "./docInfo/docInfo";
+import {Link} from "react-router-dom";
 
 const Auth = ({activeModal, setActiveModal, activeSignIn}) => {
 
@@ -12,8 +13,9 @@ const Auth = ({activeModal, setActiveModal, activeSignIn}) => {
     }
 
     return (
+        <div className='auth-page'>
         <div className='auth'>
-            <button onClick={() => setActiveModal(false)} className="auth__closeBtn"><i className="fas fa-times"></i></button>
+            <Link to='/' className="auth__closeBtn"><i className="fas fa-times"></i></Link>
 
             <div className="auth__tabs-content">
 
@@ -31,6 +33,7 @@ const Auth = ({activeModal, setActiveModal, activeSignIn}) => {
 
             </div>
 
+        </div>
         </div>
     );
 };

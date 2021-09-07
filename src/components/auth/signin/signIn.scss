@@ -96,6 +96,28 @@
     align-items: center;
     margin-top: 98px;
   }
+  &__load{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+  &__registr{
+    color: #EF8C3B;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+      font-weight: normal;
+    }
+  }
+  &__to-auth-btn{
+    color: white;
+    text-align: center;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 23px;
+  }
   &__closeBtn{
     position: absolute;
     top:10px;

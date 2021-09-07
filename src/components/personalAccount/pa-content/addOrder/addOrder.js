@@ -1,19 +1,22 @@
-import React from 'react';
-import {useDispatch} from "react-redux";
-import {createOrder, getAllOrders} from "../../../../redux/reducers/order";
+import React, {useState} from 'react';
+import {useDispatch, useSelector} from "react-redux";
+import order, {createOrder, getAllOrders} from "../../../../redux/reducers/order";
 
-const AddOrder = () => {
+const AddOrder = ({toggleTab}) => {
+    const orders = useSelector(s => s.order.order)
     const user = JSON.parse(localStorage.getItem('userEmailPass'))
     console.log(user)
     const dispatch = useDispatch()
     const orderHandler = (e) => {
         e.preventDefault()
         dispatch(createOrder(e.target.children[1].children[0].children[1].value, e.target.children[1].children[1].children[1].value,e.target.children[2].children[1].value, user.userEmail, user.userPass ))
-        dispatch(getAllOrders(user.userEmail, user.userPass))
+    if(Object.keys(orders).length !== 0){
+        window.location.reload()
+    }
     }
     return (
         <form onSubmit={orderHandler} action="" className="order">
-            <h2 className='order__title'>Новая посылка</h2>
+            <h2 className='order__title'>Новый товар</h2>
             <div style={{display:'flex'}}>
             <div className="order__input-block">
                 <span className='order__input-text'>Содержимое Посылки</span>
@@ -31,8 +34,13 @@ const AddOrder = () => {
 
             <div className="order__btns">
                 <button className="order__btn cancel">Отмена</button>
-                <button  type='submit' className="order__btn save">Далее</button>
+                {
+                    Object.keys(orders).length !== 0 ? <button  onClick={() =>  toggleTab(2)} className= 'order__btn save' type='button'> 'Перейти в посылки' </button> :
+                            <button  type='submit' className= 'order__btn save'> Отправить </button>
+                }
+
             </div>
+<div className={orders.status === 200 ? 'order__modal-success active' : 'order__modal-success'}>Товар успешно добавлен</div>
         </form>
     );
 };

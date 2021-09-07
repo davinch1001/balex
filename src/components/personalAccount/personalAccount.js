@@ -15,11 +15,13 @@ import PaFooter from "./pa-content/pa-footer/paFooter";
 import AddOrder from "./pa-content/addOrder/addOrder";
 import {useDispatch, useSelector} from "react-redux";
 import {getUserDatals} from "../../redux/reducers/auth";
+import {getAllOrders} from "../../redux/reducers/order";
 
 const PersonalAccount = () => {
-
+    const dispatch = useDispatch()
     const [toggleState, setToggleState] = useState(2)
     const [openMenu, setOpenMenu] = useState(false)
+    const user = JSON.parse(localStorage.getItem('userEmailPass'))
     console.log(toggleState)
     const menuItem = [{value: 'Добавить'},{img: packagesIcon, value: 'Посылка'},{img: priceIcon, value: 'Стоимость'},{img: adressIcon, value: 'Адрес'},{img: helpIcon, value: 'Помощь'},{img: settingsIcon, value: 'Настройки'}]
 
@@ -28,6 +30,17 @@ const PersonalAccount = () => {
         setOpenMenu(false)
     }
 
+
+    const pathname = window.location.pathname
+
+    useEffect(() => {
+       setTimeout(() => {
+           if(pathname === '/personalAccount'){
+               dispatch(getAllOrders(user.userEmail, user.userPass))
+           }else{
+               console.log('err')}
+       }, 1000)
+    }, [])
 
     return (
         <div className='personal-account'>
@@ -46,7 +59,7 @@ const PersonalAccount = () => {
                 </div>
                 <div className='content'>
                     <div className={toggleState === 1 ? 'add-order-block active' : 'add-order-block' }>
-                        <AddOrder/>
+                        <AddOrder toggleTab={toggleTab}/>
                     </div>
                     <div className={toggleState === 2 ? 'packages-route active' : 'packages-route' }>
                         <Packages/>

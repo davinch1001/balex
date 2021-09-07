@@ -46,6 +46,7 @@
   &__user-data{
     display: flex;
     color: white;
+    position: relative;
   }
   &__price{
     font-style: normal;
@@ -103,7 +104,7 @@
   padding: 30px 13px;
   position: absolute;
   top: 65px;
-  left: -18%;
+  left: -127%;
   width: 300px;
   border: 1px solid #40328A;
   max-height: 400px;
@@ -114,6 +115,8 @@
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+  background: white;
+  z-index: 1;
   .user-names{
     font-style: normal;
     font-weight: 600;
@@ -189,6 +192,10 @@
 @media(max-width: 609px){
   .user{
     display: none;
+  }
+  .user-data-modal{
+    position: absolute;
+    left: -259px;
   }
 }
 

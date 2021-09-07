@@ -68,7 +68,14 @@
       justify-content: center;
       align-items: center;
     }
+    &.active{
+      background: #4caf50;
+    }
   }
-
-
+  &__modal-success{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
 }

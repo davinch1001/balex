@@ -26,12 +26,6 @@ const Home = ({activeModal, setActiveModal, activeSignIn, setActiveSignIn}) => {
     return (
         <section className="home" id='home'>
 
-            <div onClick={() => setActiveModal(!activeModal)}
-                 className={activeModal  ? 'authorization active' : 'authorization'}>
-                <div onClick={e => e.stopPropagation()} className="auth-block"><Auth activeSignIn={setActiveSignIn} activeModal={activeModal}
-                                                                                     setActiveModal={setActiveModal}/>
-                </div>
-            </div>
 
             <div onClick={() => setActiveSignIn(!activeSignIn)}
                  className={activeSignIn? 'authorization-sign-in active' : 'authorization-sign-in'}>

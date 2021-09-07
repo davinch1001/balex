@@ -22,22 +22,25 @@ const PostCode = ({getIndex, stepsTabs, setActiveSignIn, setActiveModal}) => {
     }
     const postHandler = (e) => {
         e.preventDefault()
-         dispatch(postCode(e.target.children[4].children[1].value))
-        console.log('code===>',e.target.children[4].children[1].value)
-        if(userData.isActivated === 1){
+         dispatch(postCode(e.target.children[3].children[1].value))
+        console.log('code===>',e.target.children[3].children[1].value)
+        if(userData.isActivated === 1) {
             getIndex(3)
-        }setCodeErr(true)
+        }else{setCodeErr(true)}
 
     }
     return (
         <form onSubmit={postHandler} className='post-code'>
             <h2 className="post-code__title">Подтверждение</h2>
-            <p className='registr__subtitle'>уже есть акканут? <button onClick={openSingIn} style={{color:"#EF8C3B"}}>Войдите</button></p>
             <StepBtn stepsTabs={stepsTabs}/>
-                   <p className='post-code__description'>{userData.isActivated === 1 ? 'Success' : 'err'}</p>
+            {
+                userData.isActivated !== 1 ? <span className='post-code__err'>{userData.isActivated !== 1 ? 'Вам на почту был отправлен код' : 'Err'}</span> :
+                    <p className='post-code__description'>{codeErr ? 'Код подтвержден' : 'Err'}</p>
+            }
+
             <div className='post-code__input-block'>
                 <span className="input-text">Code</span>
-                <input maxLength={6} required  type="text" className="post-code__input"/>
+                <input required  type="number" maxLength={6} className="post-code__input"/>
             </div>
             <div className="post-code__btns">
                 <button onClick={formHandler} className='post-code__btn cancel' >Отмена</button>

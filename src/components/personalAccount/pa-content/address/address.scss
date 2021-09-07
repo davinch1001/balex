@@ -8,6 +8,24 @@
 }
 
 .address{
+  &__title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    /* identical to box height */
+    color: #000000;
+  }
+  &__subtitle{
+    max-width: 689px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    margin-top: 19px;
+    color: #000000;
+    margin-bottom: 48px;
+  }
   &__user-address {
     max-width: 585px;
     padding: 15px;
@@ -67,5 +85,17 @@
       display: flex;
       flex-direction: column;
     }
+  }
+}
+
+@media(max-width: 465px){
+  .address__title{
+    font-size: 28px;
+  }
+}
+
+@media(max-width: 320px){
+  .address__title{
+    font-size: 24px;
   }
 }
